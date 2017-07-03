@@ -37,6 +37,15 @@ class SignInViewController: UIViewController {
             print("we tried to sign in")
             if error != nil {
                 print("There's an error: \(String(describing: error))")
+                Auth.auth().createUser(withEmail: self.emailTextField.text!, password: self.passwordTextField.text!, completion: { (user, error) in
+                    print("we tried to create a user")
+                    if error != nil {
+                        print("There's an error: \(String(describing: error))")
+                    } else {
+                        
+                    }
+                    
+                })
             } else {
                 print("Signed in successfully")
             }
