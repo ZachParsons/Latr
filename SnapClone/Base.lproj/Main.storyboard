@@ -78,10 +78,10 @@
             </objects>
             <point key="canvasLocation" x="136.80000000000001" y="138.98050974512745"/>
         </scene>
-        <!--View Controller-->
+        <!--Snaps View Controller-->
         <scene sceneID="Xpr-zL-eqd">
             <objects>
-                <viewController id="8dN-xO-gqW" sceneMemberID="viewController">
+                <viewController id="8dN-xO-gqW" customClass="SnapsViewController" customModule="SnapClone" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="w9H-IH-x3r"/>
                         <viewControllerLayoutGuide type="bottom" id="62P-GV-go1"/>
@@ -91,7 +91,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="lg4-AU-Jjq"/>
+                    <navigationItem key="navigationItem" id="lg4-AU-Jjq">
+                        <barButtonItem key="leftBarButtonItem" title="Logout" id="e0C-F4-YUW">
+                            <connections>
+                                <action selector="tappedLogout:" destination="8dN-xO-gqW" id="tnk-xi-Bn1"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WQQ-4x-r02" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
