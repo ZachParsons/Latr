@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		CC6D0AE6C32B929DAFF977F9 /* Pods_SnapClone.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06398A643EA6E9AD0D232691 /* Pods_SnapClone.framework */; };
 		EDC906301F0AA090007B078C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC9062F1F0AA090007B078C /* AppDelegate.swift */; };
-		EDC906321F0AA090007B078C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC906311F0AA090007B078C /* ViewController.swift */; };
+		EDC906321F0AA090007B078C /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC906311F0AA090007B078C /* SignInViewController.swift */; };
 		EDC906351F0AA090007B078C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EDC906331F0AA090007B078C /* Main.storyboard */; };
 		EDC906371F0AA090007B078C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EDC906361F0AA090007B078C /* Assets.xcassets */; };
 		EDC9063A1F0AA090007B078C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EDC906381F0AA090007B078C /* LaunchScreen.storyboard */; };
@@ -22,7 +22,7 @@
 		0A0F4A88DB1F406FDC253753 /* Pods-SnapClone.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SnapClone.release.xcconfig"; path = "Pods/Target Support Files/Pods-SnapClone/Pods-SnapClone.release.xcconfig"; sourceTree = "<group>"; };
 		EDC9062C1F0AA090007B078C /* SnapClone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SnapClone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EDC9062F1F0AA090007B078C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		EDC906311F0AA090007B078C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		EDC906311F0AA090007B078C /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		EDC906341F0AA090007B078C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		EDC906361F0AA090007B078C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EDC906391F0AA090007B078C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -81,7 +81,7 @@
 			isa = PBXGroup;
 			children = (
 				EDC9062F1F0AA090007B078C /* AppDelegate.swift */,
-				EDC906311F0AA090007B078C /* ViewController.swift */,
+				EDC906311F0AA090007B078C /* SignInViewController.swift */,
 				EDC906331F0AA090007B078C /* Main.storyboard */,
 				EDC906361F0AA090007B078C /* Assets.xcassets */,
 				EDC906381F0AA090007B078C /* LaunchScreen.storyboard */,
@@ -216,7 +216,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EDC906321F0AA090007B078C /* ViewController.swift in Sources */,
+				EDC906321F0AA090007B078C /* SignInViewController.swift in Sources */,
 				EDC906301F0AA090007B078C /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -385,6 +385,7 @@
 				EDC906401F0AA090007B078C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

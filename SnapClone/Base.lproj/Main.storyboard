@@ -10,10 +10,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Sign In View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SnapClone" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="SignInViewController" customModule="SnapClone" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -37,7 +37,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="N1W-w0-T2V">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="N1W-w0-T2V" userLabel="Password Text Field">
                                 <rect key="frame" x="87.5" y="147" width="200" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="200" id="EKh-ia-FGW"/>
@@ -46,6 +46,10 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oPa-Ff-65w" userLabel="Sign In Button">
+                                <rect key="frame" x="164" y="185" width="47" height="30"/>
+                                <state key="normal" title="Sign In"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -53,11 +57,18 @@
                             <constraint firstItem="9FB-eh-4yC" firstAttribute="top" secondItem="QfV-rT-LeU" secondAttribute="bottom" constant="8" id="APK-B5-LI5"/>
                             <constraint firstItem="QfV-rT-LeU" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="65" id="DE2-Xh-vW8"/>
                             <constraint firstItem="9FB-eh-4yC" firstAttribute="leading" secondItem="N1W-w0-T2V" secondAttribute="leading" id="Ok2-tM-Ri8"/>
+                            <constraint firstItem="oPa-Ff-65w" firstAttribute="top" secondItem="N1W-w0-T2V" secondAttribute="bottom" constant="8" id="S9S-s8-G85"/>
                             <constraint firstItem="N1W-w0-T2V" firstAttribute="top" secondItem="9FB-eh-4yC" secondAttribute="bottom" constant="8" id="fGR-g3-0bH"/>
                             <constraint firstItem="QfV-rT-LeU" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="28" id="fdl-55-NKq"/>
+                            <constraint firstItem="oPa-Ff-65w" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="iYq-Av-jrI"/>
                             <constraint firstAttribute="trailingMargin" secondItem="QfV-rT-LeU" secondAttribute="trailing" constant="66" id="jlr-kC-utQ"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="emailTextField" destination="9FB-eh-4yC" id="oPw-rG-Bxz"/>
+                        <outlet property="passwordTextField" destination="N1W-w0-T2V" id="dUb-SF-9Lm"/>
+                        <outlet property="signInButton" destination="oPa-Ff-65w" id="32K-jP-HN0"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
