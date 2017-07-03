@@ -42,7 +42,7 @@ class SignInViewController: UIViewController {
                     if error != nil {
                         print("There's an error: \(String(describing: error))")
                     } else {
-                        
+                        print("created user successfully")
                     }
                     
                 })
