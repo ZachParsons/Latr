@@ -71,11 +71,49 @@
                         <outlet property="emailTextField" destination="9FB-eh-4yC" id="oPw-rG-Bxz"/>
                         <outlet property="passwordTextField" destination="N1W-w0-T2V" id="dUb-SF-9Lm"/>
                         <outlet property="signInButton" destination="oPa-Ff-65w" id="32K-jP-HN0"/>
+                        <segue destination="nk3-YV-HiQ" kind="presentation" identifier="signInSegue" id="MAQ-Rc-fuh"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="136.80000000000001" y="138.98050974512745"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="Xpr-zL-eqd">
+            <objects>
+                <viewController id="8dN-xO-gqW" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="w9H-IH-x3r"/>
+                        <viewControllerLayoutGuide type="bottom" id="62P-GV-go1"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="O84-Tf-XkS">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="lg4-AU-Jjq"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WQQ-4x-r02" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1765.5999999999999" y="139.880059970015"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="f2w-fm-tVW">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="nk3-YV-HiQ" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="6E3-MG-I9Q">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="8dN-xO-gqW" kind="relationship" relationship="rootViewController" id="eaE-Wb-Eko"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Mrd-Zw-sVa" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="945" y="139"/>
         </scene>
     </scenes>
 </document>
