@@ -16,6 +16,7 @@ class PictureViewController: UIViewController {
     
     @IBOutlet weak var descriptionTextField: UITextField!
     
+    var imagePicker = UIImagePickerController()
     override func viewDidLoad() {
         super.viewDidLoad()
 
