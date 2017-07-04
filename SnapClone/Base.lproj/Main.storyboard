@@ -81,7 +81,7 @@
         <!--Snaps View Controller-->
         <scene sceneID="Xpr-zL-eqd">
             <objects>
-                <viewController id="8dN-xO-gqW" customClass="SnapsViewController" customModule="SnapClone" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="8dN-xO-gqW" customClass="SnapsViewController" customModule="SnapClone" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="w9H-IH-x3r"/>
                         <viewControllerLayoutGuide type="bottom" id="62P-GV-go1"/>
@@ -89,7 +89,19 @@
                     <view key="view" contentMode="scaleToFill" id="O84-Tf-XkS">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="gIR-iQ-u5R">
+                                <rect key="frame" x="16" y="64" width="343" height="603"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="62P-GV-go1" firstAttribute="top" secondItem="gIR-iQ-u5R" secondAttribute="bottom" id="3DM-TJ-fJN"/>
+                            <constraint firstItem="gIR-iQ-u5R" firstAttribute="top" secondItem="w9H-IH-x3r" secondAttribute="bottom" id="6gk-j7-rBR"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="gIR-iQ-u5R" secondAttribute="trailing" id="k1y-Ym-X9V"/>
+                            <constraint firstItem="gIR-iQ-u5R" firstAttribute="leading" secondItem="O84-Tf-XkS" secondAttribute="leadingMargin" id="q2v-j7-cXU"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="lg4-AU-Jjq">
                         <barButtonItem key="leftBarButtonItem" title="Logout" id="e0C-F4-YUW">
@@ -103,10 +115,56 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="tableView" destination="gIR-iQ-u5R" id="mfX-uv-Rcx"/>
+                        <segue destination="48k-KE-uUM" kind="show" identifier="viewSnapSegue" id="zNa-gn-GSx"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WQQ-4x-r02" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1765.5999999999999" y="139.880059970015"/>
+        </scene>
+        <!--View Snap View Controller-->
+        <scene sceneID="yLT-EY-Xfc">
+            <objects>
+                <viewController id="48k-KE-uUM" customClass="ViewSnapViewController" customModule="SnapClone" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="aUa-cL-868"/>
+                        <viewControllerLayoutGuide type="bottom" id="251-jr-D01"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="5Aa-wl-GlY">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Wow great experience" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bot-rt-4RY" userLabel="Caption Text Field">
+                                <rect key="frame" x="16" y="636" width="343" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="92L-1V-Wvd">
+                                <rect key="frame" x="26" y="74" width="323" height="552"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="92L-1V-Wvd" firstAttribute="top" secondItem="aUa-cL-868" secondAttribute="bottom" constant="10" id="cpc-67-FDo"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Bot-rt-4RY" secondAttribute="trailing" id="d7s-a7-J7t"/>
+                            <constraint firstItem="Bot-rt-4RY" firstAttribute="leading" secondItem="5Aa-wl-GlY" secondAttribute="leadingMargin" id="fmM-G5-MSB"/>
+                            <constraint firstItem="251-jr-D01" firstAttribute="top" secondItem="Bot-rt-4RY" secondAttribute="bottom" constant="10" id="jqy-vL-t3Q"/>
+                            <constraint firstItem="92L-1V-Wvd" firstAttribute="leading" secondItem="5Aa-wl-GlY" secondAttribute="leadingMargin" constant="10" id="sO4-os-K92"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="92L-1V-Wvd" secondAttribute="trailing" constant="10" id="su7-aK-7I4"/>
+                            <constraint firstItem="Bot-rt-4RY" firstAttribute="top" secondItem="92L-1V-Wvd" secondAttribute="bottom" constant="10" id="zoo-h9-El5"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="captionTextField" destination="Bot-rt-4RY" id="GdP-kh-gBg"/>
+                        <outlet property="imageView" destination="92L-1V-Wvd" id="pch-KG-gqC"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PoT-vS-dHe" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1775.2" y="888.30584707646187"/>
         </scene>
         <!--Picture View Controller-->
         <scene sceneID="oft-NR-gD0">

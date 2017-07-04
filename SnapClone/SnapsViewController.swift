@@ -10,56 +10,85 @@ import UIKit
 import FirebaseDatabase
 import FirebaseAuth
 
-class SnapsViewController: UIViewController {
-
+class SnapsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+    
+    @IBOutlet weak var tableView: UITableView!
+    
+    var messages : [Message] = []
   
     override func viewDidLoad() {
         super.viewDidLoad()
         // find current user's messages
+        
+        
+        // setting up table view
+        tableView.dataSource = self
+        tableView.delegate = self
+        
+        
         Database.database().reference().child("users").child(Auth.auth().currentUser!.uid).child("messages").observe(DataEventType.childAdded, with: {(snapshot) in
-            // returns object of each user
-            // called for each user
+            // returns object of each message
+            // called for each message
             print(snapshot)
             
-//            // like calling new
-//            let user = User()
-//            
-//            // setting the values
-//            // forcing the value as well as the upcast to a string
-//            
-//            // need to cast snapshot.value as a NSDictionary.
-//            let value = snapshot.value as? NSDictionary
-//            
-//            user.email = value?["email"] as! String
-//            
-//            // snapshot dictionary doesn't have a key so can keep this
-//            user.uid = snapshot.key // assigns the uid
-//            
-//            // kind of like shovelling back into users
-//            self.users.append(user)
-//            
-//            self.tableView.reloadData()
+            // like calling new
+            let message = Message()
+            
+            // setting the values
+            // forcing the value as well as the upcast to a string
+            
+            // need to cast snapshot.value as a NSDictionary.
+            let value = snapshot.value as? NSDictionary
+            
+            message.imageURL = value?["image_url"] as! String
+            message.descrip = value?["description"] as! String
+            message.from = value?["from"] as! String
+            
+            
+            // kind of like shovelling back into users
+            self.messages.append(message)
+            
+            self.tableView.reloadData()
         })
 
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return messages.count
     }
+    
+    // prep for view message scene
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let message = messages[indexPath.row]
+        
+        self.performSegue(withIdentifier: "viewSnapSegue", sender: message)
+
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "viewSnapSegue" {
+            let nextVC = segue.destination as! ViewSnapViewController
+            nextVC.message = sender as! Message
+        }
+        
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = UITableViewCell()
+        
+        let message = messages[indexPath.row]
+        
+        // set cell's text label 
+        cell.textLabel?.text = message.from
+        
+        return cell
+    }
+    
+    
     
     @IBAction func tappedLogout(_ sender: Any) {
         dismiss(animated: true, completion: nil)
     }
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }
