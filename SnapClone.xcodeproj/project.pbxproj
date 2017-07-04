@@ -107,10 +107,10 @@
 		EDC9062E1F0AA090007B078C /* SnapClone */ = {
 			isa = PBXGroup;
 			children = (
+				EDC906331F0AA090007B078C /* Main.storyboard */,
 				ED349FA21F0BE3AB00FC1477 /* Models */,
 				ED349FA11F0BE39000FC1477 /* ViewControllers */,
 				EDC9062F1F0AA090007B078C /* AppDelegate.swift */,
-				EDC906331F0AA090007B078C /* Main.storyboard */,
 				EDC906361F0AA090007B078C /* Assets.xcassets */,
 				EDC906381F0AA090007B078C /* LaunchScreen.storyboard */,
 				EDC9063B1F0AA090007B078C /* Info.plist */,

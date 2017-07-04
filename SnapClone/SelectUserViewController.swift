@@ -15,6 +15,12 @@ class SelectUserViewController: UIViewController, UITableViewDataSource, UITable
     
     var users : [User] = []
     
+    // prep for segue getting those variable values
+    var imageURL = ""
+    
+    // description can mess with swift
+    var descrip = ""
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -79,7 +85,8 @@ class SelectUserViewController: UIViewController, UITableViewDataSource, UITable
         let user = users[indexPath.row]
         
         // need to make a dictionary 
-        let message = ["from": user.email, "description": "yo yo", "image_url": "woo.jpg"]
+        // gets descrip and image url from sender user input in the picture view 
+        let message = ["from": user.email, "description": descrip, "image_url": imageURL]
         
         // child by auto id is a firebase function that prevents reuse of id and makes unique
         // add the message to the set value

@@ -8,13 +8,13 @@
 
 import UIKit
 
-// need specific firebase storage 
-// via https://stackoverflow.com/questions/38561257/swift-use-of-unresolved-identifier-firstorage 
+// need specific firebase storage
+// via https://stackoverflow.com/questions/38561257/swift-use-of-unresolved-identifier-firstorage
 
 import FirebaseStorage
 
 class PictureViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
-
+    
     @IBOutlet weak var imageView: UIImageView!
     
     @IBOutlet weak var nextButton: UIButton!
@@ -38,7 +38,7 @@ class PictureViewController: UIViewController, UIImagePickerControllerDelegate, 
         
         imagePicker.dismiss(animated: true, completion: nil)
     }
-
+    
     @IBAction func tappedCamera(_ sender: Any) {
         // for testing we're going to pick one
         imagePicker.sourceType = .savedPhotosAlbum
@@ -59,23 +59,34 @@ class PictureViewController: UIViewController, UIImagePickerControllerDelegate, 
         // higher compression of 0.1 vs a png
         let imageData = UIImageJPEGRepresentation(imageView.image!, 0.1)!
         
-         // upload to firebase
+        // upload to firebase
         
-        // uu id unique 
+        // uu id unique
         imagesFolder.child("\(NSUUID().uuidString).jpg").putData(imageData, metadata: nil, completion: { (metadata, error) in
             print("we're trying to upload")
             if error != nil {
                 print("We had an error: \(String(describing: error))")
             } else {
-                
-                print(metadata?.downloadURL())
                 // perform segue upon no error next tap upload
-                self.performSegue(withIdentifier: "selectUserSegue", sender: nil)
+                // absolute designates the value as a string
+                self.performSegue(withIdentifier: "selectUserSegue", sender: metadata?.downloadURL()?.absoluteString)
             }
         })
+        
+        
     }
     
-   
-
-
+    
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        // assign destination as the next controller
+        let nextVC = segue.destination as! SelectUserViewController
+        
+        // using the select user vc's var declaration
+        // gets sender from sender metadata in perform segue
+        nextVC.imageURL = sender as! String
+        
+        // we know that text here exists with a bang !
+        nextVC.descrip = descriptionTextField.text!
+    }
 }
