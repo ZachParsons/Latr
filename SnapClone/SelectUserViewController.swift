@@ -24,11 +24,13 @@ class SelectUserViewController: UIViewController, UITableViewDataSource, UITable
     // add firebase users 
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        <#code#>
+        // just to get runable code
+        return 2
     }
     
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        <#code#>
+        // just to get runable code
+        return UITableViewCell()
     }
 }
