@@ -29,8 +29,8 @@ class SignInViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // add into firebase database
-        Database.database().reference().child("hello").setValue("Cool beans")
-
+        
+        
     }
     // we're logging in and registering now
     // this will be easier than handling both on different pages
@@ -40,28 +40,29 @@ class SignInViewController: UIViewController {
             // function as a form field for handling responses
             
             { (user, error) in
-            print("we tried to sign in")
-            if error != nil {
-                print("There's an error: \(String(describing: error))")
-                Auth.auth().createUser(withEmail: self.emailTextField.text!, password: self.passwordTextField.text!, completion: { (user, error) in
-                    print("we tried to create a user")
-                    if error != nil {
-                        print("There's an error: \(String(describing: error))")
-                    } else {
-                        print("created user successfully")
-                        
-                        
-                        
-                        
-                        
-                        self.performSegue(withIdentifier: "signInSegue", sender: nil)
-                    }
-                })
-            } else {
-                print("Signed in successfully")
-                self.performSegue(withIdentifier: "signInSegue", sender: nil)
-            }
+                print("we tried to sign in")
+                if error != nil {
+                    print("There's an error: \(String(describing: error))")
+                    Auth.auth().createUser(withEmail: self.emailTextField.text!, password: self.passwordTextField.text!, completion: { (user, error) in
+                        print("we tried to create a user")
+                        if error != nil {
+                            print("There's an error: \(String(describing: error))")
+                        } else {
+                            print("created user successfully")
+                            
+                            // set value of that email
+                            // give enough children to set user id here in the firebase storage 
+                            // putting code inside the creation code 
+                            Database.database().reference().child("users").child(user!.uid).child("email").setValue(user!.email!)
+                            
+                            self.performSegue(withIdentifier: "signInSegue", sender: nil)
+                        }
+                    })
+                } else {
+                    print("Signed in successfully")
+                    self.performSegue(withIdentifier: "signInSegue", sender: nil)
+                }
         }
-    )}
+        )}
 }
 
