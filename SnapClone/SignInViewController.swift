@@ -9,6 +9,9 @@
 import UIKit
 import Firebase
 
+// need db for specifying the db call
+import FirebaseDatabase
+
 // getting weird errors associated to signIn without specified
 // pods from firebase
 // via https://stackoverflow.com/questions/37345465/use-of-unresolved-identifier-firauth-swift-2-firebase-3-x
@@ -25,8 +28,11 @@ class SignInViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        // add into firebase database
+        Database.database().reference().child("hello").setValue("Cool beans")
+
     }
-    // we're logging in and registering now 
+    // we're logging in and registering now
     // this will be easier than handling both on different pages
     
     @IBAction func signInTapped(_ sender: Any) {
@@ -43,6 +49,11 @@ class SignInViewController: UIViewController {
                         print("There's an error: \(String(describing: error))")
                     } else {
                         print("created user successfully")
+                        
+                        
+                        
+                        
+                        
                         self.performSegue(withIdentifier: "signInSegue", sender: nil)
                     }
                 })
