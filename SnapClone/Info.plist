@@ -36,6 +36,8 @@
 	</array>
 	<key>NSPhotoLibraryUsageDescription</key>
 	<string>Want to use the photos to send a snap</string>
+	<key>NSCameraUsageDescription</key>
+	<string>We&apos;d appreciate using your camera to send Latr messages.</string>
 	<key>UISupportedInterfaceOrientations~ipad</key>
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>

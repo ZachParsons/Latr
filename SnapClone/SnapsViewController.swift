@@ -54,7 +54,14 @@ class SnapsViewController: UIViewController, UITableViewDelegate, UITableViewDat
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return messages.count
+        
+        // for returning the one cell of no messages avail
+        if messages.count == 0 {
+            return 1
+        } else {
+            return messages.count
+        }
+        
     }
     
     // prep for view message scene
@@ -76,11 +83,16 @@ class SnapsViewController: UIViewController, UITableViewDelegate, UITableViewDat
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = UITableViewCell()
         
-        let message = messages[indexPath.row]
-        
-        // set cell's text label 
-        cell.textLabel?.text = message.from
-        
+        // for returning the one cell of no messages avail
+        if messages.count == 0 {
+            cell.textLabel?.text = "You have no Latr messages :("
+
+        } else {
+            let message = messages[indexPath.row]
+            
+            // set cell's text label
+            cell.textLabel?.text = message.from
+        }
         return cell
     }
     

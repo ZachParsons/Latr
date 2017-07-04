@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SDWebImage
 
 class ViewSnapViewController: UIViewController {
 
@@ -19,7 +20,7 @@ class ViewSnapViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         captionTextField.text = message.descrip
-
+        imageView.sd_setImage(with: URL(string: message.imageURL))
         // Do any additional setup after loading the view.
     }
 

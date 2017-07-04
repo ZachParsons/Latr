@@ -25,6 +25,7 @@ class PictureViewController: UIViewController, UIImagePickerControllerDelegate, 
     override func viewDidLoad() {
         super.viewDidLoad()
         imagePicker.delegate = self
+        nextButton.isEnabled = false
     }
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
@@ -36,12 +37,22 @@ class PictureViewController: UIViewController, UIImagePickerControllerDelegate, 
         
         imageView.backgroundColor = UIColor.clear
         
+        // can now click next button 
+        // testing and debugging
+        // authorization
+        nextButton.isEnabled = true
+        
+        
         imagePicker.dismiss(animated: true, completion: nil)
     }
     
     @IBAction func tappedCamera(_ sender: Any) {
         // for testing we're going to pick one
         imagePicker.sourceType = .savedPhotosAlbum
+        // should be camera
+        
+//        imagePicker.sourceType = .camera
+        
         
         // would muck up the ui if allowed editing
         imagePicker.allowsEditing = false
