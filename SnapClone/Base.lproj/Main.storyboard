@@ -174,10 +174,10 @@
             </objects>
             <point key="canvasLocation" x="2575" y="140"/>
         </scene>
-        <!--View Controller-->
+        <!--Select User View Controller-->
         <scene sceneID="YOs-n1-k9G">
             <objects>
-                <viewController automaticallyAdjustsScrollViewInsets="NO" id="teS-GP-Ziv" sceneMemberID="viewController">
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="teS-GP-Ziv" customClass="SelectUserViewController" customModule="SnapClone" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="ZfL-Iy-qI2"/>
                         <viewControllerLayoutGuide type="bottom" id="rV4-mB-ypi"/>

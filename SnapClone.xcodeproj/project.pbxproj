@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		CC6D0AE6C32B929DAFF977F9 /* Pods_SnapClone.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06398A643EA6E9AD0D232691 /* Pods_SnapClone.framework */; };
+		ED349F9E1F0BCE1900FC1477 /* SelectUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED349F9D1F0BCE1900FC1477 /* SelectUserViewController.swift */; };
 		EDC906301F0AA090007B078C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC9062F1F0AA090007B078C /* AppDelegate.swift */; };
 		EDC906321F0AA090007B078C /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC906311F0AA090007B078C /* SignInViewController.swift */; };
 		EDC906351F0AA090007B078C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EDC906331F0AA090007B078C /* Main.storyboard */; };
@@ -22,6 +23,7 @@
 		0055DD685E2137098640CCDA /* Pods-SnapClone.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SnapClone.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SnapClone/Pods-SnapClone.debug.xcconfig"; sourceTree = "<group>"; };
 		06398A643EA6E9AD0D232691 /* Pods_SnapClone.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SnapClone.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0A0F4A88DB1F406FDC253753 /* Pods-SnapClone.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SnapClone.release.xcconfig"; path = "Pods/Target Support Files/Pods-SnapClone/Pods-SnapClone.release.xcconfig"; sourceTree = "<group>"; };
+		ED349F9D1F0BCE1900FC1477 /* SelectUserViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectUserViewController.swift; sourceTree = "<group>"; };
 		EDC9062C1F0AA090007B078C /* SnapClone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SnapClone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EDC9062F1F0AA090007B078C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EDC906311F0AA090007B078C /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
@@ -87,6 +89,7 @@
 				EDC9062F1F0AA090007B078C /* AppDelegate.swift */,
 				EDC906311F0AA090007B078C /* SignInViewController.swift */,
 				EDC906331F0AA090007B078C /* Main.storyboard */,
+				ED349F9D1F0BCE1900FC1477 /* SelectUserViewController.swift */,
 				EDC906451F0B1BD0007B078C /* PictureViewController.swift */,
 				EDC906431F0B0292007B078C /* SnapsViewController.swift */,
 				EDC906361F0AA090007B078C /* Assets.xcassets */,
@@ -224,6 +227,7 @@
 			files = (
 				EDC906321F0AA090007B078C /* SignInViewController.swift in Sources */,
 				EDC906461F0B1BD0007B078C /* PictureViewController.swift in Sources */,
+				ED349F9E1F0BCE1900FC1477 /* SelectUserViewController.swift in Sources */,
 				EDC906301F0AA090007B078C /* AppDelegate.swift in Sources */,
 				EDC906441F0B0292007B078C /* SnapsViewController.swift in Sources */,
 			);
