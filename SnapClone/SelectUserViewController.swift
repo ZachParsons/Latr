@@ -73,4 +73,12 @@ class SelectUserViewController: UIViewController, UITableViewDataSource, UITable
         
         return cell
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        // find user that was selected
+        let user = users[indexPath.row]
+        
+        // child by auto id is a firebase function that prevents reuse of id and makes unique
+        Database.database().reference().child("users").child(user.uid).child("messages").childByAutoId().setValue("testing_spot")
+    }
 }
