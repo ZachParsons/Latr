@@ -60,11 +60,15 @@ class PictureViewController: UIViewController, UIImagePickerControllerDelegate, 
         let imageData = UIImageJPEGRepresentation(imageView.image!, 0.1)!
         
          // upload to firebase
-        imagesFolder.child("images.png").putData(imageData, metadata: nil, completion: { (metadata, error) in
+        
+        // uu id unique 
+        imagesFolder.child("\(NSUUID().uuidString).jpg").putData(imageData, metadata: nil, completion: { (metadata, error) in
             print("we're trying to upload")
             if error != nil {
                 print("We had an error: \(String(describing: error))")
             } else {
+                
+                print(metadata?.downloadURL())
                 // perform segue upon no error next tap upload
                 self.performSegue(withIdentifier: "selectUserSegue", sender: nil)
             }
