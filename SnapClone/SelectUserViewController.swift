@@ -12,6 +12,8 @@ class SelectUserViewController: UIViewController, UITableViewDataSource, UITable
 
     @IBOutlet weak var tableView: UITableView!
     
+    var users : [User] = []
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -24,13 +26,20 @@ class SelectUserViewController: UIViewController, UITableViewDataSource, UITable
     // add firebase users 
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // just to get runable code
-        return 2
+        // how many rows
+        return users.count
     }
     
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        // just to get runable code
-        return UITableViewCell()
+        let cell = UITableViewCell()
+        
+        // calling the cell at the index
+        let user = users[indexPath.row]
+        
+        // assign the label of text 
+        cell.textLabel?.text = user.email
+        
+        return cell
     }
 }
