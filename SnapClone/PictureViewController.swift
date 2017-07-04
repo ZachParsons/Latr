@@ -8,7 +8,7 @@
 
 import UIKit
 
-class PictureViewController: UIViewController {
+class PictureViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
     @IBOutlet weak var imageView: UIImageView!
     
@@ -19,13 +19,26 @@ class PictureViewController: UIViewController {
     var imagePicker = UIImagePickerController()
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        imagePicker.delegate = self
+    }
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
+        // can also use edited image
+        let image = info[UIImagePickerControllerOriginalImage] as! UIImage
+        
+        // setting the image to the view
+        imageView.image = image
+        
+        imagePicker.dismiss(animated: true, completion: nil)
     }
 
-
     @IBAction func tappedCamera(_ sender: Any) {
+        // for testing we're going to pick one
+        imagePicker.sourceType = .savedPhotosAlbum
         
+        // would muck up the ui if allowed editing
+        imagePicker.allowsEditing = false
+        present(imagePicker, animated: true, completion: nil)
     }
     
     
