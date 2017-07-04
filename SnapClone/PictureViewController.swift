@@ -62,11 +62,12 @@ class PictureViewController: UIViewController, UIImagePickerControllerDelegate, 
         // bang to know that image exists
         let imageData = UIImagePNGRepresentation(imageView.image!)!
         
-        imagesFolder.child("images.png").putData(imageData, metadata: nil) { (metadata, error) in
+        imagesFolder.child("images.png").putData(imageData, metadata: nil, completion: { (metadata, error) in
+            print("we're trying to upload")
             if error != nil {
-                print("We had an error: \(error)")
+                print("We had an error: \(String(describing: error))")
             }
-        }
+        })
     }
 
 }
