@@ -8,6 +8,7 @@
 
 import UIKit
 import FirebaseDatabase
+import FirebaseAuth
 
 class SelectUserViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
@@ -88,7 +89,8 @@ class SelectUserViewController: UIViewController, UITableViewDataSource, UITable
         
         // need to make a dictionary 
         // gets descrip and image url from sender user input in the picture view 
-        let message = ["from": user.email, "description": descrip, "image_url": imageURL]
+        // sender should always be current user
+        let message = ["from": Auth.auth().currentUser!.email!, "description": descrip, "image_url": imageURL]
         
         // child by auto id is a firebase function that prevents reuse of id and makes unique
         // add the message to the set value
