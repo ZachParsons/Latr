@@ -97,11 +97,68 @@
                                 <action selector="tappedLogout:" destination="8dN-xO-gqW" id="tnk-xi-Bn1"/>
                             </connections>
                         </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="icj-Er-L33">
+                            <connections>
+                                <segue destination="LVq-wu-htG" kind="show" id="1oJ-b5-vnA"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WQQ-4x-r02" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1765.5999999999999" y="139.880059970015"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="oft-NR-gD0">
+            <objects>
+                <viewController id="LVq-wu-htG" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Vtc-d0-CU0"/>
+                        <viewControllerLayoutGuide type="bottom" id="bax-pu-d4Z"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="SDE-L1-SJV">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="qDr-Jb-17O">
+                                <rect key="frame" x="68" y="84" width="240" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="4H5-QH-6hh"/>
+                                    <constraint firstAttribute="height" constant="128" id="OHr-gL-r40"/>
+                                </constraints>
+                            </imageView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RND-og-aee">
+                                <rect key="frame" x="68" y="227" width="240" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hR3-2E-2HL">
+                                <rect key="frame" x="165" y="265" width="46" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="46" id="U0l-Co-dCZ"/>
+                                </constraints>
+                                <state key="normal" title="Next"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="RND-og-aee" firstAttribute="centerX" secondItem="qDr-Jb-17O" secondAttribute="centerX" id="100-jS-rBR"/>
+                            <constraint firstItem="RND-og-aee" firstAttribute="centerX" secondItem="SDE-L1-SJV" secondAttribute="centerX" id="2hg-pf-JC8"/>
+                            <constraint firstItem="hR3-2E-2HL" firstAttribute="centerX" secondItem="qDr-Jb-17O" secondAttribute="centerX" id="3FC-VA-twa"/>
+                            <constraint firstItem="hR3-2E-2HL" firstAttribute="top" secondItem="RND-og-aee" secondAttribute="bottom" constant="8" id="4Mj-fI-EGu"/>
+                            <constraint firstItem="qDr-Jb-17O" firstAttribute="top" secondItem="Vtc-d0-CU0" secondAttribute="bottom" constant="20" id="ELq-et-FfT"/>
+                            <constraint firstItem="RND-og-aee" firstAttribute="top" secondItem="qDr-Jb-17O" secondAttribute="bottom" constant="15" id="EzI-tB-xao"/>
+                            <constraint firstItem="RND-og-aee" firstAttribute="width" secondItem="qDr-Jb-17O" secondAttribute="width" id="m97-UG-l8U"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="gpj-I9-A42">
+                        <barButtonItem key="rightBarButtonItem" systemItem="camera" id="ZAI-1f-x8p"/>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="M0p-Is-rDL" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2575" y="140"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="f2w-fm-tVW">
