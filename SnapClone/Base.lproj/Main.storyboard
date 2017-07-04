@@ -108,10 +108,10 @@
             </objects>
             <point key="canvasLocation" x="1765.5999999999999" y="139.880059970015"/>
         </scene>
-        <!--View Controller-->
+        <!--Picture View Controller-->
         <scene sceneID="oft-NR-gD0">
             <objects>
-                <viewController id="LVq-wu-htG" sceneMemberID="viewController">
+                <viewController id="LVq-wu-htG" customClass="PictureViewController" customModule="SnapClone" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Vtc-d0-CU0"/>
                         <viewControllerLayoutGuide type="bottom" id="bax-pu-d4Z"/>
@@ -127,7 +127,7 @@
                                     <constraint firstAttribute="height" constant="128" id="OHr-gL-r40"/>
                                 </constraints>
                             </imageView>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RND-og-aee">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RND-og-aee" userLabel="Description Text Field">
                                 <rect key="frame" x="68" y="227" width="240" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -139,6 +139,9 @@
                                     <constraint firstAttribute="width" constant="46" id="U0l-Co-dCZ"/>
                                 </constraints>
                                 <state key="normal" title="Next"/>
+                                <connections>
+                                    <action selector="tappedNext:" destination="LVq-wu-htG" eventType="touchUpInside" id="Uzh-DM-shB"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -153,8 +156,17 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="gpj-I9-A42">
-                        <barButtonItem key="rightBarButtonItem" systemItem="camera" id="ZAI-1f-x8p"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="camera" id="ZAI-1f-x8p">
+                            <connections>
+                                <action selector="tappedCamera:" destination="LVq-wu-htG" id="cU7-aO-BgS"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="descriptionTextField" destination="RND-og-aee" id="lZO-gL-ZQH"/>
+                        <outlet property="imageView" destination="qDr-Jb-17O" id="LLw-UP-zss"/>
+                        <outlet property="nextButton" destination="hR3-2E-2HL" id="mNw-rJ-B3I"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="M0p-Is-rDL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
