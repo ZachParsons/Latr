@@ -57,6 +57,22 @@ class SnapsViewController: UIViewController, UITableViewDelegate, UITableViewDat
         return messages.count
     }
     
+    // prep for view message scene
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let message = messages[indexPath.row]
+        
+        self.performSegue(withIdentifier: "viewSnapSegue", sender: message)
+
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "viewSnapSegue" {
+            let nextVC = segue.destination as! ViewSnapViewController
+            nextVC.message = sender as! Message
+        }
+        
+    }
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = UITableViewCell()
         
@@ -67,6 +83,9 @@ class SnapsViewController: UIViewController, UITableViewDelegate, UITableViewDat
         
         return cell
     }
+    
+    
+    
     @IBAction func tappedLogout(_ sender: Any) {
         dismiss(animated: true, completion: nil)
     }
