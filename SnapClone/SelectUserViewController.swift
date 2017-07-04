@@ -78,7 +78,11 @@ class SelectUserViewController: UIViewController, UITableViewDataSource, UITable
         // find user that was selected
         let user = users[indexPath.row]
         
+        // need to make a dictionary 
+        let message = ["from": user.email, "description": "yo yo", "image_url": "woo.jpg"]
+        
         // child by auto id is a firebase function that prevents reuse of id and makes unique
-        Database.database().reference().child("users").child(user.uid).child("messages").childByAutoId().setValue("testing_spot")
+        // add the message to the set value
+        Database.database().reference().child("users").child(user.uid).child("messages").childByAutoId().setValue(message)
     }
 }
