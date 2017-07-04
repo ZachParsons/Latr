@@ -29,6 +29,8 @@ class PictureViewController: UIViewController, UIImagePickerControllerDelegate, 
         // setting the image to the view
         imageView.image = image
         
+        imageView.backgroundColor = UIColor.clear
+        
         imagePicker.dismiss(animated: true, completion: nil)
     }
 
