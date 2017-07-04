@@ -10,6 +10,7 @@
 		CC6D0AE6C32B929DAFF977F9 /* Pods_SnapClone.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06398A643EA6E9AD0D232691 /* Pods_SnapClone.framework */; };
 		ED349F9E1F0BCE1900FC1477 /* SelectUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED349F9D1F0BCE1900FC1477 /* SelectUserViewController.swift */; };
 		ED349FA01F0BE35000FC1477 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED349F9F1F0BE35000FC1477 /* User.swift */; };
+		ED349FA41F0BFFB300FC1477 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED349FA31F0BFFB300FC1477 /* Message.swift */; };
 		EDC906301F0AA090007B078C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC9062F1F0AA090007B078C /* AppDelegate.swift */; };
 		EDC906321F0AA090007B078C /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC906311F0AA090007B078C /* SignInViewController.swift */; };
 		EDC906351F0AA090007B078C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EDC906331F0AA090007B078C /* Main.storyboard */; };
@@ -26,6 +27,7 @@
 		0A0F4A88DB1F406FDC253753 /* Pods-SnapClone.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SnapClone.release.xcconfig"; path = "Pods/Target Support Files/Pods-SnapClone/Pods-SnapClone.release.xcconfig"; sourceTree = "<group>"; };
 		ED349F9D1F0BCE1900FC1477 /* SelectUserViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectUserViewController.swift; sourceTree = "<group>"; };
 		ED349F9F1F0BE35000FC1477 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		ED349FA31F0BFFB300FC1477 /* Message.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
 		EDC9062C1F0AA090007B078C /* SnapClone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SnapClone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EDC9062F1F0AA090007B078C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EDC906311F0AA090007B078C /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
@@ -82,6 +84,7 @@
 			isa = PBXGroup;
 			children = (
 				ED349F9F1F0BE35000FC1477 /* User.swift */,
+				ED349FA31F0BFFB300FC1477 /* Message.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -250,6 +253,7 @@
 				ED349F9E1F0BCE1900FC1477 /* SelectUserViewController.swift in Sources */,
 				EDC906301F0AA090007B078C /* AppDelegate.swift in Sources */,
 				EDC906441F0B0292007B078C /* SnapsViewController.swift in Sources */,
+				ED349FA41F0BFFB300FC1477 /* Message.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
