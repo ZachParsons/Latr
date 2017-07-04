@@ -7,14 +7,40 @@
 //
 
 import UIKit
+import FirebaseDatabase
+import FirebaseAuth
 
 class SnapsViewController: UIViewController {
 
   
     override func viewDidLoad() {
         super.viewDidLoad()
+        // find current user's messages
+        Database.database().reference().child("users").child(Auth.auth().currentUser!.uid).child("messages").observe(DataEventType.childAdded, with: {(snapshot) in
+            // returns object of each user
+            // called for each user
+            print(snapshot)
+            
+//            // like calling new
+//            let user = User()
+//            
+//            // setting the values
+//            // forcing the value as well as the upcast to a string
+//            
+//            // need to cast snapshot.value as a NSDictionary.
+//            let value = snapshot.value as? NSDictionary
+//            
+//            user.email = value?["email"] as! String
+//            
+//            // snapshot dictionary doesn't have a key so can keep this
+//            user.uid = snapshot.key // assigns the uid
+//            
+//            // kind of like shovelling back into users
+//            self.users.append(user)
+//            
+//            self.tableView.reloadData()
+        })
 
-        // Do any additional setup after loading the view.
     }
 
     override func didReceiveMemoryWarning() {
