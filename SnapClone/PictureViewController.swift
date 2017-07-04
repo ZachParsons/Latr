@@ -8,6 +8,11 @@
 
 import UIKit
 
+// need specific firebase storage 
+// via https://stackoverflow.com/questions/38561257/swift-use-of-unresolved-identifier-firstorage 
+
+import FirebaseStorage
+
 class PictureViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
     @IBOutlet weak var imageView: UIImageView!
@@ -45,7 +50,23 @@ class PictureViewController: UIViewController, UIImagePickerControllerDelegate, 
     
     
     @IBAction func tappedNext(_ sender: Any) {
+        performSegue(withIdentifier: "selectUserSegue", sender: nil)
+    }
+    
+    // upload to firebase
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let imagesFolder = Storage.storage().reference().child("images")
         
+        // turns image into data
+        // bang to know that image exists
+        let imageData = UIImagePNGRepresentation(imageView.image!)!
+        
+        imagesFolder.child("images.png").putData(imageData, metadata: nil) { (metadata, error) in
+            if error != nil {
+                print("We had an error: \(error)")
+            }
+        }
     }
 
 }
