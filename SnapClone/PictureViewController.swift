@@ -50,6 +50,7 @@ class PictureViewController: UIViewController, UIImagePickerControllerDelegate, 
     
     
     @IBAction func tappedNext(_ sender: Any) {
+        nextButton.isEnabled = false
         
         let imagesFolder = Storage.storage().reference().child("images")
         
