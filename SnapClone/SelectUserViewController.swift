@@ -78,6 +78,8 @@ class SelectUserViewController: UIViewController, UITableViewDataSource, UITable
         cell.textLabel?.text = user.email
         
         return cell
+        
+        
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -91,5 +93,8 @@ class SelectUserViewController: UIViewController, UITableViewDataSource, UITable
         // child by auto id is a firebase function that prevents reuse of id and makes unique
         // add the message to the set value
         Database.database().reference().child("users").child(user.uid).child("messages").childByAutoId().setValue(message)
+        
+        // after selecting a row, go back to the root to see any remaining messages
+        navigationController!.popToRootViewController(animated: true)
     }
 }
