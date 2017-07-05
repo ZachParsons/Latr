@@ -21,6 +21,9 @@ class PictureViewController: UIViewController, UIImagePickerControllerDelegate, 
     
     @IBOutlet weak var descriptionTextField: UITextField!
     
+    // need to persist this unique photo id across scenes to delete from db
+    var uuid = NSUUID().uuidString
+    
     var imagePicker = UIImagePickerController()
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -73,7 +76,7 @@ class PictureViewController: UIViewController, UIImagePickerControllerDelegate, 
         // upload to firebase
         
         // uu id unique
-        imagesFolder.child("\(NSUUID().uuidString).jpg").putData(imageData, metadata: nil, completion: { (metadata, error) in
+        imagesFolder.child("\(uuid).jpg").putData(imageData, metadata: nil, completion: { (metadata, error) in
             print("we're trying to upload")
             if error != nil {
                 print("We had an error: \(String(describing: error))")
