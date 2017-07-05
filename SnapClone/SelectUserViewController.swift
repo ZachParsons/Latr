@@ -22,6 +22,10 @@ class SelectUserViewController: UIViewController, UITableViewDataSource, UITable
     // description can mess with swift
     var descrip = ""
     
+    
+    // need to keep on knowing the uuid of the photo url so that it will be associated with the message
+    var uuid = ""
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -90,7 +94,7 @@ class SelectUserViewController: UIViewController, UITableViewDataSource, UITable
         // need to make a dictionary 
         // gets descrip and image url from sender user input in the picture view 
         // sender should always be current user
-        let message = ["from": Auth.auth().currentUser!.email!, "description": descrip, "image_url": imageURL]
+        let message = ["from": Auth.auth().currentUser!.email!, "description": descrip, "image_url": imageURL, "uuid": uuid]
         
         // child by auto id is a firebase function that prevents reuse of id and makes unique
         // add the message to the set value

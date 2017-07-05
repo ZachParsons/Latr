@@ -12,4 +12,6 @@ class Message {
     var imageURL = ""
     var descrip = ""
     var from = ""
+    var key = ""
+    var uuid = ""
 }

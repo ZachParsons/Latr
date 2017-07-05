@@ -43,6 +43,10 @@ class SnapsViewController: UIViewController, UITableViewDelegate, UITableViewDat
             message.imageURL = value?["image_url"] as! String
             message.descrip = value?["description"] as! String
             message.from = value?["from"] as! String
+            message.uuid = value?["uuid"] as! String
+            
+            // that message's unique id
+            message.key = snapshot.key
             
             
             // kind of like shovelling back into users
@@ -50,8 +54,24 @@ class SnapsViewController: UIViewController, UITableViewDelegate, UITableViewDat
             
             self.tableView.reloadData()
         })
-
+        
+        
+        // wait on observing the child deleted
+        Database.database().reference().child("users").child(Auth.auth().currentUser!.uid).child("messages").observe(DataEventType.childRemoved, with: {(snapshot) in
+            
+            // need to make loop for removing programmatically
+            var index = 0
+            for message in self.messages {
+                if message.key == snapshot.key {
+                    self.messages.remove(at: index)
+                }
+               index += 1
+            }
+            self.tableView.reloadData()
+        })
     }
+    
+
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         

@@ -21,6 +21,9 @@ class PictureViewController: UIViewController, UIImagePickerControllerDelegate, 
     
     @IBOutlet weak var descriptionTextField: UITextField!
     
+    // need to persist this unique photo id across scenes to delete from db
+    var uuid = NSUUID().uuidString
+    
     var imagePicker = UIImagePickerController()
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -48,10 +51,10 @@ class PictureViewController: UIViewController, UIImagePickerControllerDelegate, 
     
     @IBAction func tappedCamera(_ sender: Any) {
         // for testing we're going to pick one
-//        imagePicker.sourceType = .savedPhotosAlbum
+        imagePicker.sourceType = .savedPhotosAlbum
         // should be camera
         
-        imagePicker.sourceType = .camera
+//        imagePicker.sourceType = .camera
         
         
         // would muck up the ui if allowed editing
@@ -73,7 +76,7 @@ class PictureViewController: UIViewController, UIImagePickerControllerDelegate, 
         // upload to firebase
         
         // uu id unique
-        imagesFolder.child("\(NSUUID().uuidString).jpg").putData(imageData, metadata: nil, completion: { (metadata, error) in
+        imagesFolder.child("\(uuid).jpg").putData(imageData, metadata: nil, completion: { (metadata, error) in
             print("we're trying to upload")
             if error != nil {
                 print("We had an error: \(String(describing: error))")
@@ -99,5 +102,8 @@ class PictureViewController: UIViewController, UIImagePickerControllerDelegate, 
         
         // we know that text here exists with a bang !
         nextVC.descrip = descriptionTextField.text!
+        
+        // perisist the property of uuid of the created photo to next scene 
+        nextVC.uuid = uuid 
     }
 }
