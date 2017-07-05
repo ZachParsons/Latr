@@ -23,6 +23,12 @@ class ViewSnapViewController: UIViewController {
         imageView.sd_setImage(with: URL(string: message.imageURL))
         // Do any additional setup after loading the view.
     }
+    
+    // to make message disappear
+    override func viewWillDisappear(_ animated: Bool) {
+        // test print statement
+        print("disappearing view")
+    }
 
 
 

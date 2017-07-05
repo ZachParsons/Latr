@@ -50,8 +50,9 @@ class SnapsViewController: UIViewController, UITableViewDelegate, UITableViewDat
             
             self.tableView.reloadData()
         })
-
     }
+    
+
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
