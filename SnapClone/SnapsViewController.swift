@@ -53,6 +53,21 @@ class SnapsViewController: UIViewController, UITableViewDelegate, UITableViewDat
             
             self.tableView.reloadData()
         })
+        
+        
+        // wait on observing the child deleted
+        Database.database().reference().child("users").child(Auth.auth().currentUser!.uid).child("messages").observe(DataEventType.childRemoved, with: {(snapshot) in
+            
+            // need to make loop for removing programmatically
+            var index = 0
+            for message in self.messages {
+                if message.key == snapshot.key {
+                    self.messages.remove(at: index)
+                }
+               index += 1
+            }
+            self.tableView.reloadData()
+        })
     }
     
 

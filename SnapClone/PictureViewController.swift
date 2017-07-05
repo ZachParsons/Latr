@@ -48,10 +48,10 @@ class PictureViewController: UIViewController, UIImagePickerControllerDelegate, 
     
     @IBAction func tappedCamera(_ sender: Any) {
         // for testing we're going to pick one
-//        imagePicker.sourceType = .savedPhotosAlbum
+        imagePicker.sourceType = .savedPhotosAlbum
         // should be camera
         
-        imagePicker.sourceType = .camera
+//        imagePicker.sourceType = .camera
         
         
         // would muck up the ui if allowed editing
