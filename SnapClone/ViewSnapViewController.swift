@@ -8,6 +8,8 @@
 
 import UIKit
 import SDWebImage
+import FirebaseDatabase
+import FirebaseAuth
 
 class ViewSnapViewController: UIViewController {
 
@@ -28,6 +30,7 @@ class ViewSnapViewController: UIViewController {
     override func viewWillDisappear(_ animated: Bool) {
         // test print statement
         print("disappearing view")
+        Database.database().reference().child("users").child(Auth.auth().currentUser!.uid).child("messages").child(message.key).removeValue()
     }
 
 

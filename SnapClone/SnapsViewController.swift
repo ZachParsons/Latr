@@ -44,6 +44,9 @@ class SnapsViewController: UIViewController, UITableViewDelegate, UITableViewDat
             message.descrip = value?["description"] as! String
             message.from = value?["from"] as! String
             
+            // that message's unique id
+            message.key = snapshot.key
+            
             
             // kind of like shovelling back into users
             self.messages.append(message)
