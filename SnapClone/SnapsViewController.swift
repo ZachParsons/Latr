@@ -67,7 +67,10 @@ class SnapsViewController: UIViewController, UITableViewDelegate, UITableViewDat
             var index = 0
             for message in self.messages {
                 if message.key == snapshot.key {
-                    self.messages.remove(at: index)
+                    // make sure unshown db items aren't deleted
+                    if message.displayable == "Yes" {
+                        self.messages.remove(at: index)
+                    }
                 }
                index += 1
             }
@@ -116,6 +119,13 @@ class SnapsViewController: UIViewController, UITableViewDelegate, UITableViewDat
             
             // set cell's text label
             cell.textLabel?.text = message.from
+            
+            // can't return nil here ...
+            // return nil cell for hidden message
+//            if message.displayable == "No" {
+//                cell.isOpaque = true
+//                return cell
+//            }
         }
         return cell
     }
