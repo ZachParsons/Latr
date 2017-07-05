@@ -43,6 +43,7 @@ class SnapsViewController: UIViewController, UITableViewDelegate, UITableViewDat
             message.imageURL = value?["image_url"] as! String
             message.descrip = value?["description"] as! String
             message.from = value?["from"] as! String
+            message.uuid = value?["uuid"] as! String
             
             // that message's unique id
             message.key = snapshot.key

@@ -102,5 +102,8 @@ class PictureViewController: UIViewController, UIImagePickerControllerDelegate, 
         
         // we know that text here exists with a bang !
         nextVC.descrip = descriptionTextField.text!
+        
+        // perisist the property of uuid of the created photo to next scene 
+        nextVC.uuid = uuid 
     }
 }

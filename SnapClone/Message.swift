@@ -13,4 +13,5 @@ class Message {
     var descrip = ""
     var from = ""
     var key = ""
+    var uuid = ""
 }

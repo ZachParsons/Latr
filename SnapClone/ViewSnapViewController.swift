@@ -10,6 +10,7 @@ import UIKit
 import SDWebImage
 import FirebaseDatabase
 import FirebaseAuth
+import FirebaseStorage
 
 class ViewSnapViewController: UIViewController {
 
@@ -31,6 +32,11 @@ class ViewSnapViewController: UIViewController {
         // test print statement
         print("disappearing view")
         Database.database().reference().child("users").child(Auth.auth().currentUser!.uid).child("messages").child(message.key).removeValue()
+        
+        // interpolate the message's uuid url of the photo here to delete that too
+        Storage.storage().reference().child("images").child("\(message.uuid).jpg").delete { (error) in
+            print("we deleted the picture")
+        }
     }
 
 
