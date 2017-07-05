@@ -17,9 +17,16 @@ class PictureViewController: UIViewController, UIImagePickerControllerDelegate, 
     
     @IBOutlet weak var imageView: UIImageView!
     
+    @IBOutlet weak var displayableTextField: UITextField!
+    
     @IBOutlet weak var nextButton: UIButton!
     
     @IBOutlet weak var descriptionTextField: UITextField!
+    
+    // need to make a new ib outlet for displayable to be timefield
+    
+    
+    
     
     // need to persist this unique photo id across scenes to delete from db
     var uuid = NSUUID().uuidString
@@ -106,6 +113,6 @@ class PictureViewController: UIViewController, UIImagePickerControllerDelegate, 
         // perisist the property of uuid of the created photo to next scene 
         nextVC.uuid = uuid
         
-        nextVC.displayable = descriptionTextField.text!
+        nextVC.displayable = displayableTextField.text!
     }
 }
