@@ -26,6 +26,8 @@ class SelectUserViewController: UIViewController, UITableViewDataSource, UITable
     // need to keep on knowing the uuid of the photo url so that it will be associated with the message
     var uuid = ""
     
+    var displayable = ""
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         

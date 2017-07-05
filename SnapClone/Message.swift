@@ -14,4 +14,8 @@ class Message {
     var from = ""
     var key = ""
     var uuid = ""
+    
+    // show is a method
+    // add a var displayable to display or not in inbox
+    var displayable = ""
 }

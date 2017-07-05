@@ -45,6 +45,9 @@ class SnapsViewController: UIViewController, UITableViewDelegate, UITableViewDat
             message.from = value?["from"] as! String
             message.uuid = value?["uuid"] as! String
             
+            
+            // take in the message's show critera
+            message.displayable = value?["displayable"] as! String
             // that message's unique id
             message.key = snapshot.key
             

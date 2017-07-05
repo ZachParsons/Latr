@@ -104,6 +104,8 @@ class PictureViewController: UIViewController, UIImagePickerControllerDelegate, 
         nextVC.descrip = descriptionTextField.text!
         
         // perisist the property of uuid of the created photo to next scene 
-        nextVC.uuid = uuid 
+        nextVC.uuid = uuid
+        
+        nextVC.displayable = descriptionTextField.text!
     }
 }
