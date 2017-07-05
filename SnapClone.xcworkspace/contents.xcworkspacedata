@@ -2,7 +2,7 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:SnapClone.xcodeproj">
+      location = "group:/Users/jackhowa/dbc/three-phase/three-week/Latr/Latr.xcodeproj">
    </FileRef>
    <FileRef
       location = "group:Pods/Pods.xcodeproj">

@@ -30,7 +30,7 @@
 		ED349F9F1F0BE35000FC1477 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		ED349FA31F0BFFB300FC1477 /* Message.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
 		ED349FA51F0C1EEA00FC1477 /* ViewSnapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewSnapViewController.swift; sourceTree = "<group>"; };
-		EDC9062C1F0AA090007B078C /* SnapClone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SnapClone.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		EDC9062C1F0AA090007B078C /* Latr.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Latr.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EDC9062F1F0AA090007B078C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EDC906311F0AA090007B078C /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		EDC906341F0AA090007B078C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -105,7 +105,7 @@
 		EDC9062D1F0AA090007B078C /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				EDC9062C1F0AA090007B078C /* SnapClone.app */,
+				EDC9062C1F0AA090007B078C /* Latr.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -128,9 +128,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		EDC9062B1F0AA090007B078C /* SnapClone */ = {
+		EDC9062B1F0AA090007B078C /* Latr */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = EDC9063E1F0AA090007B078C /* Build configuration list for PBXNativeTarget "SnapClone" */;
+			buildConfigurationList = EDC9063E1F0AA090007B078C /* Build configuration list for PBXNativeTarget "Latr" */;
 			buildPhases = (
 				6C0F56866B08D0AD17A81396 /* [CP] Check Pods Manifest.lock */,
 				EDC906281F0AA090007B078C /* Sources */,
@@ -143,9 +143,9 @@
 			);
 			dependencies = (
 			);
-			name = SnapClone;
+			name = Latr;
 			productName = SnapClone;
-			productReference = EDC9062C1F0AA090007B078C /* SnapClone.app */;
+			productReference = EDC9062C1F0AA090007B078C /* Latr.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -165,7 +165,7 @@
 					};
 				};
 			};
-			buildConfigurationList = EDC906271F0AA090007B078C /* Build configuration list for PBXProject "SnapClone" */;
+			buildConfigurationList = EDC906271F0AA090007B078C /* Build configuration list for PBXProject "Latr" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -178,7 +178,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				EDC9062B1F0AA090007B078C /* SnapClone */,
+				EDC9062B1F0AA090007B078C /* Latr */,
 			);
 		};
 /* End PBXProject section */
@@ -411,7 +411,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		EDC906271F0AA090007B078C /* Build configuration list for PBXProject "SnapClone" */ = {
+		EDC906271F0AA090007B078C /* Build configuration list for PBXProject "Latr" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				EDC9063C1F0AA090007B078C /* Debug */,
@@ -420,7 +420,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		EDC9063E1F0AA090007B078C /* Build configuration list for PBXNativeTarget "SnapClone" */ = {
+		EDC9063E1F0AA090007B078C /* Build configuration list for PBXNativeTarget "Latr" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				EDC9063F1F0AA090007B078C /* Debug */,

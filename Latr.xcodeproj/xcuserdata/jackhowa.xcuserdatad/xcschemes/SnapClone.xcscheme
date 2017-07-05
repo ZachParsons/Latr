@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "EDC9062B1F0AA090007B078C"
-               BuildableName = "SnapClone.app"
-               BlueprintName = "SnapClone"
-               ReferencedContainer = "container:SnapClone.xcodeproj">
+               BuildableName = "Latr.app"
+               BlueprintName = "Latr"
+               ReferencedContainer = "container:Latr.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -33,9 +33,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "EDC9062B1F0AA090007B078C"
-            BuildableName = "SnapClone.app"
-            BlueprintName = "SnapClone"
-            ReferencedContainer = "container:SnapClone.xcodeproj">
+            BuildableName = "Latr.app"
+            BlueprintName = "Latr"
+            ReferencedContainer = "container:Latr.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -56,9 +56,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "EDC9062B1F0AA090007B078C"
-            BuildableName = "SnapClone.app"
-            BlueprintName = "SnapClone"
-            ReferencedContainer = "container:SnapClone.xcodeproj">
+            BuildableName = "Latr.app"
+            BlueprintName = "Latr"
+            ReferencedContainer = "container:Latr.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -75,9 +75,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "EDC9062B1F0AA090007B078C"
-            BuildableName = "SnapClone.app"
-            BlueprintName = "SnapClone"
-            ReferencedContainer = "container:SnapClone.xcodeproj">
+            BuildableName = "Latr.app"
+            BlueprintName = "Latr"
+            ReferencedContainer = "container:Latr.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
