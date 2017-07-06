@@ -187,16 +187,6 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hR3-2E-2HL">
-                                <rect key="frame" x="183" y="318" width="46" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="46" id="U0l-Co-dCZ"/>
-                                </constraints>
-                                <state key="normal" title="Next"/>
-                                <connections>
-                                    <action selector="tappedNext:" destination="LVq-wu-htG" eventType="touchUpInside" id="Uzh-DM-shB"/>
-                                </connections>
-                            </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Display? Yes or No" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bib-MF-XT9" userLabel="Displayable Text Field">
                                 <rect key="frame" x="87" y="265" width="240" height="30"/>
                                 <constraints>
@@ -207,18 +197,37 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="CvL-Ak-lR6">
+                                <rect key="frame" x="87.666666666666686" y="303" width="240" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hR3-2E-2HL">
+                                <rect key="frame" x="184" y="353" width="46" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="46" id="U0l-Co-dCZ"/>
+                                </constraints>
+                                <state key="normal" title="Next"/>
+                                <connections>
+                                    <action selector="tappedNext:" destination="LVq-wu-htG" eventType="touchUpInside" id="Uzh-DM-shB"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="RND-og-aee" firstAttribute="centerX" secondItem="qDr-Jb-17O" secondAttribute="centerX" id="100-jS-rBR"/>
                             <constraint firstItem="RND-og-aee" firstAttribute="centerX" secondItem="SDE-L1-SJV" secondAttribute="centerX" id="2hg-pf-JC8"/>
-                            <constraint firstItem="hR3-2E-2HL" firstAttribute="centerX" secondItem="qDr-Jb-17O" secondAttribute="centerX" constant="-1" id="3FC-VA-twa"/>
-                            <constraint firstItem="hR3-2E-2HL" firstAttribute="top" secondItem="RND-og-aee" secondAttribute="bottom" constant="61" id="4Mj-fI-EGu"/>
+                            <constraint firstItem="hR3-2E-2HL" firstAttribute="centerX" secondItem="qDr-Jb-17O" secondAttribute="centerX" id="3FC-VA-twa"/>
+                            <constraint firstItem="hR3-2E-2HL" firstAttribute="top" secondItem="RND-og-aee" secondAttribute="bottom" constant="96" id="4Mj-fI-EGu"/>
+                            <constraint firstItem="CvL-Ak-lR6" firstAttribute="top" secondItem="bib-MF-XT9" secondAttribute="bottom" constant="8" symbolic="YES" id="CZa-Qo-xgF"/>
                             <constraint firstItem="qDr-Jb-17O" firstAttribute="top" secondItem="Vtc-d0-CU0" secondAttribute="bottom" constant="20" id="ELq-et-FfT"/>
                             <constraint firstItem="RND-og-aee" firstAttribute="top" secondItem="qDr-Jb-17O" secondAttribute="bottom" constant="15" id="EzI-tB-xao"/>
                             <constraint firstItem="bib-MF-XT9" firstAttribute="centerX" secondItem="RND-og-aee" secondAttribute="centerX" id="LDX-Hh-wQ7"/>
+                            <constraint firstItem="CvL-Ak-lR6" firstAttribute="centerX" secondItem="bib-MF-XT9" secondAttribute="centerX" id="NQr-Ba-Usd"/>
                             <constraint firstItem="RND-og-aee" firstAttribute="width" secondItem="qDr-Jb-17O" secondAttribute="width" id="m97-UG-l8U"/>
                             <constraint firstItem="bib-MF-XT9" firstAttribute="top" secondItem="RND-og-aee" secondAttribute="bottom" constant="8" id="x9A-vp-i93"/>
+                            <constraint firstItem="CvL-Ak-lR6" firstAttribute="width" secondItem="bib-MF-XT9" secondAttribute="width" id="yya-fE-ebv"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="gpj-I9-A42">
@@ -229,6 +238,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="datePickerText" destination="CvL-Ak-lR6" id="UEu-aH-ggd"/>
                         <outlet property="descriptionTextField" destination="RND-og-aee" id="lZO-gL-ZQH"/>
                         <outlet property="displayableTextField" destination="bib-MF-XT9" id="fWd-fz-BwL"/>
                         <outlet property="imageView" destination="qDr-Jb-17O" id="LLw-UP-zss"/>

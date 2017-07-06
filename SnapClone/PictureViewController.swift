@@ -25,6 +25,9 @@ class PictureViewController: UIViewController, UIImagePickerControllerDelegate, 
     
     // need to make a new ib outlet for displayable to be timefield
     
+    @IBOutlet weak var datePickerText: UITextField!
+    
+    let datePicker = UIDatePicker()
     
     
     
