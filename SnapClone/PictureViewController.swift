@@ -166,5 +166,6 @@ class PictureViewController: UIViewController, UIImagePickerControllerDelegate, 
         nextVC.uuid = uuid
         
         nextVC.displayable = displayableTextField.text!
+        nextVC.getAt = datePickerText.text!
     }
 }
