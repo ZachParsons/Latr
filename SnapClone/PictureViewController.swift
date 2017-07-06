@@ -17,8 +17,6 @@ class PictureViewController: UIViewController, UIImagePickerControllerDelegate, 
     
     @IBOutlet weak var imageView: UIImageView!
     
-    @IBOutlet weak var displayableTextField: UITextField!
-    
     @IBOutlet weak var nextButton: UIButton!
     
     @IBOutlet weak var descriptionTextField: UITextField!
@@ -44,11 +42,18 @@ class PictureViewController: UIViewController, UIImagePickerControllerDelegate, 
     }
     
     
+    
+    
+    @IBAction func tappedGestureAnywhere(_ sender: Any) {
+        descriptionTextField.resignFirstResponder()
+        datePickerText.resignFirstResponder()
+    }
+    
     func createDatePicker() {
         
         // format picker 
         // for only date
-//        datePicker.datePickerMode = .date
+        datePicker.datePickerMode = .date
         
         // toolbar
         let toolbar = UIToolbar()
@@ -110,10 +115,10 @@ class PictureViewController: UIViewController, UIImagePickerControllerDelegate, 
     
     @IBAction func tappedCamera(_ sender: Any) {
         // for testing we're going to pick one
-        imagePicker.sourceType = .savedPhotosAlbum
+//        imagePicker.sourceType = .savedPhotosAlbum
         // should be camera
         
-//        imagePicker.sourceType = .camera
+        imagePicker.sourceType = .camera
         
         
         // would muck up the ui if allowed editing
@@ -121,6 +126,19 @@ class PictureViewController: UIViewController, UIImagePickerControllerDelegate, 
         present(imagePicker, animated: true, completion: nil)
     }
     
+    @IBAction func tappedLibraryPlus(_ sender: Any) {
+        // for testing we're going to pick one
+        imagePicker.sourceType = .savedPhotosAlbum
+        // should be camera
+        
+        //        imagePicker.sourceType = .camera
+        
+        
+        // would muck up the ui if allowed editing
+        imagePicker.allowsEditing = false
+        present(imagePicker, animated: true, completion: nil)
+        
+    }
     
     @IBAction func tappedNext(_ sender: Any) {
         nextButton.isEnabled = false
@@ -165,6 +183,7 @@ class PictureViewController: UIViewController, UIImagePickerControllerDelegate, 
         // perisist the property of uuid of the created photo to next scene 
         nextVC.uuid = uuid
         
-        nextVC.displayable = displayableTextField.text!
+//        nextVC.displayable = displayableTextField.text!
+        nextVC.getAt = datePickerText.text!
     }
 }

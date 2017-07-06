@@ -28,12 +28,17 @@ class SelectUserViewController: UIViewController, UITableViewDataSource, UITable
     
     var displayable = ""
     
+    // show date 
+    var getAt = ""
+
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         // using delegate to reference the table view outlet
         self.tableView.dataSource = self
         self.tableView.delegate = self
+        self.title = "Contacts"
         
         // call the database of firebase
         // listen for db changes at a particular place or index
@@ -84,6 +89,9 @@ class SelectUserViewController: UIViewController, UITableViewDataSource, UITable
         // assign the label of text
         cell.textLabel?.text = user.email
         
+        // make cell a different color 
+        // if date is too soon, then make a different color
+        
         return cell
         
         
@@ -96,7 +104,12 @@ class SelectUserViewController: UIViewController, UITableViewDataSource, UITable
         // need to make a dictionary 
         // gets descrip and image url from sender user input in the picture view 
         // sender should always be current user
-        let message = ["from": Auth.auth().currentUser!.email!, "description": descrip, "image_url": imageURL, "uuid": uuid, "displayable": displayable]
+        
+        // update the get At time 
+        // get at = d/M/yy 
+        // via http://nsdateformatter.com/
+        
+        let message = ["from": Auth.auth().currentUser!.email!, "description": descrip, "image_url": imageURL, "uuid": uuid, "displayable": displayable, "getAt": getAt]
         
         // child by auto id is a firebase function that prevents reuse of id and makes unique
         // add the message to the set value
