@@ -54,7 +54,8 @@ class PictureViewController: UIViewController, UIImagePickerControllerDelegate, 
         
         // create done button icon
         // action is the function that will be called
-        let doneButton = UIBarButtonItem(barButtonSystemItem: .done, target: nil, action: nil)
+        // selector ends the assignment to the textfield 
+        let doneButton = UIBarButtonItem(barButtonSystemItem: .done, target: nil, action: #selector(donePressed))
         
         toolbar.setItems([doneButton], animated: true)
         
@@ -63,6 +64,14 @@ class PictureViewController: UIViewController, UIImagePickerControllerDelegate, 
         // assign the datepicker to text field
         datePickerText.inputView = datePicker
         
+    }
+    
+    func donePressed() {
+        // assign input text of the returned datePicker var
+        datePickerText.text = "\(datePicker.date)"
+        
+        // close picker view
+        self.view.endEditing(true)
     }
     
     
