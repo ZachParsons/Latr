@@ -7,6 +7,7 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Navigation items with more than one left or right bar item" minToolsVersion="7.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -130,7 +131,7 @@
                                 <action selector="tappedLogout:" destination="8dN-xO-gqW" id="tnk-xi-Bn1"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="icj-Er-L33">
+                        <barButtonItem key="rightBarButtonItem" systemItem="compose" id="icj-Er-L33">
                             <connections>
                                 <segue destination="LVq-wu-htG" kind="show" id="1oJ-b5-vnA"/>
                             </connections>
@@ -187,7 +188,7 @@
             </objects>
             <point key="canvasLocation" x="1775.2" y="888.30584707646187"/>
         </scene>
-        <!--Picture View Controller-->
+        <!--Message-->
         <scene sceneID="oft-NR-gD0">
             <objects>
                 <viewController id="LVq-wu-htG" customClass="PictureViewController" customModule="Latr" customModuleProvider="target" sceneMemberID="viewController">
@@ -256,12 +257,19 @@
                             <constraint firstItem="CvL-Ak-lR6" firstAttribute="width" secondItem="bib-MF-XT9" secondAttribute="width" id="yya-fE-ebv"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="gpj-I9-A42">
-                        <barButtonItem key="rightBarButtonItem" systemItem="camera" id="ZAI-1f-x8p">
-                            <connections>
-                                <action selector="tappedCamera:" destination="LVq-wu-htG" id="cU7-aO-BgS"/>
-                            </connections>
-                        </barButtonItem>
+                    <navigationItem key="navigationItem" title="Message" id="gpj-I9-A42">
+                        <rightBarButtonItems>
+                            <barButtonItem systemItem="camera" id="ZAI-1f-x8p">
+                                <connections>
+                                    <action selector="tappedCamera:" destination="LVq-wu-htG" id="cU7-aO-BgS"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem systemItem="add" id="3Ht-2V-IQJ">
+                                <connections>
+                                    <action selector="tappedLibraryPlus:" destination="LVq-wu-htG" id="5AK-kn-3Pu"/>
+                                </connections>
+                            </barButtonItem>
+                        </rightBarButtonItems>
                     </navigationItem>
                     <connections>
                         <outlet property="datePickerText" destination="CvL-Ak-lR6" id="UEu-aH-ggd"/>

@@ -38,6 +38,7 @@ class SelectUserViewController: UIViewController, UITableViewDataSource, UITable
         // using delegate to reference the table view outlet
         self.tableView.dataSource = self
         self.tableView.delegate = self
+        self.title = "Contacts"
         
         // call the database of firebase
         // listen for db changes at a particular place or index

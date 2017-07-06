@@ -108,20 +108,26 @@ class SnapsViewController: UIViewController, UITableViewDelegate, UITableViewDat
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = UITableViewCell()
-//        let cell = tableView.dequeueReusableCell(withIdentifier: <#T##String#>)
+//        let cell = UITableViewCell()
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cellID")!
         // for returning the one cell of no messages avail
         if messages.count == 0 {
             cell.textLabel?.text = "No Latr messages :("
             
+            
             // can't click error message cell lol
             cell.isUserInteractionEnabled = false
+            cell.detailTextLabel?.text = ""
 
         } else {
             let message = messages[indexPath.row]
             
             // set cell's text label
             cell.textLabel?.text = message.from
+            cell.detailTextLabel!.text = message.getAt
+            cell.isUserInteractionEnabled = true
+            
+            
             
             // can't return nil here ...
             // return nil cell for hidden message

@@ -49,6 +49,7 @@ class ViewSnapViewController: UIViewController {
         } else {
             print("we can show the photo now")
         }
+        self.title = message.from
     }
     
     // to make message disappear
