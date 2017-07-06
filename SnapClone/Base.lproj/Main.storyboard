@@ -221,7 +221,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hR3-2E-2HL">
-                                <rect key="frame" x="191" y="286" width="32" height="30"/>
+                                <rect key="frame" x="191" y="279" width="32" height="30"/>
                                 <state key="normal" title="Next"/>
                                 <connections>
                                     <action selector="tappedNext:" destination="LVq-wu-htG" eventType="touchUpInside" id="Uzh-DM-shB"/>
@@ -229,9 +229,10 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="CvL-Ak-lR6" firstAttribute="centerX" secondItem="SDE-L1-SJV" secondAttribute="centerX" id="2ih-rv-qf6"/>
-                            <constraint firstItem="hR3-2E-2HL" firstAttribute="top" secondItem="CvL-Ak-lR6" secondAttribute="bottom" constant="8" id="AdS-i9-od3"/>
+                            <constraint firstItem="hR3-2E-2HL" firstAttribute="top" secondItem="CvL-Ak-lR6" secondAttribute="bottom" constant="1" id="AdS-i9-od3"/>
                             <constraint firstItem="CvL-Ak-lR6" firstAttribute="top" secondItem="RND-og-aee" secondAttribute="bottom" constant="8" id="QIJ-vl-7y1"/>
                             <constraint firstItem="qDr-Jb-17O" firstAttribute="centerX" secondItem="SDE-L1-SJV" secondAttribute="centerX" id="bff-kZ-BgU"/>
                             <constraint firstItem="hR3-2E-2HL" firstAttribute="centerX" secondItem="SDE-L1-SJV" secondAttribute="centerX" id="c8u-e6-ujs"/>
@@ -241,6 +242,9 @@
                             <constraint firstItem="RND-og-aee" firstAttribute="top" secondItem="qDr-Jb-17O" secondAttribute="bottom" constant="8" id="mbk-BM-tpp"/>
                             <constraint firstItem="qDr-Jb-17O" firstAttribute="top" secondItem="Vtc-d0-CU0" secondAttribute="bottom" constant="10" id="rT5-vE-SQa"/>
                         </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="ywD-3A-R8K" appends="YES" id="YEA-pA-Bag"/>
+                        </connections>
                     </view>
                     <navigationItem key="navigationItem" title="Message" id="gpj-I9-A42">
                         <rightBarButtonItems>
@@ -265,6 +269,11 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="M0p-Is-rDL" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="ywD-3A-R8K">
+                    <connections>
+                        <action selector="tappedGestureAnywhere:" destination="LVq-wu-htG" id="7kw-X3-ijl"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="2575" y="140"/>
         </scene>

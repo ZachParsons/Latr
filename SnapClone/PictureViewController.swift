@@ -17,8 +17,6 @@ class PictureViewController: UIViewController, UIImagePickerControllerDelegate, 
     
     @IBOutlet weak var imageView: UIImageView!
     
-    @IBOutlet weak var displayableTextField: UITextField!
-    
     @IBOutlet weak var nextButton: UIButton!
     
     @IBOutlet weak var descriptionTextField: UITextField!
@@ -43,6 +41,13 @@ class PictureViewController: UIViewController, UIImagePickerControllerDelegate, 
         createDatePicker()
     }
     
+    
+    
+    
+    @IBAction func tappedGestureAnywhere(_ sender: Any) {
+        descriptionTextField.resignFirstResponder()
+        datePickerText.resignFirstResponder()
+    }
     
     func createDatePicker() {
         
@@ -178,7 +183,7 @@ class PictureViewController: UIViewController, UIImagePickerControllerDelegate, 
         // perisist the property of uuid of the created photo to next scene 
         nextVC.uuid = uuid
         
-        nextVC.displayable = displayableTextField.text!
+//        nextVC.displayable = displayableTextField.text!
         nextVC.getAt = datePickerText.text!
     }
 }
