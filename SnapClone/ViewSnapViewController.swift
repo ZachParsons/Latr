@@ -28,6 +28,24 @@ class ViewSnapViewController: UIViewController {
         } else {
             captionTextField.text = "Sorry you can't read this yet."
         }
+        
+        // ns current time
+        let date = NSDate()
+        print("current time")
+        print(date)
+        
+        print("string version")
+        print(message.getAt)
+        
+        print("new ns date")
+        let dateFormmater = DateFormatter()
+        dateFormmater.dateFormat = "d/M/yy"
+        let nativeGetAtDate = dateFormmater.date(from: message.getAt)
+        print(nativeGetAtDate!)
+        // 
+       
+        
+//        dateFormmater.dateFormat =
 
     }
     
@@ -43,8 +61,16 @@ class ViewSnapViewController: UIViewController {
                 print("we deleted the picture")
             }
         }
-    }
+        
 
+    
+        
+        
+
+    }
+    
 
 
 }
+
+

@@ -44,7 +44,7 @@ class SnapsViewController: UIViewController, UITableViewDelegate, UITableViewDat
             message.descrip = value?["description"] as! String
             message.from = value?["from"] as! String
             message.uuid = value?["uuid"] as! String
-            
+            message.getAt = value?["getAt"] as! String
             
             // take in the message's show critera
             message.displayable = value?["displayable"] as! String
