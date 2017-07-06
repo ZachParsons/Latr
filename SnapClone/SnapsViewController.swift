@@ -109,10 +109,13 @@ class SnapsViewController: UIViewController, UITableViewDelegate, UITableViewDat
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = UITableViewCell()
-        
+//        let cell = tableView.dequeueReusableCell(withIdentifier: <#T##String#>)
         // for returning the one cell of no messages avail
         if messages.count == 0 {
-            cell.textLabel?.text = "You have no Latr messages :("
+            cell.textLabel?.text = "No Latr messages :("
+            
+            // can't click error message cell lol
+            cell.isUserInteractionEnabled = false
 
         } else {
             let message = messages[indexPath.row]

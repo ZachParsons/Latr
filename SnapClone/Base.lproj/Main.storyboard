@@ -73,7 +73,7 @@
             </objects>
             <point key="canvasLocation" x="136.80000000000001" y="138.98050974512745"/>
         </scene>
-        <!--Snaps View Controller-->
+        <!--Inbox-->
         <scene sceneID="Xpr-zL-eqd">
             <objects>
                 <viewController automaticallyAdjustsScrollViewInsets="NO" id="8dN-xO-gqW" customClass="SnapsViewController" customModule="Latr" customModuleProvider="target" sceneMemberID="viewController">
@@ -88,6 +88,32 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="gIR-iQ-u5R">
                                 <rect key="frame" x="20" y="64" width="374" height="672"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cellID" textLabel="OJZ-tj-PKE" detailTextLabel="5wD-TC-oqY" style="IBUITableViewCellStyleSubtitle" id="Q8Y-Uj-h0Z">
+                                        <rect key="frame" x="0.0" y="28" width="374" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Q8Y-Uj-h0Z" id="ZLh-o2-qp2">
+                                            <rect key="frame" x="0.0" y="0.0" width="374" height="43.666666666666664"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="OJZ-tj-PKE">
+                                                    <rect key="frame" x="15" y="5" width="33.333333333333336" height="20.333333333333332"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Detail" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="5wD-TC-oqY">
+                                                    <rect key="frame" x="15" y="25.333333333333332" width="32.666666666666664" height="14.333333333333334"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -98,7 +124,7 @@
                             <constraint firstItem="gIR-iQ-u5R" firstAttribute="leading" secondItem="O84-Tf-XkS" secondAttribute="leadingMargin" id="q2v-j7-cXU"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="lg4-AU-Jjq">
+                    <navigationItem key="navigationItem" title="Inbox" id="lg4-AU-Jjq">
                         <barButtonItem key="leftBarButtonItem" title="Logout" id="e0C-F4-YUW">
                             <connections>
                                 <action selector="tappedLogout:" destination="8dN-xO-gqW" id="tnk-xi-Bn1"/>
