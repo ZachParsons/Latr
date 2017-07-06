@@ -25,7 +25,11 @@ class PictureViewController: UIViewController, UIImagePickerControllerDelegate, 
     
     // need to make a new ib outlet for displayable to be timefield
     
+    @IBOutlet weak var datePickerText: UITextField!
     
+    let datePicker = UIDatePicker()
+    
+
     
     
     // need to persist this unique photo id across scenes to delete from db
@@ -36,7 +40,55 @@ class PictureViewController: UIViewController, UIImagePickerControllerDelegate, 
         super.viewDidLoad()
         imagePicker.delegate = self
         nextButton.isEnabled = false
+        createDatePicker()
     }
+    
+    
+    func createDatePicker() {
+        
+        // format picker 
+        // for only date
+//        datePicker.datePickerMode = .date
+        
+        // toolbar
+        let toolbar = UIToolbar()
+        
+        // fit to screen
+        toolbar.sizeToFit()
+        
+        // create done button icon
+        // action is the function that will be called
+        // selector ends the assignment to the textfield
+        let doneButton = UIBarButtonItem(barButtonSystemItem: .done, target: nil, action: #selector(donePressed))
+        
+        toolbar.setItems([doneButton], animated: true)
+        
+        datePickerText.inputAccessoryView = toolbar
+        
+        // assign the datepicker to text field
+        datePickerText.inputView = datePicker
+        
+    }
+    
+    func donePressed() {
+        
+        // format 
+        // dateformatter object
+        let dateFormatter = DateFormatter()
+        
+        // shortened date show
+        dateFormatter.dateStyle = .short
+        dateFormatter.timeStyle = .none
+        
+        
+        // assign input text of the returned datePicker var
+        datePickerText.text = dateFormatter.string(from: datePicker.date)
+        
+        // close picker view
+        self.view.endEditing(true)
+    }
+    
+    
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
         // can also use edited image
