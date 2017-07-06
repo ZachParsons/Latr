@@ -29,6 +29,22 @@ class PictureViewController: UIViewController, UIImagePickerControllerDelegate, 
     
     let datePicker = UIDatePicker()
     
+    func createDatePicker() {
+        
+        // toolbar
+        let toolbar = UIToolbar()
+        
+        // fit to screen
+        toolbar.sizeToFit()
+        
+        // create done button icon 
+        // action is the function that will be called
+        let doneButton = UIBarButtonItem(barButtonSystemItem: .done, target: nil, action: nil)
+        
+        toolbar.setItems(doneButton, animated: true)
+        
+    }
+    
     
     
     // need to persist this unique photo id across scenes to delete from db
