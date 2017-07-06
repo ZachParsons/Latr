@@ -46,6 +46,10 @@ class PictureViewController: UIViewController, UIImagePickerControllerDelegate, 
     
     func createDatePicker() {
         
+        // format picker 
+        // for only date
+//        datePicker.datePickerMode = .date
+        
         // toolbar
         let toolbar = UIToolbar()
         
@@ -54,7 +58,7 @@ class PictureViewController: UIViewController, UIImagePickerControllerDelegate, 
         
         // create done button icon
         // action is the function that will be called
-        // selector ends the assignment to the textfield 
+        // selector ends the assignment to the textfield
         let doneButton = UIBarButtonItem(barButtonSystemItem: .done, target: nil, action: #selector(donePressed))
         
         toolbar.setItems([doneButton], animated: true)
@@ -67,8 +71,18 @@ class PictureViewController: UIViewController, UIImagePickerControllerDelegate, 
     }
     
     func donePressed() {
+        
+        // format 
+        // dateformatter object
+        let dateFormatter = DateFormatter()
+        
+        // shortened date show
+        dateFormatter.dateStyle = .short
+        dateFormatter.timeStyle = .none
+        
+        
         // assign input text of the returned datePicker var
-        datePickerText.text = "\(datePicker.date)"
+        datePickerText.text = dateFormatter.string(from: datePicker.date)
         
         // close picker view
         self.view.endEditing(true)
