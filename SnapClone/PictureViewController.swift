@@ -29,22 +29,7 @@ class PictureViewController: UIViewController, UIImagePickerControllerDelegate, 
     
     let datePicker = UIDatePicker()
     
-    func createDatePicker() {
-        
-        // toolbar
-        let toolbar = UIToolbar()
-        
-        // fit to screen
-        toolbar.sizeToFit()
-        
-        // create done button icon 
-        // action is the function that will be called
-        let doneButton = UIBarButtonItem(barButtonSystemItem: .done, target: nil, action: nil)
-        
-        toolbar.setItems(doneButton, animated: true)
-        
-    }
-    
+
     
     
     // need to persist this unique photo id across scenes to delete from db
@@ -55,7 +40,32 @@ class PictureViewController: UIViewController, UIImagePickerControllerDelegate, 
         super.viewDidLoad()
         imagePicker.delegate = self
         nextButton.isEnabled = false
+        createDatePicker()
     }
+    
+    
+    func createDatePicker() {
+        
+        // toolbar
+        let toolbar = UIToolbar()
+        
+        // fit to screen
+        toolbar.sizeToFit()
+        
+        // create done button icon
+        // action is the function that will be called
+        let doneButton = UIBarButtonItem(barButtonSystemItem: .done, target: nil, action: nil)
+        
+        toolbar.setItems([doneButton], animated: true)
+        
+        datePickerText.inputAccessoryView = toolbar
+        
+        // assign the datepicker to text field
+        datePickerText.inputView = datePicker
+        
+    }
+    
+    
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
         // can also use edited image
