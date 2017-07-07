@@ -68,13 +68,6 @@ class SnapsViewController: UIViewController, UITableViewDelegate, UITableViewDat
             for message in self.messages {
                 // ns current time
 //                let date = Date()
-//                print("current time")
-//                print(date)
-//                
-//                print("string version")
-//                print(message.getAt)
-//                
-//                print("new ns date")
 //                let dateFormmater = DateFormatter()
 //                dateFormmater.dateFormat = "d/M/yy"
 //                let nativeGetAtDate = dateFormmater.date(from: message.getAt)
