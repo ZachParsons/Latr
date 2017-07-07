@@ -32,6 +32,10 @@ class SignInViewController: UIViewController {
         
         
     }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        createAlert(title: "yo", message: "heyyy")
+    }
     // we're logging in and registering now
     // this will be easier than handling both on different pages
     
@@ -73,6 +77,7 @@ class SignInViewController: UIViewController {
             alert.dismiss(animated: true, completion: nil)
         }))
         
+        self.present(alert, animated: true, completion: nil)
         
     }
 }
