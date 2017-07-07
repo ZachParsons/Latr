@@ -65,26 +65,20 @@ class SnapsViewController: UIViewController, UITableViewDelegate, UITableViewDat
             
             // need to make loop for removing programmatically
             var index = 0
+            
+            // ns current time
+            let date = Date()
+            let dateFormmater = DateFormatter()
+            dateFormmater.dateFormat = "d/M/yy"
+
             for message in self.messages {
-                // ns current time
-//                let date = Date()
-//                print("current time")
-//                print(date)
-//                
-//                print("string version")
-//                print(message.getAt)
-//                
-//                print("new ns date")
-//                let dateFormmater = DateFormatter()
-//                dateFormmater.dateFormat = "d/M/yy"
-//                let nativeGetAtDate = dateFormmater.date(from: message.getAt)
-//                print(nativeGetAtDate!)
-//                print(date)
+                // can't loop through and call date all of these times
+                let nativeGetAtDate = dateFormmater.date(from: message.getAt)
                 if message.key == snapshot.key {
                     // make sure unshown db items aren't deleted
-//                    if date >= nativeGetAtDate! {
+                    if date >= nativeGetAtDate! {
                         self.messages.remove(at: index)
-//                    }
+                    }
                 }
                index += 1
             }
