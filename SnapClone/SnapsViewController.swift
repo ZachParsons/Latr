@@ -47,7 +47,7 @@ class SnapsViewController: UIViewController, UITableViewDelegate, UITableViewDat
             message.getAt = value?["getAt"] as! String
             
             // take in the message's show critera
-            message.displayable = value?["displayable"] as! String
+//            message.displayable = value?["displayable"] as! String
             
             // that message's unique id
             message.key = snapshot.key
@@ -67,24 +67,24 @@ class SnapsViewController: UIViewController, UITableViewDelegate, UITableViewDat
             var index = 0
             for message in self.messages {
                 // ns current time
-                let date = Date()
-                print("current time")
-                print(date)
-                
-                print("string version")
-                print(message.getAt)
-                
-                print("new ns date")
-                let dateFormmater = DateFormatter()
-                dateFormmater.dateFormat = "d/M/yy"
-                let nativeGetAtDate = dateFormmater.date(from: message.getAt)
-                print(nativeGetAtDate!)
-                print(date)
+//                let date = Date()
+//                print("current time")
+//                print(date)
+//                
+//                print("string version")
+//                print(message.getAt)
+//                
+//                print("new ns date")
+//                let dateFormmater = DateFormatter()
+//                dateFormmater.dateFormat = "d/M/yy"
+//                let nativeGetAtDate = dateFormmater.date(from: message.getAt)
+//                print(nativeGetAtDate!)
+//                print(date)
                 if message.key == snapshot.key {
                     // make sure unshown db items aren't deleted
-                    if date >= nativeGetAtDate! {
+//                    if date >= nativeGetAtDate! {
                         self.messages.remove(at: index)
-                    }
+//                    }
                 }
                index += 1
             }
@@ -142,13 +142,6 @@ class SnapsViewController: UIViewController, UITableViewDelegate, UITableViewDat
             cell.isUserInteractionEnabled = true
             
             
-            
-            // can't return nil here ...
-            // return nil cell for hidden message
-//            if message.displayable == "No" {
-//                cell.isOpaque = true
-//                return cell
-//            }
         }
         return cell
     }

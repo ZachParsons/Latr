@@ -25,34 +25,34 @@ class ViewSnapViewController: UIViewController {
      
         
         // ns current time
-        let date = Date()
-        print("current time")
-        print(date)
-        
-        print("string version")
-        print(message.getAt)
-        
-        print("new ns date")
-        let dateFormmater = DateFormatter()
-        dateFormmater.dateFormat = "d/M/yy"
-        let nativeGetAtDate = dateFormmater.date(from: message.getAt)
-        print(nativeGetAtDate!)
-        print(date)
-        
-        if date < nativeGetAtDate! {
-            print("we can't show the photo until later")
-        } else {
-            print("we can show the photo now")
-        }
-        self.title = message.from
-        
-        
-        if date >= nativeGetAtDate! {
+//        let date = Date()
+//        print("current time")
+//        print(date)
+//        
+//        print("string version")
+//        print(message.getAt)
+//        
+//        print("new ns date")
+//        let dateFormmater = DateFormatter()
+//        dateFormmater.dateFormat = "d/M/yy"
+//        let nativeGetAtDate = dateFormmater.date(from: message.getAt)
+//        print(nativeGetAtDate!)
+//        print(date)
+//        
+//        if date < nativeGetAtDate! {
+//            print("we can't show the photo until later")
+//        } else {
+//            print("we can show the photo now")
+//        }
+//        self.title = message.from
+//        
+//        
+//        if date >= nativeGetAtDate! {
             captionTextField.text = message.descrip
             imageView.sd_setImage(with: URL(string: message.imageURL))
-        } else {
-            captionTextField.text = "Sorry you can't read this yet."
-        }
+//        } else {
+//            captionTextField.text = "Sorry you can't read this yet."
+//        }
     }
     
     // to make message disappear
@@ -64,24 +64,24 @@ class ViewSnapViewController: UIViewController {
         // interpolate the message's uuid url of the photo here to delete that too
         
         // ns current time
-        let date = Date()
-        print("current time")
-        print(date)
-        
-        print("string version")
-        print(message.getAt)
-        
-        print("new ns date")
-        let dateFormmater = DateFormatter()
-        dateFormmater.dateFormat = "d/M/yy"
-        let nativeGetAtDate = dateFormmater.date(from: message.getAt)
-        print(nativeGetAtDate!)
-        print(date)
-        
-        if date >= nativeGetAtDate! {
+//        let date = Date()
+//        print("current time")
+//        print(date)
+//        
+//        print("string version")
+//        print(message.getAt)
+//        
+//        print("new ns date")
+//        let dateFormmater = DateFormatter()
+//        dateFormmater.dateFormat = "d/M/yy"
+//        let nativeGetAtDate = dateFormmater.date(from: message.getAt)
+//        print(nativeGetAtDate!)
+//        print(date)
+//        
+//        if date >= nativeGetAtDate! {
             Storage.storage().reference().child("images").child("\(message.uuid).jpg").delete { (error) in
                 print("we deleted the picture")
-            }
+//            }
         }
         
 
