@@ -116,6 +116,6 @@ class SelectUserViewController: UIViewController, UITableViewDataSource, UITable
         Database.database().reference().child("users").child(user.uid).child("messages").childByAutoId().setValue(message)
         
         // after selecting a row, go back to the root to see any remaining messages
-        navigationController!.popToRootViewController(animated: true)
+       
     }
 }

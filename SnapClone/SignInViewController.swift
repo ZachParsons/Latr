@@ -49,16 +49,20 @@ class SignInViewController: UIViewController {
                         if error != nil {
                             print("There's an error: \(String(describing: error))")
                             // inspirational wrong password
-                            self.createAlert(title: "Sorry Wrong Password", message: "Try again, I believe in you.")
+                            self.wrongPassword(title: "Sorry Wrong Password", message: "Try again, I believe in you.")
                         } else {
                             print("created user successfully")
+                            
+                            Database.database().reference().child("users").child(user!.uid).child("email").setValue(user!.email!)
+                            
+                            self.newUser(title: "Hello there", message: "Welcome to Latr")
                             
                             // set value of that email
                             // give enough children to set user id here in the firebase storage 
                             // putting code inside the creation code 
-                            Database.database().reference().child("users").child(user!.uid).child("email").setValue(user!.email!)
                             
-                            self.performSegue(withIdentifier: "signInSegue", sender: nil)
+                            
+//                            self.performSegue(withIdentifier: "signInSegue", sender: nil)
                         }
                     })
                 } else {
@@ -68,7 +72,7 @@ class SignInViewController: UIViewController {
         }
         )}
     
-    func createAlert(title: String, message: String) {
+    func wrongPassword(title: String, message: String) {
         let alert = UIAlertController(title: title, message: message, preferredStyle: UIAlertControllerStyle.alert)
         
         alert.addAction(UIAlertAction(title: "Dismiss", style: UIAlertActionStyle.cancel, handler: { (action) in
@@ -76,6 +80,19 @@ class SignInViewController: UIViewController {
             alert.dismiss(animated: true, completion: nil)
         }))
         
+        self.present(alert, animated: true, completion: nil)
+    }
+    
+    func newUser(title: String, message: String) {
+        let alert = UIAlertController(title: title, message: message, preferredStyle: UIAlertControllerStyle.alert)
+        
+        alert.addAction(UIAlertAction(title: "Thanks", style: UIAlertActionStyle.default, handler: { (action) in
+            // what to do when button clicked
+            alert.dismiss(animated: true, completion: nil)
+            print("Signed in successfully")
+            self.performSegue(withIdentifier: "signInSegue", sender: nil)
+        }))
+
         self.present(alert, animated: true, completion: nil)
         
     }
