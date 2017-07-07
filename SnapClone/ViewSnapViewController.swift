@@ -41,29 +41,14 @@ class ViewSnapViewController: UIViewController {
     
     // to make message disappear
     override func viewWillDisappear(_ animated: Bool) {
-        // test print statement
-        print("disappearing view")
-       
-        
         // interpolate the message's uuid url of the photo here to delete that too
         
         // ns current time
         let date = Date()
-//        print("current time")
-//        print(date)
-//        
-//        print("string version")
-//        print(message.getAt)
-//        
-//        print("new ns date")
         let dateFormmater = DateFormatter()
         dateFormmater.dateFormat = "d/M/yy"
         let nativeGetAtDate = dateFormmater.date(from: message.getAt)
-//        print(nativeGetAtDate!)
-//        print(date)
-        
-
-//        
+ 
         if date >= nativeGetAtDate! {
             Database.database().reference().child("users").child(Auth.auth().currentUser!.uid).child("messages").child(message.key).removeValue()
             Storage.storage().reference().child("images").child("\(message.uuid).jpg").delete { (error) in
