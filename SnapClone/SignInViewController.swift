@@ -32,6 +32,7 @@ class SignInViewController: UIViewController {
         
         
     }
+
     // we're logging in and registering now
     // this will be easier than handling both on different pages
     
@@ -47,6 +48,8 @@ class SignInViewController: UIViewController {
                         print("we tried to create a user")
                         if error != nil {
                             print("There's an error: \(String(describing: error))")
+                            // inspirational wrong password
+                            self.createAlert(title: "Sorry Wrong Password", message: "Try again, I believe in you.")
                         } else {
                             print("created user successfully")
                             
@@ -64,5 +67,18 @@ class SignInViewController: UIViewController {
                 }
         }
         )}
+    
+    func createAlert(title: String, message: String) {
+        let alert = UIAlertController(title: title, message: message, preferredStyle: UIAlertControllerStyle.alert)
+        
+        alert.addAction(UIAlertAction(title: "Dismiss", style: UIAlertActionStyle.cancel, handler: { (action) in
+            // what to do when button clicked
+            alert.dismiss(animated: true, completion: nil)
+        }))
+        
+        self.present(alert, animated: true, completion: nil)
+        
+    }
 }
+
 
