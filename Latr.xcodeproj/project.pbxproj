@@ -386,7 +386,7 @@
 				DEVELOPMENT_TEAM = GBSL72H2K7;
 				INFOPLIST_FILE = SnapClone/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.jackhowa.SnapClone;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jackhowa.Latr;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -401,7 +401,7 @@
 				DEVELOPMENT_TEAM = GBSL72H2K7;
 				INFOPLIST_FILE = SnapClone/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.jackhowa.SnapClone;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jackhowa.Latr;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
