@@ -45,6 +45,9 @@
                                 <rect key="frame" x="82" y="241" width="250" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Register"/>
+                                <connections>
+                                    <segue destination="SkW-Uq-3Nf" kind="presentation" identifier="registerView" id="LQj-Fn-HOf"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oPa-Ff-65w" userLabel="Sign In Button">
                                 <rect key="frame" x="188" y="198" width="38" height="30"/>
@@ -172,6 +175,17 @@
                                 <rect key="frame" x="179" y="506" width="57" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Register"/>
+                                <connections>
+                                    <segue destination="nk3-YV-HiQ" kind="presentation" id="4yn-va-QtM"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="goI-Gj-Qfs">
+                                <rect key="frame" x="68" y="570" width="278" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="I already have an account I want to Login"/>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="presentation" id="yM4-Om-JqN"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -179,7 +193,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VQp-a9-veS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="44.927536231884062" y="804.61956521739137"/>
+            <point key="canvasLocation" x="45" y="815"/>
         </scene>
         <!--Inbox-->
         <scene sceneID="Xpr-zL-eqd">
@@ -436,4 +450,7 @@
             <point key="canvasLocation" x="945" y="139"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="4yn-va-QtM"/>
+    </inferredMetricsTieBreakers>
 </document>
