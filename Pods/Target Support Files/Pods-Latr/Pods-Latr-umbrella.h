@@ -11,6 +11,6 @@
 #endif
 
 
-FOUNDATION_EXPORT double Pods_SnapCloneVersionNumber;
-FOUNDATION_EXPORT const unsigned char Pods_SnapCloneVersionString[];
+FOUNDATION_EXPORT double Pods_LatrVersionNumber;
+FOUNDATION_EXPORT const unsigned char Pods_LatrVersionString[];
 
