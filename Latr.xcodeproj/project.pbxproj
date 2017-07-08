@@ -8,6 +8,29 @@
 
 /* Begin PBXBuildFile section */
 		CC6D0AE6C32B929DAFF977F9 /* Pods_SnapClone.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06398A643EA6E9AD0D232691 /* Pods_SnapClone.framework */; };
+		ED1B9F4C1F102A67005FD362 /* Contents.json in Resources */ = {isa = PBXBuildFile; fileRef = ED1B9F351F102A67005FD362 /* Contents.json */; };
+		ED1B9F4D1F102A67005FD362 /* Icon-App-20x20@1x.png in Resources */ = {isa = PBXBuildFile; fileRef = ED1B9F361F102A67005FD362 /* Icon-App-20x20@1x.png */; };
+		ED1B9F4E1F102A67005FD362 /* Icon-App-20x20@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = ED1B9F371F102A67005FD362 /* Icon-App-20x20@2x.png */; };
+		ED1B9F4F1F102A67005FD362 /* Icon-App-20x20@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = ED1B9F381F102A67005FD362 /* Icon-App-20x20@3x.png */; };
+		ED1B9F501F102A67005FD362 /* Icon-App-29x29@1x.png in Resources */ = {isa = PBXBuildFile; fileRef = ED1B9F391F102A67005FD362 /* Icon-App-29x29@1x.png */; };
+		ED1B9F511F102A67005FD362 /* Icon-App-29x29@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = ED1B9F3A1F102A67005FD362 /* Icon-App-29x29@2x.png */; };
+		ED1B9F521F102A67005FD362 /* Icon-App-29x29@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = ED1B9F3B1F102A67005FD362 /* Icon-App-29x29@3x.png */; };
+		ED1B9F531F102A67005FD362 /* Icon-App-40x40@1x.png in Resources */ = {isa = PBXBuildFile; fileRef = ED1B9F3C1F102A67005FD362 /* Icon-App-40x40@1x.png */; };
+		ED1B9F541F102A67005FD362 /* Icon-App-40x40@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = ED1B9F3D1F102A67005FD362 /* Icon-App-40x40@2x.png */; };
+		ED1B9F551F102A67005FD362 /* Icon-App-40x40@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = ED1B9F3E1F102A67005FD362 /* Icon-App-40x40@3x.png */; };
+		ED1B9F561F102A67005FD362 /* Icon-App-57x57@1x.png in Resources */ = {isa = PBXBuildFile; fileRef = ED1B9F3F1F102A67005FD362 /* Icon-App-57x57@1x.png */; };
+		ED1B9F571F102A67005FD362 /* Icon-App-57x57@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = ED1B9F401F102A67005FD362 /* Icon-App-57x57@2x.png */; };
+		ED1B9F581F102A67005FD362 /* Icon-App-60x60@1x.png in Resources */ = {isa = PBXBuildFile; fileRef = ED1B9F411F102A67005FD362 /* Icon-App-60x60@1x.png */; };
+		ED1B9F591F102A67005FD362 /* Icon-App-60x60@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = ED1B9F421F102A67005FD362 /* Icon-App-60x60@2x.png */; };
+		ED1B9F5A1F102A67005FD362 /* Icon-App-60x60@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = ED1B9F431F102A67005FD362 /* Icon-App-60x60@3x.png */; };
+		ED1B9F5B1F102A67005FD362 /* Icon-App-72x72@1x.png in Resources */ = {isa = PBXBuildFile; fileRef = ED1B9F441F102A67005FD362 /* Icon-App-72x72@1x.png */; };
+		ED1B9F5C1F102A67005FD362 /* Icon-App-72x72@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = ED1B9F451F102A67005FD362 /* Icon-App-72x72@2x.png */; };
+		ED1B9F5D1F102A67005FD362 /* Icon-App-76x76@1x.png in Resources */ = {isa = PBXBuildFile; fileRef = ED1B9F461F102A67005FD362 /* Icon-App-76x76@1x.png */; };
+		ED1B9F5E1F102A67005FD362 /* Icon-App-76x76@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = ED1B9F471F102A67005FD362 /* Icon-App-76x76@2x.png */; };
+		ED1B9F5F1F102A67005FD362 /* Icon-App-76x76@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = ED1B9F481F102A67005FD362 /* Icon-App-76x76@3x.png */; };
+		ED1B9F601F102A67005FD362 /* Icon-App-83.5x83.5@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = ED1B9F491F102A67005FD362 /* Icon-App-83.5x83.5@2x.png */; };
+		ED1B9F611F102A67005FD362 /* Icon-Small-50x50@1x.png in Resources */ = {isa = PBXBuildFile; fileRef = ED1B9F4A1F102A67005FD362 /* Icon-Small-50x50@1x.png */; };
+		ED1B9F621F102A67005FD362 /* Icon-Small-50x50@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = ED1B9F4B1F102A67005FD362 /* Icon-Small-50x50@2x.png */; };
 		ED349F9E1F0BCE1900FC1477 /* SelectUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED349F9D1F0BCE1900FC1477 /* SelectUserViewController.swift */; };
 		ED349FA01F0BE35000FC1477 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED349F9F1F0BE35000FC1477 /* User.swift */; };
 		ED349FA41F0BFFB300FC1477 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED349FA31F0BFFB300FC1477 /* Message.swift */; };
@@ -26,6 +49,29 @@
 		0055DD685E2137098640CCDA /* Pods-SnapClone.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SnapClone.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SnapClone/Pods-SnapClone.debug.xcconfig"; sourceTree = "<group>"; };
 		06398A643EA6E9AD0D232691 /* Pods_SnapClone.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SnapClone.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0A0F4A88DB1F406FDC253753 /* Pods-SnapClone.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SnapClone.release.xcconfig"; path = "Pods/Target Support Files/Pods-SnapClone/Pods-SnapClone.release.xcconfig"; sourceTree = "<group>"; };
+		ED1B9F351F102A67005FD362 /* Contents.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Contents.json; sourceTree = "<group>"; };
+		ED1B9F361F102A67005FD362 /* Icon-App-20x20@1x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-App-20x20@1x.png"; sourceTree = "<group>"; };
+		ED1B9F371F102A67005FD362 /* Icon-App-20x20@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-App-20x20@2x.png"; sourceTree = "<group>"; };
+		ED1B9F381F102A67005FD362 /* Icon-App-20x20@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-App-20x20@3x.png"; sourceTree = "<group>"; };
+		ED1B9F391F102A67005FD362 /* Icon-App-29x29@1x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-App-29x29@1x.png"; sourceTree = "<group>"; };
+		ED1B9F3A1F102A67005FD362 /* Icon-App-29x29@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-App-29x29@2x.png"; sourceTree = "<group>"; };
+		ED1B9F3B1F102A67005FD362 /* Icon-App-29x29@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-App-29x29@3x.png"; sourceTree = "<group>"; };
+		ED1B9F3C1F102A67005FD362 /* Icon-App-40x40@1x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-App-40x40@1x.png"; sourceTree = "<group>"; };
+		ED1B9F3D1F102A67005FD362 /* Icon-App-40x40@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-App-40x40@2x.png"; sourceTree = "<group>"; };
+		ED1B9F3E1F102A67005FD362 /* Icon-App-40x40@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-App-40x40@3x.png"; sourceTree = "<group>"; };
+		ED1B9F3F1F102A67005FD362 /* Icon-App-57x57@1x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-App-57x57@1x.png"; sourceTree = "<group>"; };
+		ED1B9F401F102A67005FD362 /* Icon-App-57x57@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-App-57x57@2x.png"; sourceTree = "<group>"; };
+		ED1B9F411F102A67005FD362 /* Icon-App-60x60@1x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-App-60x60@1x.png"; sourceTree = "<group>"; };
+		ED1B9F421F102A67005FD362 /* Icon-App-60x60@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-App-60x60@2x.png"; sourceTree = "<group>"; };
+		ED1B9F431F102A67005FD362 /* Icon-App-60x60@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-App-60x60@3x.png"; sourceTree = "<group>"; };
+		ED1B9F441F102A67005FD362 /* Icon-App-72x72@1x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-App-72x72@1x.png"; sourceTree = "<group>"; };
+		ED1B9F451F102A67005FD362 /* Icon-App-72x72@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-App-72x72@2x.png"; sourceTree = "<group>"; };
+		ED1B9F461F102A67005FD362 /* Icon-App-76x76@1x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-App-76x76@1x.png"; sourceTree = "<group>"; };
+		ED1B9F471F102A67005FD362 /* Icon-App-76x76@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-App-76x76@2x.png"; sourceTree = "<group>"; };
+		ED1B9F481F102A67005FD362 /* Icon-App-76x76@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-App-76x76@3x.png"; sourceTree = "<group>"; };
+		ED1B9F491F102A67005FD362 /* Icon-App-83.5x83.5@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-App-83.5x83.5@2x.png"; sourceTree = "<group>"; };
+		ED1B9F4A1F102A67005FD362 /* Icon-Small-50x50@1x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small-50x50@1x.png"; sourceTree = "<group>"; };
+		ED1B9F4B1F102A67005FD362 /* Icon-Small-50x50@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small-50x50@2x.png"; sourceTree = "<group>"; };
 		ED349F9D1F0BCE1900FC1477 /* SelectUserViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectUserViewController.swift; sourceTree = "<group>"; };
 		ED349F9F1F0BE35000FC1477 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		ED349FA31F0BFFB300FC1477 /* Message.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
@@ -69,6 +115,36 @@
 				06398A643EA6E9AD0D232691 /* Pods_SnapClone.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		ED1B9F341F102A67005FD362 /* AppIcon.appiconset */ = {
+			isa = PBXGroup;
+			children = (
+				ED1B9F351F102A67005FD362 /* Contents.json */,
+				ED1B9F361F102A67005FD362 /* Icon-App-20x20@1x.png */,
+				ED1B9F371F102A67005FD362 /* Icon-App-20x20@2x.png */,
+				ED1B9F381F102A67005FD362 /* Icon-App-20x20@3x.png */,
+				ED1B9F391F102A67005FD362 /* Icon-App-29x29@1x.png */,
+				ED1B9F3A1F102A67005FD362 /* Icon-App-29x29@2x.png */,
+				ED1B9F3B1F102A67005FD362 /* Icon-App-29x29@3x.png */,
+				ED1B9F3C1F102A67005FD362 /* Icon-App-40x40@1x.png */,
+				ED1B9F3D1F102A67005FD362 /* Icon-App-40x40@2x.png */,
+				ED1B9F3E1F102A67005FD362 /* Icon-App-40x40@3x.png */,
+				ED1B9F3F1F102A67005FD362 /* Icon-App-57x57@1x.png */,
+				ED1B9F401F102A67005FD362 /* Icon-App-57x57@2x.png */,
+				ED1B9F411F102A67005FD362 /* Icon-App-60x60@1x.png */,
+				ED1B9F421F102A67005FD362 /* Icon-App-60x60@2x.png */,
+				ED1B9F431F102A67005FD362 /* Icon-App-60x60@3x.png */,
+				ED1B9F441F102A67005FD362 /* Icon-App-72x72@1x.png */,
+				ED1B9F451F102A67005FD362 /* Icon-App-72x72@2x.png */,
+				ED1B9F461F102A67005FD362 /* Icon-App-76x76@1x.png */,
+				ED1B9F471F102A67005FD362 /* Icon-App-76x76@2x.png */,
+				ED1B9F481F102A67005FD362 /* Icon-App-76x76@3x.png */,
+				ED1B9F491F102A67005FD362 /* Icon-App-83.5x83.5@2x.png */,
+				ED1B9F4A1F102A67005FD362 /* Icon-Small-50x50@1x.png */,
+				ED1B9F4B1F102A67005FD362 /* Icon-Small-50x50@2x.png */,
+			);
+			path = AppIcon.appiconset;
 			sourceTree = "<group>";
 		};
 		ED349FA11F0BE39000FC1477 /* ViewControllers */ = {
@@ -118,6 +194,7 @@
 				ED349FA11F0BE39000FC1477 /* ViewControllers */,
 				EDC9062F1F0AA090007B078C /* AppDelegate.swift */,
 				EDC906361F0AA090007B078C /* Assets.xcassets */,
+				ED1B9F341F102A67005FD362 /* AppIcon.appiconset */,
 				EDC906381F0AA090007B078C /* LaunchScreen.storyboard */,
 				EDC9063B1F0AA090007B078C /* Info.plist */,
 				EDC906411F0AD99B007B078C /* GoogleService-Info.plist */,
@@ -188,10 +265,33 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ED1B9F5E1F102A67005FD362 /* Icon-App-76x76@2x.png in Resources */,
+				ED1B9F591F102A67005FD362 /* Icon-App-60x60@2x.png in Resources */,
+				ED1B9F511F102A67005FD362 /* Icon-App-29x29@2x.png in Resources */,
+				ED1B9F581F102A67005FD362 /* Icon-App-60x60@1x.png in Resources */,
+				ED1B9F601F102A67005FD362 /* Icon-App-83.5x83.5@2x.png in Resources */,
+				ED1B9F4C1F102A67005FD362 /* Contents.json in Resources */,
+				ED1B9F561F102A67005FD362 /* Icon-App-57x57@1x.png in Resources */,
+				ED1B9F4E1F102A67005FD362 /* Icon-App-20x20@2x.png in Resources */,
 				EDC9063A1F0AA090007B078C /* LaunchScreen.storyboard in Resources */,
+				ED1B9F5B1F102A67005FD362 /* Icon-App-72x72@1x.png in Resources */,
+				ED1B9F521F102A67005FD362 /* Icon-App-29x29@3x.png in Resources */,
+				ED1B9F5A1F102A67005FD362 /* Icon-App-60x60@3x.png in Resources */,
+				ED1B9F571F102A67005FD362 /* Icon-App-57x57@2x.png in Resources */,
+				ED1B9F4F1F102A67005FD362 /* Icon-App-20x20@3x.png in Resources */,
 				EDC906421F0AD99B007B078C /* GoogleService-Info.plist in Resources */,
+				ED1B9F611F102A67005FD362 /* Icon-Small-50x50@1x.png in Resources */,
+				ED1B9F5C1F102A67005FD362 /* Icon-App-72x72@2x.png in Resources */,
 				EDC906371F0AA090007B078C /* Assets.xcassets in Resources */,
 				EDC906351F0AA090007B078C /* Main.storyboard in Resources */,
+				ED1B9F5F1F102A67005FD362 /* Icon-App-76x76@3x.png in Resources */,
+				ED1B9F531F102A67005FD362 /* Icon-App-40x40@1x.png in Resources */,
+				ED1B9F5D1F102A67005FD362 /* Icon-App-76x76@1x.png in Resources */,
+				ED1B9F4D1F102A67005FD362 /* Icon-App-20x20@1x.png in Resources */,
+				ED1B9F551F102A67005FD362 /* Icon-App-40x40@3x.png in Resources */,
+				ED1B9F541F102A67005FD362 /* Icon-App-40x40@2x.png in Resources */,
+				ED1B9F501F102A67005FD362 /* Icon-App-29x29@1x.png in Resources */,
+				ED1B9F621F102A67005FD362 /* Icon-Small-50x50@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -386,7 +486,7 @@
 				DEVELOPMENT_TEAM = GBSL72H2K7;
 				INFOPLIST_FILE = SnapClone/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.jackhowa.Latr;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jackhowa.SnapClone;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -401,7 +501,7 @@
 				DEVELOPMENT_TEAM = GBSL72H2K7;
 				INFOPLIST_FILE = SnapClone/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.jackhowa.Latr;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jackhowa.SnapClone;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
