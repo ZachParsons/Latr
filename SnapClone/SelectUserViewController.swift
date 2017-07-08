@@ -109,7 +109,7 @@ class SelectUserViewController: UIViewController, UITableViewDataSource, UITable
         // get at = d/M/yy 
         // via http://nsdateformatter.com/
         
-        let message = ["from": Auth.auth().currentUser!.email!, "description": descrip, "image_url": imageURL, "uuid": uuid, "displayable": displayable, "getAt": getAt]
+        let message = ["from": Auth.auth().currentUser!.email!, "description": descrip, "image_url": imageURL, "uuid": uuid, "getAt": getAt]
         
         // child by auto id is a firebase function that prevents reuse of id and makes unique
         // add the message to the set value
