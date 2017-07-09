@@ -74,9 +74,7 @@ class RegistrationPageViewController: UIViewController {
 //        // Here is where we need some guidance re saving textfield user inputs
 //        // Store data, refer to Login for post request to Firebase
 
-//        Database.database().reference().child("users").child(user!.uid).child("phone").setValue(user!.phone!)
-//        Database.database().reference().child("users").child(user!.uid).child("password").setValue(user!.password!)
-//    
+
         Auth.auth().createUser(withEmail: email!, password: password!, completion: { (user, error) in
             if error != nil{
                 print(error!)
