@@ -14,7 +14,8 @@ import FirebaseDatabase
 
 class RegistrationPageViewController: UIViewController {
     
-    let databaseRef = Database.database().reference(fromURL: "https://snapchat-f15b6.firebaseio.com")
+    let databaseRef = Database.database().reference(fromURL:
+        "https://snapchat-f15b6.firebaseio.com")
 
     @IBOutlet weak var userNameTextField: UITextField!
     @IBOutlet weak var userEmailTextField: UITextField!
@@ -111,7 +112,6 @@ class RegistrationPageViewController: UIViewController {
         }
         myAlert.addAction(okAction);
         self.present(myAlert, animated:true, completion:nil);
-        
     }
     
     
