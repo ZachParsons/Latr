@@ -48,7 +48,7 @@ class SnapsViewController: UIViewController, UITableViewDelegate, UITableViewDat
                     message.from = value?["from"] as! String
                     message.uuid = value?["uuid"] as! String
                     message.getAt = value?["getAt"] as! String
-            }
+                }
         
 
         
