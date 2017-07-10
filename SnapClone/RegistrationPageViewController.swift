@@ -16,7 +16,7 @@ class RegistrationPageViewController: UIViewController {
     
     let databaseRef = Database.database().reference(fromURL:
         "https://snapchat-f15b6.firebaseio.com")
-
+    
     @IBOutlet weak var userNameTextField: UITextField!
     @IBOutlet weak var userEmailTextField: UITextField!
     @IBOutlet weak var userPhoneTextField: UITextField!
@@ -25,10 +25,10 @@ class RegistrationPageViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // Do any additional setup after loading the view.
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -47,7 +47,7 @@ class RegistrationPageViewController: UIViewController {
     @IBAction func registerButtonTapped(_ sender: Any) {
         
         let user = ""
-//        let name = userNameTextField.text;
+        //        let name = userNameTextField.text;
         let email = userEmailTextField.text;
         let phone = userPhoneTextField.text;
         let password = userPasswordTextField.text;
@@ -57,11 +57,11 @@ class RegistrationPageViewController: UIViewController {
         if(email!.isEmpty || password!.isEmpty || confirmPassword!.isEmpty)
         {
             
-            // Display alert message 
+            // Display alert message
             displayAlertMessage(userMessage: "Email, Password, & Confirmed Password fields are required.")
             return;
         }
- 
+        
         // Check if passwords match
         if(password != confirmPassword)
         {
@@ -71,10 +71,10 @@ class RegistrationPageViewController: UIViewController {
             
         }
         
-//        // Here is where we need some guidance re saving textfield user inputs
-//        // Store data, refer to Login for post request to Firebase
-
-
+        //        // Here is where we need some guidance re saving textfield user inputs
+        //        // Store data, refer to Login for post request to Firebase
+        
+        
         Auth.auth().createUser(withEmail: email!, password: password!, completion: { (user, error) in
             if error != nil{
                 print(error!)
@@ -83,22 +83,22 @@ class RegistrationPageViewController: UIViewController {
             guard let uid = user?.uid else{
                 return
             }
-        
-
-        let userReference = self.databaseRef.child("users").child(uid)
-        let values = ["email": email, "phone": phone]
-        
-        userReference.updateChildValues(values
-            , withCompletionBlock: { (error, ref) in
-                if error != nil{
-                    print(error!)
-                    return
-                }
-                self.dismiss(animated: true, completion: nil)
+            
+            
+            let userReference = self.databaseRef.child("users").child(uid)
+            let values = ["email": email, "phone": phone]
+            
+            userReference.updateChildValues(values
+                , withCompletionBlock: { (error, ref) in
+                    if error != nil{
+                        print(error!)
+                        return
+                    }
+                    self.dismiss(animated: true, completion: nil)
+            })
+            
         })
         
-    })
-    
         
         
         // Display alert message with confirmation
@@ -113,4 +113,4 @@ class RegistrationPageViewController: UIViewController {
     }
     
     
-    }
+}

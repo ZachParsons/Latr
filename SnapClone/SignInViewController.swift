@@ -53,8 +53,10 @@ class SignInViewController: UIViewController {
                         } else {
                             print("created user successfully")
                             
+                            // db
                             Database.database().reference().child("users").child(user!.uid).child("email").setValue(user!.email!)
                             
+                            // alert
                             self.newUser(title: "Hello there", message: "Welcome to Latr")
                             
                             // set value of that email
