@@ -163,7 +163,7 @@
                                 <state key="normal" title="Register"/>
                                 <connections>
                                     <action selector="registerButtonTapped:" destination="SkW-Uq-3Nf" eventType="touchUpInside" id="oWv-mM-LOB"/>
-                                    <segue destination="8dN-xO-gqW" kind="presentation" id="GVb-W8-6dB"/>
+                                    <segue destination="8dN-xO-gqW" kind="presentation" identifier="registrationSegue" id="GVb-W8-6dB"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="goI-Gj-Qfs">

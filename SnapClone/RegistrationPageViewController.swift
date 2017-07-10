@@ -17,7 +17,7 @@ class RegistrationPageViewController: UIViewController {
     let databaseRef = Database.database().reference(fromURL:
         "https://snapchat-f15b6.firebaseio.com")
 
-    @IBOutlet weak var userNameTextField: UITextField!
+//    @IBOutlet weak var userNameTextField: UITextField!
     @IBOutlet weak var userEmailTextField: UITextField!
     @IBOutlet weak var userPhoneTextField: UITextField!
     @IBOutlet weak var userPasswordTextField: UITextField!
@@ -29,10 +29,6 @@ class RegistrationPageViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
     
     func displayAlertMessage(userMessage:String)
     {
@@ -77,12 +73,21 @@ class RegistrationPageViewController: UIViewController {
 
         Auth.auth().createUser(withEmail: email!, password: password!, completion: { (user, error) in
             if error != nil{
+                //
                 print(error!)
                 return
             }
+            
+            
             guard let uid = user?.uid else{
+//                print(uid)
+//                 Database.database().reference().child("users").child(user!.uid).child("email").setValue(user!.email!)
                 return
+                
             }
+            
+           
+
         
 
         let userReference = self.databaseRef.child("users").child(uid)
@@ -107,10 +112,11 @@ class RegistrationPageViewController: UIViewController {
         let okAction = UIAlertAction(title:"Ok", style: UIAlertActionStyle.default){
             action in
             self.dismiss(animated: true, completion:nil);
+            self.performSegue(withIdentifier: "registrationSegue", sender: nil);
+
         }
         myAlert.addAction(okAction);
         self.present(myAlert, animated:true, completion:nil);
     }
-    
     
     }
