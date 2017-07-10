@@ -28,6 +28,8 @@ class SignInViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
         // add into firebase database
         
         
@@ -44,27 +46,29 @@ class SignInViewController: UIViewController {
                 print("we tried to sign in")
                 if error != nil {
                     print("There's an error: \(String(describing: error))")
-                    Auth.auth().createUser(withEmail: self.emailTextField.text!, password: self.passwordTextField.text!, completion: { (user, error) in
-                        print("we tried to create a user")
-                        if error != nil {
-                            print("There's an error: \(String(describing: error))")
-                            // inspirational wrong password
-                            self.wrongPassword(title: "Sorry Wrong Password", message: "Try again, I believe in you.")
-                        } else {
-                            print("created user successfully")
-                            
-                            Database.database().reference().child("users").child(user!.uid).child("email").setValue(user!.email!)
-                            
-                            self.newUser(title: "Hello there", message: "Welcome to Latr")
-                            
-                            // set value of that email
-                            // give enough children to set user id here in the firebase storage 
-                            // putting code inside the creation code 
-                            
-                            
-//                            self.performSegue(withIdentifier: "signInSegue", sender: nil)
-                        }
-                    })
+                    self.wrongPassword(title: "Login Error", message: "Either unregistered email or wrong password.")
+                    
+//                    Auth.auth().createUser(withEmail: self.emailTextField.text!, password: self.passwordTextField.text!, completion: { (user, error) in
+//                        print("we tried to create a user")
+//                        if error != nil {
+//                            print("There's an error: \(String(describing: error))")
+//                            // inspirational wrong password
+//
+//                        } else {
+//                            print("created user successfully")
+//                            
+//                            Database.database().reference().child("users").child(user!.uid).child("email").setValue(user!.email!)
+//                            
+//                            self.newUser(title: "Hello there", message: "Welcome to Latr")
+//                            
+//                            // set value of that email
+//                            // give enough children to set user id here in the firebase storage 
+//                            // putting code inside the creation code 
+//                            
+//                            
+////                            self.performSegue(withIdentifier: "signInSegue", sender: nil)
+//                        }
+//                    })
                 } else {
                     print("Signed in successfully")
                     self.performSegue(withIdentifier: "signInSegue", sender: nil)
