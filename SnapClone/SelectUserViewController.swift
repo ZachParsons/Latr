@@ -138,7 +138,7 @@ class SelectUserViewController: UIViewController, UITableViewDataSource, UITable
             print("Request :", response.request!)
             
             // HTTP URL response --> header and status code
-            print("Response received is :", response.response)
+            print("Response received is :", response.response as Any)
             
             // server data : example 267 bytes
             print("Response data is :", response.data!)
