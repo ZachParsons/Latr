@@ -114,40 +114,40 @@ class SelectUserViewController: UIViewController, UITableViewDataSource, UITable
         
         let inputFormatter = DateFormatter()
         inputFormatter.dateFormat = "MM/dd/yy"
-        let showDate = inputFormatter.date(from: getAt)
+//        let showDate = inputFormatter.date(from: getAt)
         inputFormatter.dateFormat = "yyyy-MM-dd"
-        let deliver_at = inputFormatter.string(from: showDate!)
+//        let deliver_at = inputFormatter.string(from: showDate!)
         
         
-        let parameters: Parameters = [
-            "caption": descrip,
-            "image_url": imageURL,
-            "sender_id": "9",
-            "receiver_id": "9",
-            "deliver_at": deliver_at,
-//           "deliver_at": "07-09-2017",
-//            "deliverable": displayable
-        ]
+//        let parameters: Parameters = [
+//            "caption": descrip,
+//            "image_url": imageURL,
+//            "sender_id": "9",
+//            "receiver_id": "9",
+//            "deliver_at": deliver_at,
+////           "deliver_at": "07-09-2017",
+////            "deliverable": displayable
+//        ]
+//        
         
+//        let headers: HTTPHeaders = ["Accept": "application/json", "Content-Type" :"application/json"]
         
-        let headers: HTTPHeaders = ["Accept": "application/json", "Content-Type" :"application/json"]
-        
-        Alamofire.request("https://aqueous-waters-34203.herokuapp.com/messages", method: .post, parameters: parameters, encoding: JSONEncoding.default, headers: headers).responseJSON { response in
-            
-            // original URL request
-            print("Request :", response.request!)
-            
-            // HTTP URL response --> header and status code
-            print("Response received is :", response.response)
-            
-            // server data : example 267 bytes
-            print("Response data is :", response.data!)
-            
-            // result of response serialization : SUCCESS / FAILURE
-            print("Response result is :", response.result)
-            
-            debugPrint("Debug Print :", response)
-        }
+//        Alamofire.request("https://aqueous-waters-34203.herokuapp.com/messages", method: .post, parameters: parameters, encoding: JSONEncoding.default, headers: headers).responseJSON { response in
+//            
+//            // original URL request
+//            print("Request :", response.request!)
+//            
+//            // HTTP URL response --> header and status code
+//            print("Response received is :", response.response)
+//            
+//            // server data : example 267 bytes
+//            print("Response data is :", response.data!)
+//            
+//            // result of response serialization : SUCCESS / FAILURE
+//            print("Response result is :", response.result)
+//            
+//            debugPrint("Debug Print :", response)
+//        }
         
         
         // child by auto id is a firebase function that prevents reuse of id and makes unique
