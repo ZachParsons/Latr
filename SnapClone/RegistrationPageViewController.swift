@@ -54,16 +54,16 @@ class RegistrationPageViewController: UIViewController {
         {
         
 //             Display alert message 
-//            displayAlertMessage(userMessage: "Email, Password, & Confirmed Password fields are required.")
-//            return;
+            displayAlertMessage(userMessage: "Email, Password, & Confirmed Password fields are required.")
+            return;
         }
  
 //         Check if passwords match
         if(password != confirmPassword)
         {
             // Display alert message
-//            displayAlertMessage(userMessage: "Passwords do not match.")
-//            return;
+            displayAlertMessage(userMessage: "Passwords do not match.")
+            return;
             
         }
 //
@@ -98,7 +98,7 @@ class RegistrationPageViewController: UIViewController {
                     return
                 }
                 // error handling stuff
-//                self.dismiss(animated: true, completion: nil)
+                self.dismiss(animated: true, completion: nil)
                 self.performSegue(withIdentifier: "registrationSegue", sender: nil);
 
         })
@@ -109,15 +109,14 @@ class RegistrationPageViewController: UIViewController {
         // error handling registration 
         // not sure what's up seems to be
         // Display alert message with confirmation
-//        var myAlert = UIAlertController(title:"Alert", message:"Registration is successful.", preferredStyle:UIAlertControllerStyle.alert);
-//        
-//        let okAction = UIAlertAction(title:"Ok", style: UIAlertActionStyle.default){
-//            action in
-//            self.dismiss(animated: true, completion:nil);
-//
-//        }
-//        myAlert.addAction(okAction);
-//        self.present(myAlert, animated:true, completion:nil);
+        var myAlert = UIAlertController(title:"Alert", message:"Registration is successful.", preferredStyle:UIAlertControllerStyle.alert);
+       
+       let okAction = UIAlertAction(title:"Ok", style: UIAlertActionStyle.default){
+           action in
+           self.dismiss(animated: true, completion:nil);
+       }
+        myAlert.addAction(okAction);
+        self.present(myAlert, animated:true, completion:nil);
     }
     
     }
