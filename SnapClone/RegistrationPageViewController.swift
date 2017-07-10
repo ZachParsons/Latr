@@ -17,7 +17,7 @@ class RegistrationPageViewController: UIViewController {
     let databaseRef = Database.database().reference(fromURL:
         "https://snapchat-f15b6.firebaseio.com")
 
-//    @IBOutlet weak var userNameTextField: UITextField!
+    @IBOutlet weak var userNameTextField: UITextField!
     @IBOutlet weak var userEmailTextField: UITextField!
     @IBOutlet weak var userPhoneTextField: UITextField!
     @IBOutlet weak var userPasswordTextField: UITextField!
@@ -52,36 +52,34 @@ class RegistrationPageViewController: UIViewController {
         // Check for empty fields
         if(email!.isEmpty || password!.isEmpty || confirmPassword!.isEmpty)
         {
-            
-            // Display alert message 
-            displayAlertMessage(userMessage: "Email, Password, & Confirmed Password fields are required.")
-            return;
+        
+//             Display alert message 
+//            displayAlertMessage(userMessage: "Email, Password, & Confirmed Password fields are required.")
+//            return;
         }
  
-        // Check if passwords match
+//         Check if passwords match
         if(password != confirmPassword)
         {
             // Display alert message
-            displayAlertMessage(userMessage: "Passwords do not match.")
-            return;
+//            displayAlertMessage(userMessage: "Passwords do not match.")
+//            return;
             
         }
-        
+//
 //        // Here is where we need some guidance re saving textfield user inputs
 //        // Store data, refer to Login for post request to Firebase
 
 
         Auth.auth().createUser(withEmail: email!, password: password!, completion: { (user, error) in
             if error != nil{
-                //
                 print(error!)
                 return
             }
             
             
             guard let uid = user?.uid else{
-//                print(uid)
-//                 Database.database().reference().child("users").child(user!.uid).child("email").setValue(user!.email!)
+                // error handling for uid overlap perhaps
                 return
                 
             }
@@ -99,24 +97,27 @@ class RegistrationPageViewController: UIViewController {
                     print(error!)
                     return
                 }
-                self.dismiss(animated: true, completion: nil)
+                // error handling stuff
+//                self.dismiss(animated: true, completion: nil)
+                self.performSegue(withIdentifier: "registrationSegue", sender: nil);
+
         })
         
     })
     
         
-        
+        // error handling registration 
+        // not sure what's up seems to be
         // Display alert message with confirmation
-        var myAlert = UIAlertController(title:"Alert", message:"Registration is successful.", preferredStyle:UIAlertControllerStyle.alert);
-        
-        let okAction = UIAlertAction(title:"Ok", style: UIAlertActionStyle.default){
-            action in
-            self.dismiss(animated: true, completion:nil);
-            self.performSegue(withIdentifier: "registrationSegue", sender: nil);
-
-        }
-        myAlert.addAction(okAction);
-        self.present(myAlert, animated:true, completion:nil);
+//        var myAlert = UIAlertController(title:"Alert", message:"Registration is successful.", preferredStyle:UIAlertControllerStyle.alert);
+//        
+//        let okAction = UIAlertAction(title:"Ok", style: UIAlertActionStyle.default){
+//            action in
+//            self.dismiss(animated: true, completion:nil);
+//
+//        }
+//        myAlert.addAction(okAction);
+//        self.present(myAlert, animated:true, completion:nil);
     }
     
     }
