@@ -1,4 +1,5 @@
 PODS:
+  - Alamofire (4.5.0)
   - Firebase (4.0.3):
     - Firebase/Core (= 4.0.3)
   - Firebase/Auth (4.0.3):
@@ -47,6 +48,7 @@ PODS:
   - SDWebImage/Core (3.8.2)
 
 DEPENDENCIES:
+  - Alamofire (~> 4.4)
   - Firebase
   - Firebase/Auth
   - Firebase/Database
@@ -54,6 +56,7 @@ DEPENDENCIES:
   - SDWebImage (~> 3.8)
 
 SPEC CHECKSUMS:
+  Alamofire: f28cdffd29de33a7bfa022cbd63ae95a27fae140
   Firebase: 9e33fdfbca37cab635c693883caa90a4475b842b
   FirebaseAnalytics: ad41720e3e67fc63fbe3d2948d3e26932a8de311
   FirebaseAuth: ebb6abcbabae00fc47446d690c19ce68d8484fde
@@ -65,6 +68,6 @@ SPEC CHECKSUMS:
   GTMSessionFetcher: 30d874b96d0d76028f61fbd122801e3f030d47db
   SDWebImage: '098e97e6176540799c27e804c96653ee0833d13c'
 
-PODFILE CHECKSUM: 39b027cb6016d43326e14f324d0ded7ea79e61f8
+PODFILE CHECKSUM: a84662fee244a37040414a759b53fcdd4a5adfc5
 
 COCOAPODS: 1.2.1
