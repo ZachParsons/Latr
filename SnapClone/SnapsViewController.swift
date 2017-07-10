@@ -26,7 +26,7 @@ class SnapsViewController: UIViewController, UITableViewDelegate, UITableViewDat
         tableView.delegate = self
         
         
-        Database.database().reference().child("users").child(Auth.auth().currentUser!.uid).child("messages").observe(DataEventType.childAdded, with: {(snapshot) in
+    Database.database().reference().child("users").child(Auth.auth().currentUser!.uid).child("messages").observe(DataEventType.childAdded, with: {(snapshot) in
             // returns object of each message
             // called for each message
             print(snapshot)
@@ -39,12 +39,20 @@ class SnapsViewController: UIViewController, UITableViewDelegate, UITableViewDat
             
             // need to cast snapshot.value as a NSDictionary.
             let value = snapshot.value as? NSDictionary
+        
+            // ensuring that everything doesn't break if there's no new messages or maybe one
+            if (snapshot.value as? [String: AnyObject]) != nil // unwrap it since its an optional
+                {
+                    message.imageURL = value?["image_url"] as? String ?? ""
+                    message.descrip = value?["description"] as! String
+                    message.from = value?["from"] as! String
+                    message.uuid = value?["uuid"] as! String
+                    message.getAt = value?["getAt"] as! String
+            }
+        
+
+        
             
-            message.imageURL = value?["image_url"] as! String
-            message.descrip = value?["description"] as! String
-            message.from = value?["from"] as! String
-            message.uuid = value?["uuid"] as! String
-            message.getAt = value?["getAt"] as! String
             
             // take in the message's show critera
 //            message.displayable = value?["displayable"] as! String
