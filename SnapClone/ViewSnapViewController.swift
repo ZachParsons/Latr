@@ -23,7 +23,7 @@ class ViewSnapViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationController?.setToolbarHidden(false, animated: true)
-
+       
         
 //         ns current time
         let date = Date()
@@ -39,11 +39,25 @@ class ViewSnapViewController: UIViewController {
         if date > nativeGetAtDate! {
             captionTextField.text = message.descrip
             imageView.sd_setImage(with: URL(string: message.imageURL))
+            
+            // show nav title
             self.title = "From: \(message.from)"
         } else {
             captionTextField.text = "Sorry you can't read this yet."
         }
     }
+    
+    @IBAction func tappedShare(_ sender: Any) {
+        // share the image view
+        let activityVC = UIActivityViewController(activityItems: [imageView.image!], applicationActivities: nil)
+        
+        // popover view on the controller
+        activityVC.popoverPresentationController?.sourceView = self.view
+        
+        self.present(activityVC, animated: true, completion: nil)
+        
+    }
+
     
     
     @IBAction func tappedSave(_ sender: Any) {

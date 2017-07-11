@@ -308,7 +308,11 @@
                         </barButtonItem>
                         <barButtonItem width="42" style="plain" systemItem="fixedSpace" id="fqg-Ej-OPk"/>
                         <barButtonItem style="plain" systemItem="flexibleSpace" id="sO8-PE-uyo"/>
-                        <barButtonItem title="Item" id="T65-gY-n0s"/>
+                        <barButtonItem systemItem="action" id="T65-gY-n0s">
+                            <connections>
+                                <action selector="tappedShare:" destination="48k-KE-uUM" id="3dS-5f-D7i"/>
+                            </connections>
+                        </barButtonItem>
                     </toolbarItems>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
