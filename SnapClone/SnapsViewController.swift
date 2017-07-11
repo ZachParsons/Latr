@@ -9,8 +9,32 @@
 import UIKit
 import FirebaseDatabase
 import FirebaseAuth
+import UserNotifications
 
-class SnapsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+@available(iOS 10.0, *)
+class SnapsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UNUserNotificationCenterDelegate {
+    
+    var isGrantedNotificationAccess = false
+
+    
+    func makeContent() -> UNMutableNotificationContent {
+        let content = UNMutableNotificationContent()
+        content.title = "Title"
+        content.body = "Body"
+        content.userInfo = ["step":0]
+        return content
+    }
+    
+    func addNotifications(trigger:UNNotificationTrigger?, content:UNMutableNotificationContent, identifier:String) {
+        let request = UNNotificationRequest(identifier: identifier, content: content, trigger: trigger)
+        UNUserNotificationCenter.current().add(request) {
+            (error) in
+            if error != nil {
+                print("Error adding notification: \(error?.localizedDescription)")
+            }
+        }
+    }
+    
 
     @IBOutlet weak var tableView: UITableView!
 
@@ -18,6 +42,16 @@ class SnapsViewController: UIViewController, UITableViewDelegate, UITableViewDat
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        UNUserNotificationCenter.current().delegate = self
+        UNUserNotificationCenter.current().requestAuthorization(options: [.alert,.badge,.sound]) {
+            (granted,error) in
+            self.isGrantedNotificationAccess = granted
+            if !granted {
+                //add alert to complain to user
+            }
+        }
+        
         // find current user's messages
 
 
@@ -47,14 +81,28 @@ class SnapsViewController: UIViewController, UITableViewDelegate, UITableViewDat
                     message.from = value?["from"] as! String
                     message.uuid = value?["uuid"] as! String
                     message.getAt = value?["getAt"] as! String
+                    
+                    // fire notifications when message is waiting
+                    if self.isGrantedNotificationAccess {
+                        let content = UNMutableNotificationContent()
+                        content.title = "Latr"
+                        content.body = "You have a message waiting!"
+                        let unitFlags:Set<Calendar.Component> = [.minute,.hour,.second]
+                        var date = Calendar.current.dateComponents(unitFlags, from: Date())
+                        date.second = date.second! + 5
+                        
+                        
+                        
+                        let trigger = UNCalendarNotificationTrigger(dateMatching: date, repeats: false)
+                        self.addNotifications(trigger: trigger, content: content, identifier: "message.scheduled")
+                    }
+
+                    
                 }
 
 
-
-
-
             // take in the message's show critera
-//            message.displayable = value?["displayable"] as! String
+            // message.displayable = value?["displayable"] as! String
 
             // that message's unique id
             message.key = snapshot.key
@@ -153,6 +201,15 @@ class SnapsViewController: UIViewController, UITableViewDelegate, UITableViewDat
     @IBAction func tappedLogout(_ sender: Any) {
         dismiss(animated: true, completion: nil)
     }
+    
+    //MARK: - Delegates in-app notifications
+    
+    @available(iOS 10.0, *)
+    func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification, withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
+        completionHandler([.alert, .sound]) //presentation options as arguments
+    }
+    
+    
 
 
 }
