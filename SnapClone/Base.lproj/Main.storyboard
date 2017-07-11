@@ -41,10 +41,12 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iCy-R7-iga">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iCy-R7-iga">
                                 <rect key="frame" x="16" y="185" width="71" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="71" id="uy8-fM-qey"/>
+                                </constraints>
                                 <state key="normal" title="Register"/>
                                 <connections>
                                     <segue destination="SkW-Uq-3Nf" kind="presentation" identifier="registerView" id="LQj-Fn-HOf"/>
@@ -54,7 +56,7 @@
                                 <rect key="frame" x="300" y="185" width="59" height="30"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="59" id="340-VH-Vqt"/>
+                                    <constraint firstAttribute="width" constant="59" id="U58-xV-L4F"/>
                                 </constraints>
                                 <state key="normal" title="Login"/>
                                 <connections>
@@ -64,17 +66,18 @@
                         </subviews>
                         <color key="backgroundColor" red="0.23529411759999999" green="0.090196078430000007" blue="0.10980392160000001" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="oPa-Ff-65w" firstAttribute="top" secondItem="N1W-w0-T2V" secondAttribute="bottom" constant="8" id="8De-F6-mDL"/>
+                            <constraint firstItem="oPa-Ff-65w" firstAttribute="trailing" secondItem="N1W-w0-T2V" secondAttribute="trailing" id="5mg-TP-txM"/>
                             <constraint firstItem="N1W-w0-T2V" firstAttribute="top" secondItem="9FB-eh-4yC" secondAttribute="bottom" constant="8" id="I7S-yi-kx3"/>
                             <constraint firstAttribute="trailingMargin" secondItem="9FB-eh-4yC" secondAttribute="trailing" id="Jha-qA-uTZ"/>
                             <constraint firstItem="QfV-rT-LeU" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="SvE-x6-asS"/>
+                            <constraint firstItem="oPa-Ff-65w" firstAttribute="top" secondItem="N1W-w0-T2V" secondAttribute="bottom" constant="8" symbolic="YES" id="bFb-Xc-ZiS"/>
+                            <constraint firstItem="iCy-R7-iga" firstAttribute="leading" secondItem="N1W-w0-T2V" secondAttribute="leading" id="cjJ-Qs-lov"/>
                             <constraint firstItem="9FB-eh-4yC" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="d9U-3g-hgW"/>
+                            <constraint firstItem="iCy-R7-iga" firstAttribute="baseline" secondItem="oPa-Ff-65w" secondAttribute="baseline" id="gsf-8w-wtN"/>
                             <constraint firstItem="N1W-w0-T2V" firstAttribute="width" secondItem="9FB-eh-4yC" secondAttribute="width" id="nYy-yJ-Yj0"/>
                             <constraint firstItem="QfV-rT-LeU" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="33.5" id="naC-uX-y9j"/>
                             <constraint firstItem="9FB-eh-4yC" firstAttribute="top" secondItem="QfV-rT-LeU" secondAttribute="bottom" constant="2.3333333333333144" id="naw-gX-0dp"/>
                             <constraint firstItem="N1W-w0-T2V" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="thy-8w-f0Q"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="oPa-Ff-65w" secondAttribute="trailing" id="v8X-kL-JMM"/>
-                            <constraint firstItem="oPa-Ff-65w" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="284" id="xg6-W6-Twb"/>
                         </constraints>
                     </view>
                     <connections>
