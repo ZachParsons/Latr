@@ -106,7 +106,7 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="goI-Gj-Qfs">
                                 <rect key="frame" x="77" y="20" width="221" height="30"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <state key="normal" title="I have an account. Let me log in."/>
+                                <state key="normal" title="Back To Login"/>
                                 <connections>
                                     <segue destination="BYZ-38-t0r" kind="presentation" id="yM4-Om-JqN"/>
                                 </connections>
@@ -155,15 +155,14 @@
                             <constraint firstItem="Nfs-LO-20h" firstAttribute="top" secondItem="pgh-6G-Hy2" secondAttribute="bottom" constant="8" id="RVW-yj-8Lc"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Nfs-LO-20h" secondAttribute="trailing" id="SCv-iU-B9b"/>
                             <constraint firstAttribute="trailingMargin" secondItem="IcX-13-g7o" secondAttribute="trailing" id="Udy-8Y-8vG"/>
+                            <constraint firstItem="aMS-xj-Udu" firstAttribute="top" secondItem="SMt-I8-GmN" secondAttribute="bottom" constant="8" symbolic="YES" id="VP9-pT-NLt"/>
                             <constraint firstAttribute="leadingMargin" secondItem="Nfs-LO-20h" secondAttribute="leading" id="X6K-YV-gTa"/>
                             <constraint firstAttribute="trailingMargin" secondItem="goI-Gj-Qfs" secondAttribute="trailing" constant="61" id="YYu-lK-gPA"/>
-                            <constraint firstItem="aMS-xj-Udu" firstAttribute="leading" secondItem="Zf8-5m-QMV" secondAttribute="leadingMargin" constant="143" id="Yd6-Fr-k7c"/>
                             <constraint firstAttribute="leadingMargin" secondItem="SMt-I8-GmN" secondAttribute="leading" id="ZS2-Bg-xc9"/>
                             <constraint firstItem="goI-Gj-Qfs" firstAttribute="leading" secondItem="Zf8-5m-QMV" secondAttribute="leadingMargin" constant="61" id="ZqC-FD-Jdi"/>
-                            <constraint firstItem="aMS-xj-Udu" firstAttribute="top" secondItem="SMt-I8-GmN" secondAttribute="bottom" constant="8" id="kQk-oU-lHA"/>
                             <constraint firstItem="goI-Gj-Qfs" firstAttribute="top" secondItem="CM0-my-Epm" secondAttribute="bottom" id="lkl-8f-MCs"/>
                             <constraint firstAttribute="leadingMargin" secondItem="IcX-13-g7o" secondAttribute="leading" id="mIg-H1-3Az"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="aMS-xj-Udu" secondAttribute="trailing" constant="143" id="tAX-bf-GpN"/>
+                            <constraint firstItem="aMS-xj-Udu" firstAttribute="centerX" secondItem="SMt-I8-GmN" secondAttribute="centerX" id="wri-9F-JdT"/>
                             <constraint firstItem="pgh-6G-Hy2" firstAttribute="trailing" secondItem="IcX-13-g7o" secondAttribute="trailing" id="xUJ-zP-Jx9"/>
                             <constraint firstItem="pgh-6G-Hy2" firstAttribute="leading" secondItem="IcX-13-g7o" secondAttribute="leading" id="xqx-mI-JQz"/>
                             <constraint firstItem="Nfs-LO-20h" firstAttribute="width" secondItem="pgh-6G-Hy2" secondAttribute="width" id="yRF-9J-AmW"/>
@@ -437,6 +436,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="MAQ-Rc-fuh"/>
+        <segue reference="GbX-16-ShJ"/>
     </inferredMetricsTieBreakers>
 </document>
