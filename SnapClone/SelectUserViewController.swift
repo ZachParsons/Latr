@@ -28,7 +28,8 @@ class SelectUserViewController: UIViewController, UITableViewDataSource, UITable
     
     var displayable = ""
     
-    // show date 
+    // show date
+    // and time 
     var getAt = ""
 
     

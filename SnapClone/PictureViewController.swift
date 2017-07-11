@@ -28,7 +28,7 @@ class PictureViewController: UIViewController, UIImagePickerControllerDelegate, 
     let datePicker = UIDatePicker()
     
     
-    var getAtAmerican = ""
+    var getAtTime = ""
     
     // need to persist this unique photo id across scenes to delete from db
     var uuid = NSUUID().uuidString
@@ -53,7 +53,7 @@ class PictureViewController: UIViewController, UIImagePickerControllerDelegate, 
         
         // format picker 
         // for only date
-        datePicker.datePickerMode = .date
+//        datePicker.datePickerMode = .date
         
         // toolbar
         let toolbar = UIToolbar()
@@ -82,17 +82,16 @@ class PictureViewController: UIViewController, UIImagePickerControllerDelegate, 
         let dateFormatter = DateFormatter()
         
         // shortened date show
-        dateFormatter.dateStyle = .short
-        dateFormatter.timeStyle = .none
+//        dateFormatter.dateStyle = .short
+//        dateFormatter.timeStyle = .none
         
-        getAtAmerican = dateFormatter.string(from: datePicker.date)
         
         dateFormatter.dateStyle = .medium
+        dateFormatter.timeStyle = .short
+        getAtTime = dateFormatter.string(from: datePicker.date)
         
         // assign input text of the returned datePicker var
-        datePickerText.text = dateFormatter.string(from: datePicker.date)
-        
-       
+        datePickerText.text = getAtTime
 
         // close picker view
         self.view.endEditing(true)
@@ -188,11 +187,6 @@ class PictureViewController: UIViewController, UIImagePickerControllerDelegate, 
         // perisist the property of uuid of the created photo to next scene 
         nextVC.uuid = uuid
         
-//        nextVC.displayable = displayableTextField.text!
-        
-        // getAtAmerican remains the shortened us version m/d/yy
-        // what's seen on the screen is a nicer written out version for jack
-        
-        nextVC.getAt = getAtAmerican
+        nextVC.getAt = getAtTime
     }
 }
