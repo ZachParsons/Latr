@@ -28,7 +28,8 @@ class ViewSnapViewController: UIViewController {
         let date = Date()
 
         let dateFormmater = DateFormatter()
-        dateFormmater.dateFormat = "d/M/yy"
+        // month day now
+        dateFormmater.dateFormat = "M/d/yy"
         let nativeGetAtDate = dateFormmater.date(from: message.getAt)
   
         if date > nativeGetAtDate! {
@@ -46,7 +47,8 @@ class ViewSnapViewController: UIViewController {
         // ns current time
         let date = Date()
         let dateFormmater = DateFormatter()
-        dateFormmater.dateFormat = "d/M/yy"
+        // month day now
+        dateFormmater.dateFormat = "M/d/yy"
         let nativeGetAtDate = dateFormmater.date(from: message.getAt)
  
         if date >= nativeGetAtDate! {
