@@ -88,7 +88,8 @@ class RegistrationPageViewController: UIViewController {
             }
             
             
-            let userReference = self.databaseRef.child("users").child(uid)
+            let userReference =
+            self.databaseRef.child("users").child(uid)
             let values = ["email": email, "phone": phone]
             
             userReference.updateChildValues(values
@@ -97,7 +98,7 @@ class RegistrationPageViewController: UIViewController {
                         print(error!)
                         return
                     }
-                    self.dismiss(animated: true, completion: nil)
+                    self.performSegue(withIdentifier: "registrationSegue", sender: nil)
             })
             
         })
@@ -105,14 +106,14 @@ class RegistrationPageViewController: UIViewController {
         
         
         // Display alert message with confirmation
-        var myAlert = UIAlertController(title:"Alert", message:"Registration is successful.", preferredStyle:UIAlertControllerStyle.alert);
-        
-        let okAction = UIAlertAction(title:"Ok", style: UIAlertActionStyle.default){
-            action in
-            self.dismiss(animated: true, completion:nil);
-        }
-        myAlert.addAction(okAction);
-        self.present(myAlert, animated:true, completion:nil);
+//        var myAlert = UIAlertController(title:"Alert", message:"Registration is successful.", preferredStyle:UIAlertControllerStyle.alert);
+//        
+//        let okAction = UIAlertAction(title:"Ok", style: UIAlertActionStyle.default){
+//            action in
+//            self.dismiss(animated: true, completion:nil);
+//        }
+//        myAlert.addAction(okAction);
+//        self.present(myAlert, animated:true, completion:nil);
     }
     
     
