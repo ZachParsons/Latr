@@ -239,7 +239,7 @@
                         <outlet property="userEmailTextField" destination="IcX-13-g7o" id="3dD-CG-z7P"/>
                         <outlet property="userPasswordTextField" destination="Nfs-LO-20h" id="Tvf-1p-VOw"/>
                         <outlet property="userPhoneTextField" destination="pgh-6G-Hy2" id="CnG-Z7-hv4"/>
-                        <segue destination="nk3-YV-HiQ" kind="presentation" id="GbX-16-ShJ"/>
+                        <segue destination="nk3-YV-HiQ" kind="presentation" identifier="registrationSegue" id="GbX-16-ShJ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VQp-a9-veS" userLabel="First Responder" sceneMemberID="firstResponder"/>
