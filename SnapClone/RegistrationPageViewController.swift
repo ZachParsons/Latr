@@ -11,6 +11,7 @@ import Firebase
 
 // need db for specifying the db call
 import FirebaseDatabase
+import FirebaseAuth
 
 class RegistrationPageViewController: UIViewController {
     
@@ -52,6 +53,8 @@ class RegistrationPageViewController: UIViewController {
         let phone = userPhoneTextField.text;
         let password = userPasswordTextField.text;
         let confirmPassword = userConfirmPasswordTextField.text;
+        
+        
         
         // Check for empty fields
         if(email!.isEmpty || password!.isEmpty || confirmPassword!.isEmpty)

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		090D2B001F14558700B1579A /* SnapsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC906431F0B0292007B078C /* SnapsViewController.swift */; };
 		09F354671F11AB5100C4B86A /* RegistrationPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09F354661F11AB5100C4B86A /* RegistrationPageViewController.swift */; };
 		B678A2D8781B588A6E6AC1A1 /* Pods_Latr.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74933B02F2E3EA5E28E39D53 /* Pods_Latr.framework */; };
 		ED1B9F4C1F102A67005FD362 /* Contents.json in Resources */ = {isa = PBXBuildFile; fileRef = ED1B9F351F102A67005FD362 /* Contents.json */; };
@@ -42,14 +43,11 @@
 		EDC906371F0AA090007B078C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EDC906361F0AA090007B078C /* Assets.xcassets */; };
 		EDC9063A1F0AA090007B078C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EDC906381F0AA090007B078C /* LaunchScreen.storyboard */; };
 		EDC906421F0AD99B007B078C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = EDC906411F0AD99B007B078C /* GoogleService-Info.plist */; };
-		EDC906441F0B0292007B078C /* SnapsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC906431F0B0292007B078C /* SnapsViewController.swift */; };
 		EDC906461F0B1BD0007B078C /* PictureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC906451F0B1BD0007B078C /* PictureViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		0055DD685E2137098640CCDA /* Pods-SnapClone.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SnapClone.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SnapClone/Pods-SnapClone.debug.xcconfig"; sourceTree = "<group>"; };
 		09F354661F11AB5100C4B86A /* RegistrationPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegistrationPageViewController.swift; sourceTree = "<group>"; };
-		0A0F4A88DB1F406FDC253753 /* Pods-SnapClone.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SnapClone.release.xcconfig"; path = "Pods/Target Support Files/Pods-SnapClone/Pods-SnapClone.release.xcconfig"; sourceTree = "<group>"; };
 		74933B02F2E3EA5E28E39D53 /* Pods_Latr.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Latr.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7A06CC149DB2FA333D9807E5 /* Pods-Latr.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Latr.release.xcconfig"; path = "Pods/Target Support Files/Pods-Latr/Pods-Latr.release.xcconfig"; sourceTree = "<group>"; };
 		7D7749F1B2904FA596725C9E /* Pods-Latr.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Latr.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Latr/Pods-Latr.debug.xcconfig"; sourceTree = "<group>"; };
@@ -107,8 +105,6 @@
 		74F144A533BB254091630883 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				0055DD685E2137098640CCDA /* Pods-SnapClone.debug.xcconfig */,
-				0A0F4A88DB1F406FDC253753 /* Pods-SnapClone.release.xcconfig */,
 				7D7749F1B2904FA596725C9E /* Pods-Latr.debug.xcconfig */,
 				7A06CC149DB2FA333D9807E5 /* Pods-Latr.release.xcconfig */,
 			);
@@ -359,12 +355,12 @@
 			files = (
 				EDC906321F0AA090007B078C /* SignInViewController.swift in Sources */,
 				EDC906461F0B1BD0007B078C /* PictureViewController.swift in Sources */,
+				090D2B001F14558700B1579A /* SnapsViewController.swift in Sources */,
 				09F354671F11AB5100C4B86A /* RegistrationPageViewController.swift in Sources */,
 				ED349FA01F0BE35000FC1477 /* User.swift in Sources */,
 				ED349FA61F0C1EEA00FC1477 /* ViewSnapViewController.swift in Sources */,
 				ED349F9E1F0BCE1900FC1477 /* SelectUserViewController.swift in Sources */,
 				EDC906301F0AA090007B078C /* AppDelegate.swift in Sources */,
-				EDC906441F0B0292007B078C /* SnapsViewController.swift in Sources */,
 				ED349FA41F0BFFB300FC1477 /* Message.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
