@@ -76,8 +76,14 @@ class SnapsViewController: UIViewController, UITableViewDelegate, UITableViewDat
             // ns current time
             let date = Date()
             let dateFormmater = DateFormatter()
-            // month day now
-            dateFormmater.dateFormat = "M/d/yy"
+            
+            
+            
+
+            // 2017-07-09T19:55:41+0000
+            // Jul 9 , 2017, 7:55 PM
+
+            dateFormmater.dateFormat = "MMM  d, yyyy, h:mm a"
 
             for message in self.messages {
                 // can't loop through and call date all of these times
