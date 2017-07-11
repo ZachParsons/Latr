@@ -39,6 +39,7 @@ class ViewSnapViewController: UIViewController {
         if date > nativeGetAtDate! {
             captionTextField.text = message.descrip
             imageView.sd_setImage(with: URL(string: message.imageURL))
+            self.title = "From: \(message.from)"
         } else {
             captionTextField.text = "Sorry you can't read this yet."
         }
