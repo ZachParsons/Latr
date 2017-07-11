@@ -306,6 +306,9 @@
                                 <action selector="tappedSave:" destination="48k-KE-uUM" id="hQ8-TQ-cRs"/>
                             </connections>
                         </barButtonItem>
+                        <barButtonItem width="42" style="plain" systemItem="fixedSpace" id="fqg-Ej-OPk"/>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="sO8-PE-uyo"/>
+                        <barButtonItem title="Item" id="T65-gY-n0s"/>
                     </toolbarItems>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
