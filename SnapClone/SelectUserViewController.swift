@@ -52,7 +52,8 @@ class SelectUserViewController: UIViewController, UITableViewDataSource, UITable
             print(snapshot)
             
             // like calling new
-            let user = User()
+//           let user = User()
+            let user = User(userEmail: "", userID: "")
             
             // setting the values
             // forcing the value as well as the upcast to a string
@@ -63,7 +64,8 @@ class SelectUserViewController: UIViewController, UITableViewDataSource, UITable
             user.email = value?["email"] as! String
             
             // snapshot dictionary doesn't have a key so can keep this
-            user.uid = snapshot.key // assigns the uid
+//            user.uid = snapshot.key // assigns the uid
+            user.id = snapshot.key // assigns the uid
             
             // kind of like shovelling back into users
             self.users.append(user)
@@ -94,7 +96,6 @@ class SelectUserViewController: UIViewController, UITableViewDataSource, UITable
         
         return cell
         
-        
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -113,7 +114,8 @@ class SelectUserViewController: UIViewController, UITableViewDataSource, UITable
         
         // child by auto id is a firebase function that prevents reuse of id and makes unique
         // add the message to the set value
-        Database.database().reference().child("users").child(user.uid).child("messages").childByAutoId().setValue(message)
+//        Database.database().reference().child("users").child(user.uid).child("messages").childByAutoId().setValue(message)
+        Database.database().reference().child("users").child(user.id).child("messages").childByAutoId().setValue(message)
         
         // after selecting a row, go back to the root to see any remaining messages
         // need this pop back after viewing

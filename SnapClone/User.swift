@@ -9,7 +9,15 @@
 import Foundation
 
 class User {
+
+//    var uid = ""
+//    var email = ""
     
-    var email = ""
-    var uid = ""
+    var email: String!
+    var id: String!
+    
+    init(userEmail: String, userID: String) {
+        self.email = userEmail
+        self.id = userID
+    }
 }
