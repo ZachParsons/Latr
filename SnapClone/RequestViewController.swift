@@ -24,7 +24,6 @@ class RequestViewController: UIViewController {
             self.tableView.reloadData()
         }
     }
-    
 }
 
 extension RequestViewController: UITableViewDataSource {
