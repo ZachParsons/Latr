@@ -11,7 +11,19 @@ import FirebaseDatabase
 import FirebaseAuth
 import UserNotifications
 
-class SnapsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+@available(iOS 10.0, *)
+class SnapsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UNUserNotificationCenterDelegate {
+    
+    var isGrantedNotificationAccess = false
+
+    
+    
+    
+    
+    
+    
+    
+    
 
     @IBOutlet weak var tableView: UITableView!
 
@@ -19,6 +31,16 @@ class SnapsViewController: UIViewController, UITableViewDelegate, UITableViewDat
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        UNUserNotificationCenter.current().delegate = self
+        UNUserNotificationCenter.current().requestAuthorization(options: [.alert,.badge,.sound]) {
+            (granted,error) in
+            self.isGrantedNotificationAccess = granted
+            if !granted {
+                //add alert to complain to user
+            }
+        }
+        
         // find current user's messages
 
 
