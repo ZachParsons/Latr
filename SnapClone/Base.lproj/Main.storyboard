@@ -257,6 +257,7 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <nil key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="tableView" destination="gIR-iQ-u5R" id="mfX-uv-Rcx"/>
                         <segue destination="48k-KE-uUM" kind="show" identifier="viewSnapSegue" id="zNa-gn-GSx"/>
@@ -300,7 +301,11 @@
                         </constraints>
                     </view>
                     <toolbarItems>
-                        <barButtonItem systemItem="save" id="E7D-nh-b45"/>
+                        <barButtonItem systemItem="save" id="E7D-nh-b45">
+                            <connections>
+                                <action selector="tappedSave:" destination="48k-KE-uUM" id="hQ8-TQ-cRs"/>
+                            </connections>
+                        </barButtonItem>
                     </toolbarItems>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
@@ -437,13 +442,17 @@
         <!--Navigation Controller-->
         <scene sceneID="f2w-fm-tVW">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="nk3-YV-HiQ" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" toolbarHidden="NO" id="nk3-YV-HiQ" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="6E3-MG-I9Q">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
+                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="oMN-J1-59d">
+                        <rect key="frame" x="0.0" y="623" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </toolbar>
                     <connections>
                         <segue destination="8dN-xO-gqW" kind="relationship" relationship="rootViewController" id="eaE-Wb-Eko"/>
                     </connections>
