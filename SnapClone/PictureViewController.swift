@@ -53,7 +53,7 @@ class PictureViewController: UIViewController, UIImagePickerControllerDelegate, 
         
         // format picker 
         // for only date
-        datePicker.datePickerMode = .date
+//        datePicker.datePickerMode = .date
         
         // toolbar
         let toolbar = UIToolbar()
