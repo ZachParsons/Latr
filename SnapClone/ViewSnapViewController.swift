@@ -22,7 +22,8 @@ class ViewSnapViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-     
+        self.navigationController?.setToolbarHidden(false, animated: true)
+
         
 //         ns current time
         let date = Date()
@@ -42,6 +43,28 @@ class ViewSnapViewController: UIViewController {
             captionTextField.text = "Sorry you can't read this yet."
         }
     }
+    
+    
+    @IBAction func tappedSave(_ sender: Any) {
+        UIImageWriteToSavedPhotosAlbum(imageView.image!, self, #selector(image(_:didFinishSavingWithError:contextInfo:)), nil)
+
+    }
+    
+    //MARK: - Add image to Library
+    func image(_ image: UIImage, didFinishSavingWithError error: Error?, contextInfo: UnsafeRawPointer) {
+        if let error = error {
+            // we got back an error!
+            let ac = UIAlertController(title: "Save error", message: error.localizedDescription, preferredStyle: .alert)
+            ac.addAction(UIAlertAction(title: "OK", style: .default))
+            present(ac, animated: true)
+        } else {
+            let ac = UIAlertController(title: "Saved!", message: "Your Latr image has been saved to your photos.", preferredStyle: .alert)
+            ac.addAction(UIAlertAction(title: "OK", style: .default))
+            present(ac, animated: true)
+        }
+    }
+    
+
     
     // to make message disappear
     override func viewWillDisappear(_ animated: Bool) {
@@ -65,6 +88,8 @@ class ViewSnapViewController: UIViewController {
             }
         }
         
+        super.viewWillDisappear(animated);
+        self.navigationController?.setToolbarHidden(true, animated: animated)
 
 
     }
