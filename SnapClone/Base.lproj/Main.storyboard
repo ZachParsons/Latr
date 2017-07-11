@@ -257,6 +257,7 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <nil key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="tableView" destination="gIR-iQ-u5R" id="mfX-uv-Rcx"/>
                         <segue destination="48k-KE-uUM" kind="show" identifier="viewSnapSegue" id="zNa-gn-GSx"/>
@@ -279,13 +280,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Wow great experience" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bot-rt-4RY" userLabel="Caption Text Field">
-                                <rect key="frame" x="16" y="636" width="343" height="21"/>
+                                <rect key="frame" x="16" y="592" width="343" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="92L-1V-Wvd">
-                                <rect key="frame" x="26" y="74" width="323" height="552"/>
+                                <rect key="frame" x="26" y="74" width="323" height="508"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -299,6 +300,21 @@
                             <constraint firstItem="Bot-rt-4RY" firstAttribute="top" secondItem="92L-1V-Wvd" secondAttribute="bottom" constant="10" id="zoo-h9-El5"/>
                         </constraints>
                     </view>
+                    <toolbarItems>
+                        <barButtonItem systemItem="save" id="E7D-nh-b45">
+                            <connections>
+                                <action selector="tappedSave:" destination="48k-KE-uUM" id="hQ8-TQ-cRs"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem width="42" style="plain" systemItem="fixedSpace" id="fqg-Ej-OPk"/>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="sO8-PE-uyo"/>
+                        <barButtonItem systemItem="action" id="T65-gY-n0s">
+                            <connections>
+                                <action selector="tappedShare:" destination="48k-KE-uUM" id="3dS-5f-D7i"/>
+                            </connections>
+                        </barButtonItem>
+                    </toolbarItems>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="captionTextField" destination="Bot-rt-4RY" id="GdP-kh-gBg"/>
                         <outlet property="imageView" destination="92L-1V-Wvd" id="pch-KG-gqC"/>
@@ -433,13 +449,17 @@
         <!--Navigation Controller-->
         <scene sceneID="f2w-fm-tVW">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="nk3-YV-HiQ" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" toolbarHidden="NO" id="nk3-YV-HiQ" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="6E3-MG-I9Q">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
+                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="oMN-J1-59d">
+                        <rect key="frame" x="0.0" y="623" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </toolbar>
                     <connections>
                         <segue destination="8dN-xO-gqW" kind="relationship" relationship="rootViewController" id="eaE-Wb-Eko"/>
                     </connections>

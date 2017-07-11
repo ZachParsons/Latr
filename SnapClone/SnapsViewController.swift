@@ -42,7 +42,7 @@ class SnapsViewController: UIViewController, UITableViewDelegate, UITableViewDat
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        self.navigationController?.setToolbarHidden(true, animated: true)
         UNUserNotificationCenter.current().delegate = self
         UNUserNotificationCenter.current().requestAuthorization(options: [.alert,.badge,.sound]) {
             (granted,error) in
@@ -215,7 +215,5 @@ class SnapsViewController: UIViewController, UITableViewDelegate, UITableViewDat
         completionHandler([.alert, .sound]) //presentation options as arguments
     }
     
-    
-
 
 }
