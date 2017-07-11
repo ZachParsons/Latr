@@ -39,6 +39,10 @@ class PictureViewController: UIViewController, UIImagePickerControllerDelegate, 
         imagePicker.delegate = self
         nextButton.isEnabled = false
         createDatePicker()
+        
+        // don't show toolbar
+        self.navigationController?.setToolbarHidden(true, animated: true)
+
     }
     
     
@@ -189,4 +193,5 @@ class PictureViewController: UIViewController, UIImagePickerControllerDelegate, 
         
         nextVC.getAt = getAtTime
     }
+    
 }
