@@ -54,10 +54,11 @@ class SignInViewController: UIViewController {
                             print("created user successfully")
                             
                             // db
-                            Database.database().reference().child("users").child(user!.uid).child("email").setValue(user!.email!)
+                            // not registering users automatically anymore
+//                            Database.database().reference().child("users").child(user!.uid).child("email").setValue(user!.email!)
                             
                             // alert
-                            self.newUser(title: "Hello there", message: "Welcome to Latr")
+//                            self.newUser(title: "Hello there", message: "Welcome to Latr")
                             
                             // set value of that email
                             // give enough children to set user id here in the firebase storage 
