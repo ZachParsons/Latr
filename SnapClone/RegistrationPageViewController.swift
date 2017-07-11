@@ -39,7 +39,7 @@ class RegistrationPageViewController: UIViewController {
     {
         let myAlert = UIAlertController(title:"Alert", message: userMessage, preferredStyle: UIAlertControllerStyle.alert);
         
-        let okAction = UIAlertAction(title:"Ok", style: UIAlertActionStyle.default, handler:nil);
+        let okAction = UIAlertAction(title:"OK", style: UIAlertActionStyle.default, handler:nil);
         
         myAlert.addAction(okAction);
         self.present(myAlert, animated:true, completion:nil);
@@ -105,7 +105,7 @@ class RegistrationPageViewController: UIViewController {
         
         
         
-        // Display alert message with confirmation
+//         Display alert message with confirmation
 //        var myAlert = UIAlertController(title:"Alert", message:"Registration is successful.", preferredStyle:UIAlertControllerStyle.alert);
 //        
 //        let okAction = UIAlertAction(title:"Ok", style: UIAlertActionStyle.default){
