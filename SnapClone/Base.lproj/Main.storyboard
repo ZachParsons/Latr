@@ -194,6 +194,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="registerButton" destination="aMS-xj-Udu" id="edk-Ow-XAZ"/>
                         <outlet property="userConfirmPasswordTextField" destination="SMt-I8-GmN" id="fei-41-5bY"/>
                         <outlet property="userEmailTextField" destination="IcX-13-g7o" id="3dD-CG-z7P"/>
                         <outlet property="userPasswordTextField" destination="Nfs-LO-20h" id="Tvf-1p-VOw"/>
@@ -372,11 +373,19 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tnb-vr-Ysz" userLabel="Send Button">
-                                <rect key="frame" x="163" y="295" width="46" height="30"/>
+                                <rect key="frame" x="155" y="295" width="64" height="30"/>
+                                <color key="backgroundColor" red="0.23529411759999999" green="0.090196078430000007" blue="0.10980392160000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="46" id="gRk-wb-VBw"/>
+                                    <constraint firstAttribute="width" constant="64" id="gRk-wb-VBw"/>
                                 </constraints>
-                                <state key="normal" title="Send"/>
+                                <state key="normal" title="Send">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="tappedSend:" destination="LVq-wu-htG" eventType="touchUpInside" id="kMN-KY-xwE"/>
                                 </connections>
@@ -493,6 +502,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="MAQ-Rc-fuh"/>
+        <segue reference="GbX-16-ShJ"/>
     </inferredMetricsTieBreakers>
 </document>

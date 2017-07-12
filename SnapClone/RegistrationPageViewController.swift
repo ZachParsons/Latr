@@ -24,6 +24,8 @@ class RegistrationPageViewController: UIViewController {
     @IBOutlet weak var userPasswordTextField: UITextField!
     @IBOutlet weak var userConfirmPasswordTextField: UITextField!
     
+    @IBOutlet weak var registerButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -46,6 +48,8 @@ class RegistrationPageViewController: UIViewController {
     }
     
     @IBAction func registerButtonTapped(_ sender: Any) {
+        
+        registerButton.isEnabled = false
         
         let user = ""
         //        let name = userNameTextField.text;
