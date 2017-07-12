@@ -207,11 +207,10 @@ class PictureViewController: UIViewController, UIImagePickerControllerDelegate, 
                     for snap in snapshot.children {
                         let userSnap = snap as! DataSnapshot
                         let uid = userSnap.key //the uid of each user
-                         print("key = \(uid)")
+                        print("key = \(uid)")
+                        
                         Database.database().reference().child("users").child(uid).child("messages").childByAutoId().setValue(message)
-                        
-                        
-                        
+                    
                     }
                     
                     
@@ -219,6 +218,11 @@ class PictureViewController: UIViewController, UIImagePickerControllerDelegate, 
                         //yes we got the user
                         let user = snapshot
                         print("\(user)  exists" )
+                        
+                        // after selecting a row, go back to the root to see any remaining messages
+                        // need this pop back after viewing
+                        self.navigationController!.popToRootViewController(animated: true)
+
                         return
                     }
                     
@@ -226,16 +230,16 @@ class PictureViewController: UIViewController, UIImagePickerControllerDelegate, 
                     //no there is no user with desired email
                     print("\(userEmail) isn't a user")
                     self.displayAlertMessage(userMessage: "User doesn't exist")
-                }) { (error) in
+                    
+                    
+                    
+                })
+                { (error) in
                     print("Failed to get snapshot", error.localizedDescription)
 
                 }
                 
-                
-                // after selecting a row, go back to the root to see any remaining messages
-                // need this pop back after viewing
-                self.navigationController!.popToRootViewController(animated: true)
-                
+
 
             }
         })
