@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import FirebaseAuth
+import FirebaseDatabase
 
 // need specific firebase storage
 // via https://stackoverflow.com/questions/38561257/swift-use-of-unresolved-identifier-firstorage
@@ -179,11 +181,11 @@ class PictureViewController: UIViewController, UIImagePickerControllerDelegate, 
                 // absolute designates the value as a string
                 
                 // loading the message for upload into db
-                let message = ["from": Auth.auth().currentUser!.email!, "description": descriptionTextField.text!, "image_url": imageURL, "uuid": uuid, "getAt": getAt]
+                let message = ["from": Auth.auth().currentUser!.email!, "description": self.descriptionTextField.text!, "image_url": metadata?.downloadURL()?.absoluteString, "uuid": self.uuid, "getAt": self.getAtTime]
                 
                 
                 
-                // ok need to find the user based on the email 
+                // ok need to find the user based on the email
                 
                 
                 
@@ -206,21 +208,21 @@ class PictureViewController: UIViewController, UIImagePickerControllerDelegate, 
     
     
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // assign destination as the next controller
-        let nextVC = segue.destination as! SelectUserViewController
-        
-        // using the select user vc's var declaration
-        // gets sender from sender metadata in perform segue
-        nextVC.imageURL = sender as! String
-        
-        // we know that text here exists with a bang !
-        nextVC.descrip = descriptionTextField.text!
-        
-        // perisist the property of uuid of the created photo to next scene 
-        nextVC.uuid = uuid
-        
-        nextVC.getAt = getAtTime
-    }
-    
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        // assign destination as the next controller
+//        let nextVC = segue.destination as! SelectUserViewController
+//        
+//        // using the select user vc's var declaration
+//        // gets sender from sender metadata in perform segue
+//        nextVC.imageURL = sender as! String
+//        
+//        // we know that text here exists with a bang !
+//        nextVC.descrip = descriptionTextField.text!
+//        
+//        // perisist the property of uuid of the created photo to next scene 
+//        nextVC.uuid = uuid
+//        
+//        nextVC.getAt = getAtTime
+//    }
+//    
 }
