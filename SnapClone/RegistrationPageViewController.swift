@@ -69,7 +69,7 @@ class RegistrationPageViewController: UIViewController {
         let emailRegEx = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,4}"
         if(email != emailRegEx)
         {
-            self.displayAlertMessage(userMessage: "It appears you haven't entered a givalid email.")
+            self.displayAlertMessage(userMessage: "It appears you haven't entered a invalid email.")
         }
         
         // Check if passwords match
