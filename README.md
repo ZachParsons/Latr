@@ -8,7 +8,15 @@ We want you to look forward to looking back. With Latr, you can send a message a
  - Firebase 
  
  
- Authors 
+ ## Authors 
+ - [Kosha Patel](https://github.com/kpatel7389) 
+ - [Braidy Merkle](https://github.com/bmerkle3)
+ - [Zach Parsons](https://github.com/ZachParsons)
+ - [Jack Howard](https://github.com/jackhowa)
+ 
+ ## License 
+ 
+ This project is licensed under the [MIT License](https://opensource.org/licenses/MIT).
  
  
 
