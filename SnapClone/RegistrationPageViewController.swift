@@ -18,9 +18,9 @@ class RegistrationPageViewController: UIViewController {
     let databaseRef = Database.database().reference(fromURL:
         "https://snapchat-f15b6.firebaseio.com")
     
-    @IBOutlet weak var userNameTextField: UITextField!
+
     @IBOutlet weak var userEmailTextField: UITextField!
-    @IBOutlet weak var userPhoneTextField: UITextField!
+
     @IBOutlet weak var userPasswordTextField: UITextField!
     @IBOutlet weak var userConfirmPasswordTextField: UITextField!
     
@@ -50,7 +50,7 @@ class RegistrationPageViewController: UIViewController {
         let user = ""
         //        let name = userNameTextField.text;
         let email = userEmailTextField.text;
-        let phone = userPhoneTextField.text;
+
         let password = userPasswordTextField.text;
         let confirmPassword = userConfirmPasswordTextField.text;
         
@@ -88,12 +88,12 @@ class RegistrationPageViewController: UIViewController {
         Auth.auth().createUser(withEmail: email!, password: password!, completion: { (user, error) in
             if error != nil{
                 self.displayAlertMessage(userMessage: "User already exists.")
-
                 
                 
                 print(error!)
                 return
             }
+            
             guard let uid = user?.uid else{
                 return
             }
@@ -101,7 +101,7 @@ class RegistrationPageViewController: UIViewController {
             
             let userReference =
             self.databaseRef.child("users").child(uid)
-            let values = ["email": email, "phone": phone]
+            let values = ["email": email]
             
             userReference.updateChildValues(values
                 , withCompletionBlock: { (error, ref) in
@@ -112,7 +112,7 @@ class RegistrationPageViewController: UIViewController {
                     self.performSegue(withIdentifier: "registrationSegue", sender: nil)
             })
             
-        })
+            })
         
         
 
