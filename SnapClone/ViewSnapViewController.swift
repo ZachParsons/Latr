@@ -22,7 +22,6 @@ class ViewSnapViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.navigationController?.setToolbarHidden(false, animated: true)
        
         
 //         ns current time
@@ -42,7 +41,10 @@ class ViewSnapViewController: UIViewController {
             
             // show nav title
             self.title = "From: \(message.from)"
+            self.navigationController?.setToolbarHidden(false, animated: true)
+
         } else {
+            self.title = "Maybe Latr ..."
             captionTextField.text = "Sorry you can't read this yet."
         }
     }
