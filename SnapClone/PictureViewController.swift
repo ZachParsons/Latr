@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Firebase
 import FirebaseAuth
 import FirebaseDatabase
 
@@ -190,13 +191,30 @@ class PictureViewController: UIViewController, UIImagePickerControllerDelegate, 
                 // ok need to find the user based on the email
                 let userEmail = self.toTextField.text!
                 
+                
+                
+                
+                
+                
+//                let ref = Database.database().reference().child("Users")
+//                
+//                print(ref)
+//                
+//                ref.queryOrdered(byChild: "Des").queryEqual(toValue: "11").observe(.childAdded, with: { snapshot in
+//                    if let user = snapshot.value as? [String : AnyObject] {
+//                        
+//                    }
+//                })
+
+                
+                
                 // need to verify that this email is indeed an email
                 // then need to find that uid by the email
                 
                 
                 // lol this would make the db have users/email then their messages info rather than by the uid
                 // that could cause problems elsewhere
-//                Database.database().reference().child("users").child(userEmail).child("messages").childByAutoId().setValue(message)
+                Database.database().reference().child("users").child(userEmail.text!).child("messages").childByAutoId().setValue(message)
                 
                 
                 // child by auto id is a firebase function that prevents reuse of id and makes unique
@@ -216,6 +234,7 @@ class PictureViewController: UIViewController, UIImagePickerControllerDelegate, 
     
     
     
+    
 //    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
 //        // assign destination as the next controller
 //        let nextVC = segue.destination as! SelectUserViewController
@@ -227,7 +246,7 @@ class PictureViewController: UIViewController, UIImagePickerControllerDelegate, 
 //        // we know that text here exists with a bang !
 //        nextVC.descrip = descriptionTextField.text!
 //        
-//        // perisist the property of uuid of the created photo to next scene 
+//        // perisist the property of uuid of the created photo to next scene
 //        nextVC.uuid = uuid
 //        
 //        nextVC.getAt = getAtTime
