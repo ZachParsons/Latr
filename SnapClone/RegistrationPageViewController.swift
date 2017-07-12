@@ -54,6 +54,27 @@ class RegistrationPageViewController: UIViewController {
         let password = userPasswordTextField.text;
         let confirmPassword = userConfirmPasswordTextField.text;
         
+        func isValidEmailAddress(emailAddressString: String) -> Bool {
+            var returnValue = true
+            let emailRegEx = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,4}"
+        
+            do {
+                let regex = try NSRegularExpression(pattern: emailRegEx)
+                let nsString = emailAddressString as NSString
+                let results = regex.matches(in: emailAddressString, range: NSRange(location: 0, length: nsString.length))
+                if results.count == 0
+                {
+                    returnValue = false
+                }
+                
+            } catch let error as NSError {
+                print("invalid regex: \(error.localizedDescription)")
+                returnValue = false
+            }
+            return returnValue
+
+        }
+        
         
         
         // Check for empty fields
@@ -65,12 +86,24 @@ class RegistrationPageViewController: UIViewController {
             return;
         }
         
-       // Check email is in email format
-        let emailRegEx = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,4}"
-        if(email != emailRegEx)
+        let isEmailAddressValid = isValidEmailAddress(emailAddressString: email!)
+        
+        if isEmailAddressValid
         {
-            self.displayAlertMessage(userMessage: "It appears you haven't entered a invalid email.")
+            print("Email address is valid")
+            
+        } else {
+            print("Email address is not valid")
+            displayAlertMessage(userMessage: "Email address is not valid")
         }
+        
+       // Check email is in email format
+//        let emailRegEx = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,4}"
+//        if(email != emailRegEx)
+//        {
+//            displayAlertMessage(userMessage: "You entered an invalid email address.")
+//            return;
+//        }
         
         // Check if passwords match
         if(password != confirmPassword)
@@ -91,7 +124,7 @@ class RegistrationPageViewController: UIViewController {
                 
                 
                 print(error!)
-                return
+                return;
             }
             
             guard let uid = user?.uid else{
