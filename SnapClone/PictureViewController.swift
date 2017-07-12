@@ -19,7 +19,9 @@ class PictureViewController: UIViewController, UIImagePickerControllerDelegate, 
     
     @IBOutlet weak var imageView: UIImageView!
     
-    @IBOutlet weak var nextButton: UIButton!
+//    @IBOutlet weak var nextButton: UIButton!
+    
+    @IBOutlet weak var sendButton: UIButton!
     
     @IBOutlet weak var descriptionTextField: UITextField!
     
@@ -43,7 +45,7 @@ class PictureViewController: UIViewController, UIImagePickerControllerDelegate, 
     override func viewDidLoad() {
         super.viewDidLoad()
         imagePicker.delegate = self
-        nextButton.isEnabled = false
+        sendButton.isEnabled = false
         createDatePicker()
         
         // don't show toolbar
@@ -124,7 +126,7 @@ class PictureViewController: UIViewController, UIImagePickerControllerDelegate, 
         // can now click next button 
         // testing and debugging
         // authorization
-        nextButton.isEnabled = true
+        sendButton.isEnabled = true
         
         
         imagePicker.dismiss(animated: true, completion: nil)
@@ -158,9 +160,9 @@ class PictureViewController: UIViewController, UIImagePickerControllerDelegate, 
     }
     
     
-    // now tapped send
-    @IBAction func tappedNext(_ sender: Any) {
-        nextButton.isEnabled = false
+    
+    @IBAction func tappedSend(_ sender: Any) {
+        sendButton.isEnabled = false
         
         let imagesFolder = Storage.storage().reference().child("images")
         
@@ -188,30 +190,28 @@ class PictureViewController: UIViewController, UIImagePickerControllerDelegate, 
                 // ok need to find the user based on the email
                 let userEmail = self.toTextField.text!
                 
-                // need to verify that this email is indeed an email 
-                // then need to find that uid by the email 
+                // need to verify that this email is indeed an email
+                // then need to find that uid by the email
                 
                 
-                // lol this would make the db have users/email then their messages info rather than by the uid 
+                // lol this would make the db have users/email then their messages info rather than by the uid
                 // that could cause problems elsewhere
-                Database.database().reference().child("users").child(userEmail).child("messages").childByAutoId().setValue(message)
+//                Database.database().reference().child("users").child(userEmail).child("messages").childByAutoId().setValue(message)
                 
                 
                 // child by auto id is a firebase function that prevents reuse of id and makes unique
                 // add the message to the set value
-                Database.database().reference().child("users").child(user.uid).child("messages").childByAutoId().setValue(message)
+                //                Database.database().reference().child("users").child(user.uid).child("messages").childByAutoId().setValue(message)
                 
                 // after selecting a row, go back to the root to see any remaining messages
                 // need this pop back after viewing
-                navigationController!.popToRootViewController(animated: true)
-
+                self.navigationController!.popToRootViewController(animated: true)
                 
                 
-//                self.performSegue(withIdentifier: "selectUserSegue", sender: metadata?.downloadURL()?.absoluteString)
+                
+                //                self.performSegue(withIdentifier: "selectUserSegue", sender: metadata?.downloadURL()?.absoluteString)
             }
         })
-        
-        
     }
     
     

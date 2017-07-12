@@ -361,22 +361,34 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tnb-vr-Ysz" userLabel="Send Button">
+                                <rect key="frame" x="163" y="295" width="46" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="46" id="gRk-wb-VBw"/>
+                                </constraints>
+                                <state key="normal" title="Send"/>
+                                <connections>
+                                    <action selector="tappedSend:" destination="LVq-wu-htG" eventType="touchUpInside" id="kMN-KY-xwE"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <gestureRecognizers/>
                         <constraints>
-                            <constraint firstAttribute="trailingMargin" secondItem="0MP-DH-4S2" secondAttribute="trailing" id="0nj-Nm-ExK"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="CvL-Ak-lR6" secondAttribute="trailing" id="3H6-oV-KoQ"/>
-                            <constraint firstAttribute="leadingMargin" secondItem="CvL-Ak-lR6" secondAttribute="leading" constant="1" id="4vJ-2L-Bs1"/>
-                            <constraint firstItem="RND-og-aee" firstAttribute="top" secondItem="qDr-Jb-17O" secondAttribute="bottom" constant="8" id="9Ks-Ln-y8r"/>
-                            <constraint firstAttribute="leadingMargin" secondItem="RND-og-aee" secondAttribute="leading" constant="1" id="XME-47-iar"/>
-                            <constraint firstAttribute="leadingMargin" secondItem="0MP-DH-4S2" secondAttribute="leading" id="Y0I-hB-oVl"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="RND-og-aee" secondAttribute="trailing" constant="1" id="q4s-hc-Pco"/>
-                            <constraint firstItem="0MP-DH-4S2" firstAttribute="top" secondItem="CvL-Ak-lR6" secondAttribute="bottom" constant="8" id="s65-Us-YXI"/>
-                            <constraint firstItem="CvL-Ak-lR6" firstAttribute="top" secondItem="RND-og-aee" secondAttribute="bottom" constant="8" id="sED-e0-hTm"/>
-                            <constraint firstItem="qDr-Jb-17O" firstAttribute="centerX" secondItem="RND-og-aee" secondAttribute="centerX" id="tWc-Qn-kFa"/>
+                            <constraint firstItem="RND-og-aee" firstAttribute="top" secondItem="qDr-Jb-17O" secondAttribute="bottom" constant="8" symbolic="YES" id="2EP-gu-PN7"/>
+                            <constraint firstItem="RND-og-aee" firstAttribute="centerX" secondItem="qDr-Jb-17O" secondAttribute="centerX" id="39r-DD-xdG"/>
+                            <constraint firstItem="Tnb-vr-Ysz" firstAttribute="top" secondItem="0MP-DH-4S2" secondAttribute="bottom" constant="8" symbolic="YES" id="IIH-VY-gU0"/>
+                            <constraint firstItem="CvL-Ak-lR6" firstAttribute="centerX" secondItem="RND-og-aee" secondAttribute="centerX" id="LIn-ja-Bkk"/>
+                            <constraint firstItem="0MP-DH-4S2" firstAttribute="centerX" secondItem="CvL-Ak-lR6" secondAttribute="centerX" id="P8s-Ud-qAP"/>
+                            <constraint firstItem="0MP-DH-4S2" firstAttribute="trailing" secondItem="CvL-Ak-lR6" secondAttribute="trailing" id="RmK-e9-hfT"/>
+                            <constraint firstItem="CvL-Ak-lR6" firstAttribute="leading" secondItem="RND-og-aee" secondAttribute="leading" id="XJ8-oJ-i8R"/>
+                            <constraint firstItem="Tnb-vr-Ysz" firstAttribute="centerX" secondItem="RND-og-aee" secondAttribute="centerX" id="Ynn-MG-8of"/>
+                            <constraint firstItem="CvL-Ak-lR6" firstAttribute="top" secondItem="RND-og-aee" secondAttribute="bottom" constant="8" symbolic="YES" id="nlS-Ak-sMV"/>
+                            <constraint firstItem="RND-og-aee" firstAttribute="leading" secondItem="SDE-L1-SJV" secondAttribute="leadingMargin" constant="-1" id="nny-ME-C5P"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="RND-og-aee" secondAttribute="trailing" constant="1" id="p3z-qB-Vgz"/>
                             <constraint firstItem="qDr-Jb-17O" firstAttribute="leading" secondItem="SDE-L1-SJV" secondAttribute="leadingMargin" constant="75" id="uIf-JQ-B0O"/>
                             <constraint firstItem="qDr-Jb-17O" firstAttribute="top" secondItem="Vtc-d0-CU0" secondAttribute="bottom" constant="8" id="uL3-N0-jMY"/>
+                            <constraint firstItem="0MP-DH-4S2" firstAttribute="top" secondItem="CvL-Ak-lR6" secondAttribute="bottom" constant="8" symbolic="YES" id="zJX-Nm-Y4m"/>
                         </constraints>
                         <connections>
                             <outletCollection property="gestureRecognizers" destination="ywD-3A-R8K" appends="YES" id="YEA-pA-Bag"/>
@@ -400,6 +412,7 @@
                         <outlet property="datePickerText" destination="CvL-Ak-lR6" id="UEu-aH-ggd"/>
                         <outlet property="descriptionTextField" destination="RND-og-aee" id="lZO-gL-ZQH"/>
                         <outlet property="imageView" destination="qDr-Jb-17O" id="LLw-UP-zss"/>
+                        <outlet property="sendButton" destination="Tnb-vr-Ysz" id="ko1-lo-nYx"/>
                         <outlet property="toTextField" destination="0MP-DH-4S2" id="0Di-AX-zDX"/>
                         <segue destination="teS-GP-Ziv" kind="show" identifier="selectUserSegue" id="6lJ-fg-Aqd"/>
                     </connections>
