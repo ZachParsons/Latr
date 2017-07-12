@@ -191,23 +191,6 @@ class PictureViewController: UIViewController, UIImagePickerControllerDelegate, 
                 // ok need to find the user based on the email
                 let userEmail = self.toTextField.text!
                 
-                
-                
-//                
-//               let ref: DatabaseReference!
-//                ref = Database.database().reference()
-//                print(ref.child("users"))
-//                
-//                ref.child("users").orderByChild("email").equalTo(userEmail)
-//                
-//                let ref = Database.database().referenceFromURL(ref.child("users")).child("email")
-//                let query = ref.queryOrderedByChild("email").queryEqualToValue(userEmail)
-//                query.observeEventType(.Value, withBlock: { (snapshot) in
-//                    for childSnapshot in snapshot.children {
-//                        print(childSnapshot)
-//                    }
-//                })
-                
                 let ref = Database.database().reference().child("users").queryOrdered(byChild: "email").queryEqual(toValue: userEmail)
                 ref.observeSingleEvent(of: .value, with: { (snapshot) in
                     
@@ -216,6 +199,7 @@ class PictureViewController: UIViewController, UIImagePickerControllerDelegate, 
                         let uid = userSnap.key //the uid of each user
                          print("key = \(uid)")
                         Database.database().reference().child("users").child(uid).child("messages").childByAutoId().setValue(message)
+                        
                     }
                     
                     
@@ -223,7 +207,6 @@ class PictureViewController: UIViewController, UIImagePickerControllerDelegate, 
                         //yes we got the user
                         let user = snapshot
                         print("\(user)  exists" )
-//                        print(user.uid)
                         return
                     }
                     
@@ -236,57 +219,13 @@ class PictureViewController: UIViewController, UIImagePickerControllerDelegate, 
                 }
                 
                 
-                
-//                ref.queryOrdered(byChild: "Des").queryEqual(toValue: "11").observe(.childAdded, with: { snapshot in
-//                    if let user = snapshot.value as? [String : AnyObject] {
-//                        
-//                    }
-//                })
-//                    print(ref)
-            
-                
-                // need to verify that this email is indeed an email
-                // then need to find that uid by the email
-                
-                
-                // lol this would make the db have users/email then their messages info rather than by the uid
-                // that could cause problems elsewhere
-//                Database.database().reference().child("users").child(userEmail.text!).child("messages").childByAutoId().setValue(message)
-                
-                
-                // child by auto id is a firebase function that prevents reuse of id and makes unique
-                // add the message to the set value
-//                                Database.database().reference().child("users").child(user.uid).child("messages").childByAutoId().setValue(message)
-                
                 // after selecting a row, go back to the root to see any remaining messages
                 // need this pop back after viewing
-//                self.navigationController!.popToRootViewController(animated: true)
+                self.navigationController!.popToRootViewController(animated: true)
                 
-                
-                
-                //                self.performSegue(withIdentifier: "selectUserSegue", sender: metadata?.downloadURL()?.absoluteString)
+
             }
         })
     }
-    
-    
-    
-    
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        // assign destination as the next controller
-//        let nextVC = segue.destination as! SelectUserViewController
-//        
-//        // using the select user vc's var declaration
-//        // gets sender from sender metadata in perform segue
-//        nextVC.imageURL = sender as! String
-//        
-//        // we know that text here exists with a bang !
-//        nextVC.descrip = descriptionTextField.text!
-//        
-//        // perisist the property of uuid of the created photo to next scene
-//        nextVC.uuid = uuid
-//        
-//        nextVC.getAt = getAtTime
-//    }
-//    
+   
 }
