@@ -337,46 +337,58 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="qDr-Jb-17O">
-                                <rect key="frame" x="67.5" y="74" width="240" height="128"/>
+                                <rect key="frame" x="91" y="72" width="192" height="101"/>
                                 <color key="backgroundColor" red="0.23529411759999999" green="0.090196078430000007" blue="0.10980392160000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="128" id="2ae-Eu-EtR"/>
-                                    <constraint firstAttribute="width" constant="240" id="m2W-JW-Bkq"/>
+                                    <constraint firstAttribute="height" constant="101" id="gdW-ML-aC9"/>
                                 </constraints>
                             </imageView>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Description" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RND-og-aee" userLabel="Description Text Field">
-                                <rect key="frame" x="67.5" y="210" width="240" height="30"/>
+                                <rect key="frame" x="15" y="181" width="343" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Pick Date" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="CvL-Ak-lR6">
-                                <rect key="frame" x="67.5" y="248" width="240" height="30"/>
+                                <rect key="frame" x="15" y="219" width="344" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hR3-2E-2HL">
-                                <rect key="frame" x="171.5" y="279" width="32" height="30"/>
-                                <state key="normal" title="Next"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="To" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0MP-DH-4S2" userLabel="To Text Field">
+                                <rect key="frame" x="16" y="257" width="343" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tnb-vr-Ysz" userLabel="Send Button">
+                                <rect key="frame" x="163" y="295" width="46" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="46" id="gRk-wb-VBw"/>
+                                </constraints>
+                                <state key="normal" title="Send"/>
                                 <connections>
-                                    <action selector="tappedNext:" destination="LVq-wu-htG" eventType="touchUpInside" id="Uzh-DM-shB"/>
+                                    <action selector="tappedSend:" destination="LVq-wu-htG" eventType="touchUpInside" id="kMN-KY-xwE"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <gestureRecognizers/>
                         <constraints>
-                            <constraint firstItem="CvL-Ak-lR6" firstAttribute="centerX" secondItem="SDE-L1-SJV" secondAttribute="centerX" id="2ih-rv-qf6"/>
-                            <constraint firstItem="hR3-2E-2HL" firstAttribute="top" secondItem="CvL-Ak-lR6" secondAttribute="bottom" constant="1" id="AdS-i9-od3"/>
-                            <constraint firstItem="CvL-Ak-lR6" firstAttribute="top" secondItem="RND-og-aee" secondAttribute="bottom" constant="8" id="QIJ-vl-7y1"/>
-                            <constraint firstItem="qDr-Jb-17O" firstAttribute="centerX" secondItem="SDE-L1-SJV" secondAttribute="centerX" id="bff-kZ-BgU"/>
-                            <constraint firstItem="hR3-2E-2HL" firstAttribute="centerX" secondItem="SDE-L1-SJV" secondAttribute="centerX" id="c8u-e6-ujs"/>
-                            <constraint firstItem="RND-og-aee" firstAttribute="centerX" secondItem="SDE-L1-SJV" secondAttribute="centerX" id="fO8-FK-vyA"/>
-                            <constraint firstItem="RND-og-aee" firstAttribute="width" secondItem="qDr-Jb-17O" secondAttribute="width" id="iBq-eL-XLt"/>
-                            <constraint firstItem="CvL-Ak-lR6" firstAttribute="width" secondItem="RND-og-aee" secondAttribute="width" id="l2s-OD-EJy"/>
-                            <constraint firstItem="RND-og-aee" firstAttribute="top" secondItem="qDr-Jb-17O" secondAttribute="bottom" constant="8" id="mbk-BM-tpp"/>
-                            <constraint firstItem="qDr-Jb-17O" firstAttribute="top" secondItem="Vtc-d0-CU0" secondAttribute="bottom" constant="10" id="rT5-vE-SQa"/>
+                            <constraint firstItem="RND-og-aee" firstAttribute="top" secondItem="qDr-Jb-17O" secondAttribute="bottom" constant="8" symbolic="YES" id="2EP-gu-PN7"/>
+                            <constraint firstItem="RND-og-aee" firstAttribute="centerX" secondItem="qDr-Jb-17O" secondAttribute="centerX" id="39r-DD-xdG"/>
+                            <constraint firstItem="Tnb-vr-Ysz" firstAttribute="top" secondItem="0MP-DH-4S2" secondAttribute="bottom" constant="8" symbolic="YES" id="IIH-VY-gU0"/>
+                            <constraint firstItem="CvL-Ak-lR6" firstAttribute="centerX" secondItem="RND-og-aee" secondAttribute="centerX" id="LIn-ja-Bkk"/>
+                            <constraint firstItem="0MP-DH-4S2" firstAttribute="centerX" secondItem="CvL-Ak-lR6" secondAttribute="centerX" id="P8s-Ud-qAP"/>
+                            <constraint firstItem="0MP-DH-4S2" firstAttribute="trailing" secondItem="CvL-Ak-lR6" secondAttribute="trailing" id="RmK-e9-hfT"/>
+                            <constraint firstItem="CvL-Ak-lR6" firstAttribute="leading" secondItem="RND-og-aee" secondAttribute="leading" id="XJ8-oJ-i8R"/>
+                            <constraint firstItem="Tnb-vr-Ysz" firstAttribute="centerX" secondItem="RND-og-aee" secondAttribute="centerX" id="Ynn-MG-8of"/>
+                            <constraint firstItem="CvL-Ak-lR6" firstAttribute="top" secondItem="RND-og-aee" secondAttribute="bottom" constant="8" symbolic="YES" id="nlS-Ak-sMV"/>
+                            <constraint firstItem="RND-og-aee" firstAttribute="leading" secondItem="SDE-L1-SJV" secondAttribute="leadingMargin" constant="-1" id="nny-ME-C5P"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="RND-og-aee" secondAttribute="trailing" constant="1" id="p3z-qB-Vgz"/>
+                            <constraint firstItem="qDr-Jb-17O" firstAttribute="leading" secondItem="SDE-L1-SJV" secondAttribute="leadingMargin" constant="75" id="uIf-JQ-B0O"/>
+                            <constraint firstItem="qDr-Jb-17O" firstAttribute="top" secondItem="Vtc-d0-CU0" secondAttribute="bottom" constant="8" id="uL3-N0-jMY"/>
+                            <constraint firstItem="0MP-DH-4S2" firstAttribute="top" secondItem="CvL-Ak-lR6" secondAttribute="bottom" constant="8" symbolic="YES" id="zJX-Nm-Y4m"/>
                         </constraints>
                         <connections>
                             <outletCollection property="gestureRecognizers" destination="ywD-3A-R8K" appends="YES" id="YEA-pA-Bag"/>
@@ -400,7 +412,8 @@
                         <outlet property="datePickerText" destination="CvL-Ak-lR6" id="UEu-aH-ggd"/>
                         <outlet property="descriptionTextField" destination="RND-og-aee" id="lZO-gL-ZQH"/>
                         <outlet property="imageView" destination="qDr-Jb-17O" id="LLw-UP-zss"/>
-                        <outlet property="nextButton" destination="hR3-2E-2HL" id="mNw-rJ-B3I"/>
+                        <outlet property="sendButton" destination="Tnb-vr-Ysz" id="ko1-lo-nYx"/>
+                        <outlet property="toTextField" destination="0MP-DH-4S2" id="0Di-AX-zDX"/>
                         <segue destination="teS-GP-Ziv" kind="show" identifier="selectUserSegue" id="6lJ-fg-Aqd"/>
                     </connections>
                 </viewController>
@@ -411,7 +424,7 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="2575" y="140"/>
+            <point key="canvasLocation" x="2573.5999999999999" y="139.880059970015"/>
         </scene>
         <!--Select User View Controller-->
         <scene sceneID="YOs-n1-k9G">
