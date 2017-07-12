@@ -80,7 +80,7 @@ class RegistrationPageViewController: UIViewController {
         
         Auth.auth().createUser(withEmail: email!, password: password!, completion: { (user, error) in
             if error != nil{
-                self.displayAlertMessage(userMessage: "Account was not created properly.")
+                self.displayAlertMessage(userMessage: "User already exists.")
 
                 
                 
