@@ -69,7 +69,7 @@ class RegistrationPageViewController: UIViewController {
         if(password != confirmPassword)
         {
             // Display alert message
-            displayAlertMessage(userMessage: "Account already exists. Try your best to login.")
+            displayAlertMessage(userMessage: "Passwords do not match.")
             return;
             
         }
