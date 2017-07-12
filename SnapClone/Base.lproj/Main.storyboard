@@ -409,6 +409,7 @@
                         <outlet property="descriptionTextField" destination="RND-og-aee" id="lZO-gL-ZQH"/>
                         <outlet property="imageView" destination="qDr-Jb-17O" id="LLw-UP-zss"/>
                         <outlet property="nextButton" destination="hR3-2E-2HL" id="mNw-rJ-B3I"/>
+                        <outlet property="toTextField" destination="0MP-DH-4S2" id="0Di-AX-zDX"/>
                         <segue destination="teS-GP-Ziv" kind="show" identifier="selectUserSegue" id="6lJ-fg-Aqd"/>
                     </connections>
                 </viewController>

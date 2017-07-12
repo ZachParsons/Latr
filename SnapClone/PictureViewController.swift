@@ -25,8 +25,12 @@ class PictureViewController: UIViewController, UIImagePickerControllerDelegate, 
     
     @IBOutlet weak var datePickerText: UITextField!
     
-    let datePicker = UIDatePicker()
+    // new for adding the email address
+    @IBOutlet weak var toTextField: UITextField!
     
+    
+    
+    let datePicker = UIDatePicker()
     
     var getAtTime = ""
     
