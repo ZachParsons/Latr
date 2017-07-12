@@ -81,12 +81,12 @@ class RegistrationPageViewController: UIViewController {
         Auth.auth().createUser(withEmail: email!, password: password!, completion: { (user, error) in
             if error != nil{
                 self.displayAlertMessage(userMessage: "User already exists.")
-
                 
                 
                 print(error!)
                 return
             }
+            
             guard let uid = user?.uid else{
                 return
             }
@@ -105,7 +105,7 @@ class RegistrationPageViewController: UIViewController {
                     self.performSegue(withIdentifier: "registrationSegue", sender: nil)
             })
             
-        })
+            })
         
         
 
