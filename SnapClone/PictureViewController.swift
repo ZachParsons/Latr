@@ -193,20 +193,35 @@ class PictureViewController: UIViewController, UIImagePickerControllerDelegate, 
                 
                 
                 
-                
-                
-                
-//                let ref = Database.database().reference().child("Users")
 //                
-//                print(ref)
+//                var ref: DatabaseReference!
+//                ref = Database.database().reference()
+//                print(ref.child("users"))
 //                
+//                ref.child("users").orderByChild("email").equalTo(userEmail)
+//                
+//                let ref = Database.database().referenceFromURL(ref.child("users")).child("email")
+//                let query = ref.queryOrderedByChild("email").queryEqualToValue(userEmail)
+//                query.observeEventType(.Value, withBlock: { (snapshot) in
+//                    for childSnapshot in snapshot.children {
+//                        print(childSnapshot)
+//                    }
+//                })
+                
+//                let ref = Database.database().reference().child("users").observe(DataEventType.value, with: {(snapshot) in
+//                    print("here")
+//                    print(snapshot.childrenCount)
+//                })
+//                
+                
+                
 //                ref.queryOrdered(byChild: "Des").queryEqual(toValue: "11").observe(.childAdded, with: { snapshot in
 //                    if let user = snapshot.value as? [String : AnyObject] {
 //                        
 //                    }
 //                })
-
-                
+//                    print(ref)
+            
                 
                 // need to verify that this email is indeed an email
                 // then need to find that uid by the email
@@ -214,12 +229,12 @@ class PictureViewController: UIViewController, UIImagePickerControllerDelegate, 
                 
                 // lol this would make the db have users/email then their messages info rather than by the uid
                 // that could cause problems elsewhere
-                Database.database().reference().child("users").child(userEmail.text!).child("messages").childByAutoId().setValue(message)
+//                Database.database().reference().child("users").child(userEmail.text!).child("messages").childByAutoId().setValue(message)
                 
                 
                 // child by auto id is a firebase function that prevents reuse of id and makes unique
                 // add the message to the set value
-                //                Database.database().reference().child("users").child(user.uid).child("messages").childByAutoId().setValue(message)
+                                Database.database().reference().child("users").child(user.uid).child("messages").childByAutoId().setValue(message)
                 
                 // after selecting a row, go back to the root to see any remaining messages
                 // need this pop back after viewing
