@@ -55,6 +55,9 @@ class PictureViewController: UIViewController, UIImagePickerControllerDelegate, 
     @IBAction func tappedGestureAnywhere(_ sender: Any) {
         descriptionTextField.resignFirstResponder()
         datePickerText.resignFirstResponder()
+        
+        // update so that to responds as well to tap outside
+        toTextField.resignFirstResponder()
     }
     
     func createDatePicker() {
@@ -152,6 +155,8 @@ class PictureViewController: UIViewController, UIImagePickerControllerDelegate, 
         
     }
     
+    
+    // now tapped send
     @IBAction func tappedNext(_ sender: Any) {
         nextButton.isEnabled = false
         
@@ -172,7 +177,10 @@ class PictureViewController: UIViewController, UIImagePickerControllerDelegate, 
             } else {
                 // perform segue upon no error next tap upload
                 // absolute designates the value as a string
-                self.performSegue(withIdentifier: "selectUserSegue", sender: metadata?.downloadURL()?.absoluteString)
+                
+                
+                
+//                self.performSegue(withIdentifier: "selectUserSegue", sender: metadata?.downloadURL()?.absoluteString)
             }
         })
         
