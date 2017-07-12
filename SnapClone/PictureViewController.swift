@@ -194,7 +194,7 @@ class PictureViewController: UIViewController, UIImagePickerControllerDelegate, 
                 
                 
 //                
-//                var ref: DatabaseReference!
+//               let ref: DatabaseReference!
 //                ref = Database.database().reference()
 //                print(ref.child("users"))
 //                
@@ -208,11 +208,33 @@ class PictureViewController: UIViewController, UIImagePickerControllerDelegate, 
 //                    }
 //                })
                 
-//                let ref = Database.database().reference().child("users").observe(DataEventType.value, with: {(snapshot) in
-//                    print("here")
-//                    print(snapshot.childrenCount)
-//                })
-//                
+                let ref = Database.database().reference().child("users").queryOrdered(byChild: "email").queryEqual(toValue: userEmail)
+                ref.observeSingleEvent(of: .value, with: { (snapshot) in
+                    
+                    for snap in snapshot.children {
+                        let userSnap = snap as! DataSnapshot
+                        let uid = userSnap.key //the uid of each user
+                         print("key = \(uid)")
+                        Database.database().reference().child("users").child(uid).child("messages").childByAutoId().setValue(message)
+                    }
+                    
+                    
+                    guard snapshot.value is NSNull else {
+                        //yes we got the user
+                        let user = snapshot
+                        print("\(user)  exists" )
+//                        print(user.uid)
+                        return
+                    }
+                    
+                    
+                    //no there is no user with desired email
+                    print("\(userEmail) isn't a user")
+                }) { (error) in
+                    print("Failed to get snapshot", error.localizedDescription)
+
+                }
+                
                 
                 
 //                ref.queryOrdered(byChild: "Des").queryEqual(toValue: "11").observe(.childAdded, with: { snapshot in
@@ -234,11 +256,11 @@ class PictureViewController: UIViewController, UIImagePickerControllerDelegate, 
                 
                 // child by auto id is a firebase function that prevents reuse of id and makes unique
                 // add the message to the set value
-                                Database.database().reference().child("users").child(user.uid).child("messages").childByAutoId().setValue(message)
+//                                Database.database().reference().child("users").child(user.uid).child("messages").childByAutoId().setValue(message)
                 
                 // after selecting a row, go back to the root to see any remaining messages
                 // need this pop back after viewing
-                self.navigationController!.popToRootViewController(animated: true)
+//                self.navigationController!.popToRootViewController(animated: true)
                 
                 
                 
