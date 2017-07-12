@@ -160,6 +160,16 @@ class PictureViewController: UIViewController, UIImagePickerControllerDelegate, 
         
     }
     
+    func displayAlertMessage(userMessage:String)
+    {
+        let myAlert = UIAlertController(title:"Alert", message: userMessage, preferredStyle: UIAlertControllerStyle.alert);
+        
+        let okAction = UIAlertAction(title:"OK", style: UIAlertActionStyle.default, handler:nil);
+        
+        myAlert.addAction(okAction);
+        self.present(myAlert, animated:true, completion:nil);
+    }
+    
     
     
     @IBAction func tappedSend(_ sender: Any) {
@@ -200,6 +210,8 @@ class PictureViewController: UIViewController, UIImagePickerControllerDelegate, 
                          print("key = \(uid)")
                         Database.database().reference().child("users").child(uid).child("messages").childByAutoId().setValue(message)
                         
+                        
+                        
                     }
                     
                     
@@ -213,6 +225,7 @@ class PictureViewController: UIViewController, UIImagePickerControllerDelegate, 
                     
                     //no there is no user with desired email
                     print("\(userEmail) isn't a user")
+                    self.displayAlertMessage(userMessage: "User doesn't exist")
                 }) { (error) in
                     print("Failed to get snapshot", error.localizedDescription)
 
