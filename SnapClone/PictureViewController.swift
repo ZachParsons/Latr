@@ -186,7 +186,15 @@ class PictureViewController: UIViewController, UIImagePickerControllerDelegate, 
                 
                 
                 // ok need to find the user based on the email
+                let userEmail = self.toTextField.text!
                 
+                // need to verify that this email is indeed an email 
+                // then need to find that uid by the email 
+                
+                
+                // lol this would make the db have users/email then their messages info rather than by the uid 
+                // that could cause problems elsewhere
+                Database.database().reference().child("users").child(userEmail).child("messages").childByAutoId().setValue(message)
                 
                 
                 // child by auto id is a firebase function that prevents reuse of id and makes unique
