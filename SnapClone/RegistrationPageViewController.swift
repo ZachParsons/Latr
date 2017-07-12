@@ -65,6 +65,13 @@ class RegistrationPageViewController: UIViewController {
             return;
         }
         
+       // Check email is in email format
+        let emailRegEx = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,4}"
+        if(email != emailRegEx)
+        {
+            self.displayAlertMessage(userMessage: "It appears you haven't entered a invalid email.")
+        }
+        
         // Check if passwords match
         if(password != confirmPassword)
         {
