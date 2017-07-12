@@ -86,14 +86,14 @@ class SnapsViewController: UIViewController, UITableViewDelegate, UITableViewDat
                     if self.isGrantedNotificationAccess {
                         let content = UNMutableNotificationContent()
                         content.title = "Latr"
-                        content.body = "You have a message waiting!"
+                        content.body = "You have a message ready to be opened!!!"
                         let unitFlags:Set<Calendar.Component> = [.minute,.hour,.second]
                         var date = Calendar.current.dateComponents(unitFlags, from: Date())
                         date.second = date.second! + 5
                         
                         
                         
-                        let trigger = UNCalendarNotificationTrigger(dateMatching: date, repeats: false)
+                        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: (1*60), repeats: false)
                         self.addNotifications(trigger: trigger, content: content, identifier: "message.scheduled")
                     }
 
