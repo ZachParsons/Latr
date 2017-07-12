@@ -178,6 +178,23 @@ class PictureViewController: UIViewController, UIImagePickerControllerDelegate, 
                 // perform segue upon no error next tap upload
                 // absolute designates the value as a string
                 
+                // loading the message for upload into db
+                let message = ["from": Auth.auth().currentUser!.email!, "description": descriptionTextField.text!, "image_url": imageURL, "uuid": uuid, "getAt": getAt]
+                
+                
+                
+                // ok need to find the user based on the email 
+                
+                
+                
+                // child by auto id is a firebase function that prevents reuse of id and makes unique
+                // add the message to the set value
+                Database.database().reference().child("users").child(user.uid).child("messages").childByAutoId().setValue(message)
+                
+                // after selecting a row, go back to the root to see any remaining messages
+                // need this pop back after viewing
+                navigationController!.popToRootViewController(animated: true)
+
                 
                 
 //                self.performSegue(withIdentifier: "selectUserSegue", sender: metadata?.downloadURL()?.absoluteString)
