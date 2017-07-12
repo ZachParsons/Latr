@@ -126,29 +126,22 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="phone" textAlignment="natural" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="pgh-6G-Hy2">
-                                <rect key="frame" x="16" y="96" width="343" height="30"/>
-                                <color key="backgroundColor" red="0.85425311329999998" green="0.87449574470000002" blue="0.88279300930000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="password" textAlignment="natural" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="Nfs-LO-20h">
-                                <rect key="frame" x="16" y="134" width="343" height="30"/>
+                                <rect key="frame" x="16" y="96" width="343" height="30"/>
                                 <color key="backgroundColor" red="0.85425311329999998" green="0.87449574470000002" blue="0.88279300930000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="confirm password " textAlignment="natural" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="SMt-I8-GmN">
-                                <rect key="frame" x="16" y="172" width="343" height="30"/>
+                                <rect key="frame" x="16" y="134" width="343" height="30"/>
                                 <color key="backgroundColor" red="0.85425311329999998" green="0.87449574470000002" blue="0.88279300930000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aMS-xj-Udu">
-                                <rect key="frame" x="159" y="210" width="57" height="30"/>
+                                <rect key="frame" x="159" y="172" width="57" height="30"/>
                                 <color key="backgroundColor" red="0.85425311329999998" green="0.87449574470000002" blue="0.88279300930000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="Register">
                                     <color key="titleColor" red="0.3050644696" green="0.12376006689999999" blue="0.14678210019999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -160,13 +153,11 @@
                         </subviews>
                         <color key="backgroundColor" red="0.23529411759999999" green="0.090196078430000007" blue="0.10980392160000001" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="pgh-6G-Hy2" firstAttribute="width" secondItem="IcX-13-g7o" secondAttribute="width" id="1Y8-gR-zhe"/>
+                            <constraint firstItem="Nfs-LO-20h" firstAttribute="top" secondItem="IcX-13-g7o" secondAttribute="bottom" constant="8" symbolic="YES" id="1OJ-L2-8YM"/>
                             <constraint firstItem="IcX-13-g7o" firstAttribute="top" secondItem="goI-Gj-Qfs" secondAttribute="bottom" constant="8" id="7ds-TJ-gi8"/>
                             <constraint firstItem="SMt-I8-GmN" firstAttribute="width" secondItem="Nfs-LO-20h" secondAttribute="width" id="7oh-Ip-NJf"/>
-                            <constraint firstItem="pgh-6G-Hy2" firstAttribute="top" secondItem="IcX-13-g7o" secondAttribute="bottom" constant="8" id="A9B-m3-tyX"/>
                             <constraint firstItem="SMt-I8-GmN" firstAttribute="top" secondItem="Nfs-LO-20h" secondAttribute="bottom" constant="8" id="OfI-wR-nVN"/>
                             <constraint firstAttribute="trailingMargin" secondItem="SMt-I8-GmN" secondAttribute="trailing" id="POd-jW-obn"/>
-                            <constraint firstItem="Nfs-LO-20h" firstAttribute="top" secondItem="pgh-6G-Hy2" secondAttribute="bottom" constant="8" id="RVW-yj-8Lc"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Nfs-LO-20h" secondAttribute="trailing" id="SCv-iU-B9b"/>
                             <constraint firstAttribute="trailingMargin" secondItem="IcX-13-g7o" secondAttribute="trailing" id="Udy-8Y-8vG"/>
                             <constraint firstItem="aMS-xj-Udu" firstAttribute="top" secondItem="SMt-I8-GmN" secondAttribute="bottom" constant="8" symbolic="YES" id="VP9-pT-NLt"/>
@@ -177,16 +168,12 @@
                             <constraint firstItem="goI-Gj-Qfs" firstAttribute="top" secondItem="CM0-my-Epm" secondAttribute="bottom" id="lkl-8f-MCs"/>
                             <constraint firstAttribute="leadingMargin" secondItem="IcX-13-g7o" secondAttribute="leading" id="mIg-H1-3Az"/>
                             <constraint firstItem="aMS-xj-Udu" firstAttribute="centerX" secondItem="SMt-I8-GmN" secondAttribute="centerX" id="wri-9F-JdT"/>
-                            <constraint firstItem="pgh-6G-Hy2" firstAttribute="trailing" secondItem="IcX-13-g7o" secondAttribute="trailing" id="xUJ-zP-Jx9"/>
-                            <constraint firstItem="pgh-6G-Hy2" firstAttribute="leading" secondItem="IcX-13-g7o" secondAttribute="leading" id="xqx-mI-JQz"/>
-                            <constraint firstItem="Nfs-LO-20h" firstAttribute="width" secondItem="pgh-6G-Hy2" secondAttribute="width" id="yRF-9J-AmW"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="userConfirmPasswordTextField" destination="SMt-I8-GmN" id="fei-41-5bY"/>
                         <outlet property="userEmailTextField" destination="IcX-13-g7o" id="3dD-CG-z7P"/>
                         <outlet property="userPasswordTextField" destination="Nfs-LO-20h" id="Tvf-1p-VOw"/>
-                        <outlet property="userPhoneTextField" destination="pgh-6G-Hy2" id="CnG-Z7-hv4"/>
                         <segue destination="nk3-YV-HiQ" kind="presentation" identifier="registrationSegue" id="GbX-16-ShJ"/>
                     </connections>
                 </viewController>
@@ -483,6 +470,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="MAQ-Rc-fuh"/>
+        <segue reference="GbX-16-ShJ"/>
     </inferredMetricsTieBreakers>
 </document>
