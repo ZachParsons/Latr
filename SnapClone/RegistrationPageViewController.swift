@@ -74,9 +74,7 @@ class RegistrationPageViewController: UIViewController {
             return returnValue
 
         }
-        
-        
-        
+     
         // Check for empty fields
         if(email!.isEmpty || password!.isEmpty || confirmPassword!.isEmpty)
         {
@@ -97,14 +95,6 @@ class RegistrationPageViewController: UIViewController {
             displayAlertMessage(userMessage: "Email address is not valid")
         }
         
-       // Check email is in email format
-//        let emailRegEx = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,4}"
-//        if(email != emailRegEx)
-//        {
-//            displayAlertMessage(userMessage: "You entered an invalid email address.")
-//            return;
-//        }
-        
         // Check if passwords match
         if(password != confirmPassword)
         {
@@ -113,16 +103,11 @@ class RegistrationPageViewController: UIViewController {
             return;
             
         }
-        
-        //        // Here is where we need some guidance re saving textfield user inputs
-        //        // Store data, refer to Login for post request to Firebase
-        
-        
+
         Auth.auth().createUser(withEmail: email!, password: password!, completion: { (user, error) in
             if error != nil{
                 self.displayAlertMessage(userMessage: "User already exists.")
-                
-                
+             
                 print(error!)
                 return;
             }
@@ -145,11 +130,7 @@ class RegistrationPageViewController: UIViewController {
                     self.performSegue(withIdentifier: "registrationSegue", sender: nil)
             })
             
-            })
-        
-        
-
-        
+          })
     }
     
     
