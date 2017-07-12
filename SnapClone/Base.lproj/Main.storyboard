@@ -337,54 +337,46 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="qDr-Jb-17O">
-                                <rect key="frame" x="68" y="74" width="240" height="128"/>
+                                <rect key="frame" x="91" y="72" width="192" height="101"/>
                                 <color key="backgroundColor" red="0.23529411759999999" green="0.090196078430000007" blue="0.10980392160000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="101" id="gdW-ML-aC9"/>
+                                </constraints>
                             </imageView>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Description" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RND-og-aee" userLabel="Description Text Field">
-                                <rect key="frame" x="16" y="210" width="343" height="30"/>
+                                <rect key="frame" x="15" y="181" width="343" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Pick Date" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="CvL-Ak-lR6">
-                                <rect key="frame" x="16" y="248" width="344" height="30"/>
+                                <rect key="frame" x="15" y="219" width="344" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="To" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0MP-DH-4S2" userLabel="To Text Field">
-                                <rect key="frame" x="16" y="286" width="343" height="30"/>
+                                <rect key="frame" x="16" y="257" width="343" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hR3-2E-2HL">
-                                <rect key="frame" x="164" y="324" width="46" height="30"/>
-                                <state key="normal" title="Send"/>
-                                <connections>
-                                    <action selector="tappedNext:" destination="LVq-wu-htG" eventType="touchUpInside" id="Uzh-DM-shB"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <gestureRecognizers/>
                         <constraints>
                             <constraint firstAttribute="trailingMargin" secondItem="0MP-DH-4S2" secondAttribute="trailing" id="0nj-Nm-ExK"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="CvL-Ak-lR6" secondAttribute="trailing" constant="-1" id="3H6-oV-KoQ"/>
-                            <constraint firstAttribute="leadingMargin" secondItem="CvL-Ak-lR6" secondAttribute="leading" id="4vJ-2L-Bs1"/>
-                            <constraint firstItem="qDr-Jb-17O" firstAttribute="leading" secondItem="SDE-L1-SJV" secondAttribute="leadingMargin" constant="52" id="AVL-Vt-byt"/>
-                            <constraint firstItem="hR3-2E-2HL" firstAttribute="leading" secondItem="SDE-L1-SJV" secondAttribute="leadingMargin" constant="148" id="JKs-6G-XZW"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="hR3-2E-2HL" secondAttribute="trailing" constant="149" id="MMA-17-HY0"/>
-                            <constraint firstAttribute="leadingMargin" secondItem="RND-og-aee" secondAttribute="leading" id="XME-47-iar"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="qDr-Jb-17O" secondAttribute="trailing" constant="51" id="XpS-LR-8ST"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="CvL-Ak-lR6" secondAttribute="trailing" id="3H6-oV-KoQ"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="CvL-Ak-lR6" secondAttribute="leading" constant="1" id="4vJ-2L-Bs1"/>
+                            <constraint firstItem="RND-og-aee" firstAttribute="top" secondItem="qDr-Jb-17O" secondAttribute="bottom" constant="8" id="9Ks-Ln-y8r"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="RND-og-aee" secondAttribute="leading" constant="1" id="XME-47-iar"/>
                             <constraint firstAttribute="leadingMargin" secondItem="0MP-DH-4S2" secondAttribute="leading" id="Y0I-hB-oVl"/>
-                            <constraint firstItem="RND-og-aee" firstAttribute="top" secondItem="qDr-Jb-17O" secondAttribute="bottom" constant="8" id="mbt-Eu-bvU"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="RND-og-aee" secondAttribute="trailing" id="q4s-hc-Pco"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="RND-og-aee" secondAttribute="trailing" constant="1" id="q4s-hc-Pco"/>
                             <constraint firstItem="0MP-DH-4S2" firstAttribute="top" secondItem="CvL-Ak-lR6" secondAttribute="bottom" constant="8" id="s65-Us-YXI"/>
                             <constraint firstItem="CvL-Ak-lR6" firstAttribute="top" secondItem="RND-og-aee" secondAttribute="bottom" constant="8" id="sED-e0-hTm"/>
-                            <constraint firstItem="qDr-Jb-17O" firstAttribute="top" secondItem="Vtc-d0-CU0" secondAttribute="bottom" constant="10" id="uEN-WD-spR"/>
-                            <constraint firstItem="bax-pu-d4Z" firstAttribute="top" secondItem="qDr-Jb-17O" secondAttribute="bottom" constant="465" id="zUB-Y1-rAO"/>
-                            <constraint firstItem="hR3-2E-2HL" firstAttribute="top" secondItem="0MP-DH-4S2" secondAttribute="bottom" constant="8" id="zgf-V7-agm"/>
+                            <constraint firstItem="qDr-Jb-17O" firstAttribute="centerX" secondItem="RND-og-aee" secondAttribute="centerX" id="tWc-Qn-kFa"/>
+                            <constraint firstItem="qDr-Jb-17O" firstAttribute="leading" secondItem="SDE-L1-SJV" secondAttribute="leadingMargin" constant="75" id="uIf-JQ-B0O"/>
+                            <constraint firstItem="qDr-Jb-17O" firstAttribute="top" secondItem="Vtc-d0-CU0" secondAttribute="bottom" constant="8" id="uL3-N0-jMY"/>
                         </constraints>
                         <connections>
                             <outletCollection property="gestureRecognizers" destination="ywD-3A-R8K" appends="YES" id="YEA-pA-Bag"/>
@@ -408,7 +400,6 @@
                         <outlet property="datePickerText" destination="CvL-Ak-lR6" id="UEu-aH-ggd"/>
                         <outlet property="descriptionTextField" destination="RND-og-aee" id="lZO-gL-ZQH"/>
                         <outlet property="imageView" destination="qDr-Jb-17O" id="LLw-UP-zss"/>
-                        <outlet property="nextButton" destination="hR3-2E-2HL" id="mNw-rJ-B3I"/>
                         <outlet property="toTextField" destination="0MP-DH-4S2" id="0Di-AX-zDX"/>
                         <segue destination="teS-GP-Ziv" kind="show" identifier="selectUserSegue" id="6lJ-fg-Aqd"/>
                     </connections>
