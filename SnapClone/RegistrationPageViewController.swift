@@ -69,7 +69,7 @@ class RegistrationPageViewController: UIViewController {
         if(password != confirmPassword)
         {
             // Display alert message
-            displayAlertMessage(userMessage: "Passwords do not match.")
+            displayAlertMessage(userMessage: "Account already exists. Try your best to login.")
             return;
             
         }
@@ -80,6 +80,10 @@ class RegistrationPageViewController: UIViewController {
         
         Auth.auth().createUser(withEmail: email!, password: password!, completion: { (user, error) in
             if error != nil{
+                self.displayAlertMessage(userMessage: "Account was not created properly.")
+
+                
+                
                 print(error!)
                 return
             }
@@ -104,16 +108,8 @@ class RegistrationPageViewController: UIViewController {
         })
         
         
+
         
-//         Display alert message with confirmation
-//        var myAlert = UIAlertController(title:"Alert", message:"Registration is successful.", preferredStyle:UIAlertControllerStyle.alert);
-//        
-//        let okAction = UIAlertAction(title:"Ok", style: UIAlertActionStyle.default){
-//            action in
-//            self.dismiss(animated: true, completion:nil);
-//        }
-//        myAlert.addAction(okAction);
-//        self.present(myAlert, animated:true, completion:nil);
     }
     
     
