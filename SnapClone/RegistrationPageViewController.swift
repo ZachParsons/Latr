@@ -45,6 +45,7 @@ class RegistrationPageViewController: UIViewController {
         
         myAlert.addAction(okAction);
         self.present(myAlert, animated:true, completion:nil);
+        registerButton.isEnabled = true 
     }
     
     @IBAction func registerButtonTapped(_ sender: Any) {
