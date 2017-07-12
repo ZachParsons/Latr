@@ -28,6 +28,7 @@ class RegistrationPageViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        registerButton.isEnabled = true
         
         // Do any additional setup after loading the view.
     }
